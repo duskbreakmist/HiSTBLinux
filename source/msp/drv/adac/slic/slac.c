@@ -150,14 +150,14 @@ int Slac_ProcRead(struct seq_file *p, void *v)
 
     };
 
-    p += seq_printf(p,"---------Hisilicon Slac Driver Info---------\n");
+    seq_printf(p,"---------Hisilicon Slac Driver Info---------\n");
 
     SLAC_LOCK();
 
     if(atomic_read(&open_cnt) == 0)
     {
         SLAC_UNLOCK();
-        p += seq_printf(p,"The slac is not opened.\n");
+        seq_printf(p,"The slac is not opened.\n");
         return 0;
     }
 
@@ -166,68 +166,68 @@ int Slac_ProcRead(struct seq_file *p, void *v)
     {
         if (0 <= stLineState && 28 > stLineState) //for fix MOTO
         {
-            p += seq_printf(p,"Vp Line State: %d , %s\n",stLineState,LineState2Str[stLineState]);
+            seq_printf(p,"Vp Line State: %d , %s\n",stLineState,LineState2Str[stLineState]);
         }
     }
     else
     {
-        p += seq_printf(p,"VpGetLineState() failure, %d\n",res);
+        seq_printf(p,"VpGetLineState() failure, %d\n",res);
     }
 
-    p += seq_printf(p,"\n");
+    seq_printf(p,"\n");
 
     for(input = VP_INPUT_HOOK; input < VP_NUM_INPUT_TYPES; input++)
     {
         res = VpGetDeviceStatus(&devCtx, input, &u32DeviceStatus);
         if ( res ==  VP_STATUS_SUCCESS )
         {
-            p += seq_printf(p,"Vp Device Status: input %s, status %d\n",Input2Str[input],(int)u32DeviceStatus);
+            seq_printf(p,"Vp Device Status: input %s, status %d\n",Input2Str[input],(int)u32DeviceStatus);
         }
         else
         {
-            p += seq_printf(p,"VpGetDeviceStatus() failure, input %s, res %d\n",Input2Str[input],res);
+            seq_printf(p,"VpGetDeviceStatus() failure, input %s, res %d\n",Input2Str[input],res);
         }
     }
 
-    p += seq_printf(p,"\n");
+    seq_printf(p,"\n");
 
     for(input = VP_INPUT_HOOK; input < VP_NUM_INPUT_TYPES; input++)
     {
         res = VpGetLineStatus(&lineCtx, input, &bLineStatus);
         if ( res ==  VP_STATUS_SUCCESS )
         {
-            p += seq_printf(p,"Vp Line Status: input %s, status %s\n",Input2Str[input],bLineStatus?"TRUE":"FALSE");
+            seq_printf(p,"Vp Line Status: input %s, status %s\n",Input2Str[input],bLineStatus?"TRUE":"FALSE");
         }
         else
         {
-            p += seq_printf(p,"VpGetLineStatus() failure, input %s, res %d\n",Input2Str[input],res);
+            seq_printf(p,"VpGetLineStatus() failure, input %s, res %d\n",Input2Str[input],res);
         }
     }
     {
         HI_U8   data[2];
-        p += seq_printf(p,"\n");
+        seq_printf(p,"\n");
 
         le89116_reg_read(0x73, data, 2);    //read chip version and product code number
-        p += seq_printf(p,"SLIC 0x73 REG is 0x%x 0x%x\n",data[0],data[1]);
+        seq_printf(p,"SLIC 0x73 REG is 0x%x 0x%x\n",data[0],data[1]);
 
         le89116_reg_read(0x41, data, 1);
-        p += seq_printf(p,"SLIC 0x41 REG is 0x%x\n",data[0]);
+        seq_printf(p,"SLIC 0x41 REG is 0x%x\n",data[0]);
 
         le89116_reg_read(0x43, data, 1);
-        p += seq_printf(p,"SLIC 0x43 REG is 0x%x\n",data[0]);
+        seq_printf(p,"SLIC 0x43 REG is 0x%x\n",data[0]);
 
         le89116_reg_read(0x61, data, 1);
-        p += seq_printf(p,"SLIC 0x61 REG is 0x%x\n",data[0]);
+        seq_printf(p,"SLIC 0x61 REG is 0x%x\n",data[0]);
 
         le89116_reg_read(0x45, data, 1);
-        p += seq_printf(p,"SLIC 0x45 REG is 0x%x\n",data[0]);
+        seq_printf(p,"SLIC 0x45 REG is 0x%x\n",data[0]);
 
         le89116_reg_read(0x4b, data, 1);
-        p += seq_printf(p,"SLIC 0x4B REG is 0x%x\n",data[0]);
+        seq_printf(p,"SLIC 0x4B REG is 0x%x\n",data[0]);
     }
 
     SLAC_UNLOCK();
-    p += seq_printf(p,"\n");
+    seq_printf(p,"\n");
     return 0;
 }
 
@@ -1253,4 +1253,3 @@ module_exit(slac_exit);
 MODULE_LICENSE("GPL");
 MODULE_DESCRIPTION("WISH SLAC Device Driver");
 MODULE_AUTHOR("HISILICON");
-

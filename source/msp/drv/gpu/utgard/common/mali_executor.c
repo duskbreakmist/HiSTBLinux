@@ -793,6 +793,7 @@ _mali_osk_errcode_t mali_executor_interrupt_mmu(struct mali_group *group,
 
 		u32 fault_address = mali_mmu_get_page_fault_addr(group->mmu);
 		u32 status = mali_mmu_get_status(group->mmu);
+		status =status;
 		MALI_DEBUG_PRINT(2, ("Executor: Mali page fault detected at 0x%x from bus id %d of type %s on %s\n",
 				     (void *)(uintptr_t)fault_address,
 				     (status >> 6) & 0x1F,

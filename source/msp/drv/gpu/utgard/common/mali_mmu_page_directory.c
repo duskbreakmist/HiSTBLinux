@@ -344,7 +344,7 @@ void mali_mmu_pagedir_diag(struct mali_page_directory *pagedir, u32 fault_addr)
 
 	if (pde & MALI_MMU_FLAGS_PRESENT) {
 		u32 pte_addr = MALI_MMU_ENTRY_ADDRESS(pde);
-
+		pte_addr = pte_addr;
 		pte = _mali_osk_mem_ioread32(pagedir->page_entries_mapped[pde_index],
 					     pte_index * sizeof(u32));
 

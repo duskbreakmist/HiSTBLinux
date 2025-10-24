@@ -1,0 +1,1 @@
+FORCE_UNSAFE_CONFIGURE=1 make KCFLAGS="-Wno-error" build 2>&1 | tee build-$(date +%Y%m%d-%H%M).log ; echo -e "\a"

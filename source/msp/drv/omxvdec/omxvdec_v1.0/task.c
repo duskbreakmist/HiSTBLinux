@@ -84,7 +84,7 @@ static HI_S32 task_alloc_channel_mem(OMXVDEC_CHAN_CTX *pchan)
     HI_U32 u32NeededMemSize  = 0;
     HI_U32 u32NeededFrameNum = 0;
     HI_U32 i = 0;
-
+    i=i;
     if (pchan->decoder_vdh_buf.u32Size != 0 && pchan->decoder_vdh_buf.u32StartPhyAddr != 0)
     {
         omxvdec_release_mem(&pchan->decoder_vdh_buf, pchan->eVDHMemAlloc);
@@ -278,5 +278,3 @@ HI_VOID task_proc_entry(struct seq_file *p, OMXVDEC_TASK *ptask)
 {
     PROC_PRINT(p, "%-25s :%s\n", "TaskState",         task_show_state(ptask->task_state));
 }
-
-
