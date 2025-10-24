@@ -5,6 +5,7 @@ cfg.mak.old
 .vscode/
 *.o
 # out
+
 out/
 
 # auto create links
