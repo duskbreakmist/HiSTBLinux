@@ -3,7 +3,7 @@ cfg.mak.old
 
 # VS Code Settings
 .vscode/
-
+*.o
 # out
 out/
 
