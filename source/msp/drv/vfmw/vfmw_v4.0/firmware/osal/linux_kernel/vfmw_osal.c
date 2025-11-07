@@ -825,7 +825,7 @@ VOID InitVfmwInterface(VOID)
 
     vfmw_Osal_Func_Ptr_S.pfun_Osal_CreateTask = (FN_OSAL_CreateTask)OSAL_CreateTask;
 
-    vfmw_Osal_Func_Ptr_S.pfun_Osal_phys_to_virt = phys_to_virt;
+    vfmw_Osal_Func_Ptr_S.pfun_Osal_phys_to_virt =(FN_OSAL_phys_to_virt)phys_to_virt;
 
     vfmw_Osal_Func_Ptr_S.pfun_Osal_AllocVirMem = OSAL_AllocVirMem;
     vfmw_Osal_Func_Ptr_S.pfun_Osal_FreeVirMem  = OSAL_FreeVirMem;
@@ -841,4 +841,3 @@ VOID InitVfmwInterface(VOID)
 
     vfmw_Osal_Func_Ptr_S.pfun_Osal_vdec_control   = VDEC_Control;
 }
-

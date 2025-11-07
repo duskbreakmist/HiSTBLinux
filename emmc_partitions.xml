@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="GB2312" ?>
+<Partition_Info>
+<Part Sel="0" PartitionName="fastboot" FlashType="emmc" FileSystem="none" Start="0" Length="1M" SelectFile=""/>
+<Part Sel="0" PartitionName="bootargs" FlashType="emmc" FileSystem="none" Start="1M" Length="1M" SelectFile=""/>
+<Part Sel="0" PartitionName="kernel" FlashType="emmc" FileSystem="none" Start="2M" Length="18M" SelectFile="\\wsl.localhost\Ubuntu-22.04\home\ray\workplace\git_download\HiSTB_origin\HiSTBLinux\out\hi3798mv100\hi3798mv100_out\image\emmc_image\hi_kernel.bin"/>
+<Part Sel="1" PartitionName="rootfs" FlashType="emmc" FileSystem="ext3/4" Start="20M" Length="3800M" SelectFile="\\wsl.localhost\Ubuntu-22.04\home\ray\workplace\rootfs_try\rootfs_20251105_2139.img"/>
+</Partition_Info>

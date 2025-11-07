@@ -73,7 +73,7 @@ HI_CHAR *PDM_VmapByPhyaddr(HI_U8 *phy_addr, HI_U32 size)
     }
 
     for (i = 0; i < page_array_size; i++) {
-        page_array[i] = phys_to_page((phys_addr_t)phy_addr + i * PAGE_SIZE);
+        page_array[i] = phys_to_page((phys_addr_t)(uintptr_t)phy_addr + i * PAGE_SIZE);
     }
 
     if (i != page_array_size) {
@@ -1517,7 +1517,7 @@ HI_S32 DRV_PDM_ReleaseReserveMem(const HI_CHAR *BufName)
     //this function maybe block, can not lock
     //for 64bit system, function first para must be merge to 64 bit, cant HI_U32 type
 
-    pdm_free_reserve_mem((phys_addr_t)g_PdmGlobal.stBufInfo[i].pPhyAddr, g_PdmGlobal.stBufInfo[i].u32Lenth);
+    pdm_free_reserve_mem((phys_addr_t)(uintptr_t)g_PdmGlobal.stBufInfo[i].pPhyAddr, g_PdmGlobal.stBufInfo[i].u32Lenth);
 
     DRV_PDM_TagRemoveBuff(BufName);
 
@@ -1552,7 +1552,7 @@ static HI_S32 DRV_PDM_GetReserveMem(const HI_CHAR *BufName, HI_U32 *pReseverAddr
 
     DRV_PDM_UNLOCK(&g_PdmGlobal.PdmMutex);
 
-    *pReseverAddr = (phys_addr_t)g_PdmGlobal.stBufInfo[BufIndex].pPhyAddr;
+    *pReseverAddr = (phys_addr_t)(uintptr_t)g_PdmGlobal.stBufInfo[BufIndex].pPhyAddr;
     *pReseverBufSize = g_PdmGlobal.stBufInfo[BufIndex].u32Lenth;
 
     return HI_SUCCESS;
