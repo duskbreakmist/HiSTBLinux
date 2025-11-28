@@ -278,19 +278,19 @@ $(OBJ_DIR)/copy_code:
 	touch $@
 
 product: $(if $(OBJ_DIR), $(OBJ_DIR)/copy_code,)
-	make -C $(MINIBOOT) $(MKFLAGS) $(BOOTCONFIG_FILE)_config
-	make -C $(PRODUCT) $(MKFLAGS) O=$(O)
+	$(MAKE) -C $(MINIBOOT) $(MKFLAGS) $(BOOTCONFIG_FILE)_config
+	$(MAKE) -C $(PRODUCT) $(MKFLAGS) O=$(O)
 
 auxcode: $(AUXIMG)
 ifdef CONFIG_UNIFIED_BOOT
 ifeq (y,$(CONFIG_AUXCODE_COMPILE_SUPPORT))
-	make -C $(AUXCODE) $(MKFLAGS) O=$(O) \
+	$(MAKE) -C $(AUXCODE) $(MKFLAGS) O=$(O) \
 	&& cp -rf $(AUXCODE)/auxcode_sign.img $(AUXIMG)
 endif
 endif
 
 miniboot: prepare $(if $(CONFIG_PRODUCT_WITH_BOOT),product,)
-	make -C $(MINIBOOT) $(MKFLAGS) $(BOOTCONFIG_FILE) -j1
+	$(MAKE) -C $(MINIBOOT) $(MKFLAGS) $(BOOTCONFIG_FILE) -j1
 
 ################################### programmer #################################
 FASTBOOT       =  $(BUILD_DIR)/fastboot
@@ -313,8 +313,8 @@ ifdef CONFIG_UNIFIED_BOOT
 endif
 
 advca_programmer_install: programmer_prepare
-	make -C $(FASTBOOT) $(PROGRAM_MKFLAGS) CONFIG_BOOTROM_CA_SUPPORT=y $(BOOTCONFIG) -j 16
-	make -C $(FASTBOOT) $(PROGRAM_MKFLAGS) mini-boot.bin
+	$(MAKE) -C $(FASTBOOT) $(PROGRAM_MKFLAGS) CONFIG_BOOTROM_CA_SUPPORT=y $(BOOTCONFIG) -j 16
+	$(MAKE) -C $(FASTBOOT) $(PROGRAM_MKFLAGS) mini-boot.bin
 ifeq ($(CFG_PRODUCT_TYPE),linux)
 ifeq ($(CFG_HI_NAND_FLASH_SUPPORT),y)
 	$(AT)test -d $(HI_NAND_IMAGE_DIR) || mkdir -p $(HI_NAND_IMAGE_DIR)
@@ -336,17 +336,17 @@ else
 	$(AT)test -d $(PREFIX) || mkdir -p $(PREFIX)
 	$(AT)cp -f $(FASTBOOT)/$(PROGRAMMER_TARGET) $(PREFIX)/advca_programmer.bin
 endif
-	make -C $(FASTBOOT)  $(PROGRAM_MKFLAGS) distclean
-	make -C $(FASTBOOT) $(PROGRAM_MKFLAGS) mini-boot.clean
+	$(MAKE) -C $(FASTBOOT)  $(PROGRAM_MKFLAGS) distclean
+	$(MAKE) -C $(FASTBOOT) $(PROGRAM_MKFLAGS) mini-boot.clean
 	$(AT)rm -f $(FASTBOOT)/*.reg
 
 $(PREFIX)/non-advca_programmer.bin: programmer_prepare
-	make -C $(FASTBOOT) $(PROGRAM_MKFLAGS) $(BOOTCONFIG) -j 16
-	make -C $(FASTBOOT) $(PROGRAM_MKFLAGS) mini-boot.bin
+	$(MAKE) -C $(FASTBOOT) $(PROGRAM_MKFLAGS) $(BOOTCONFIG) -j 16
+	$(MAKE) -C $(FASTBOOT) $(PROGRAM_MKFLAGS) mini-boot.bin
 	$(AT)test -d $(PREFIX)/ || mkdir -p $(PREFIX)/
 	$(AT)cp -fv $(FASTBOOT)/$(PROGRAMMER_TARGET) $(PREFIX)/non-advca_programmer.bin
-	make -C $(FASTBOOT) $(PROGRAM_MKFLAGS) distclean
-	make -C $(FASTBOOT) $(PROGRAM_MKFLAGS) mini-boot.clean
+	$(MAKE) -C $(FASTBOOT) $(PROGRAM_MKFLAGS) distclean
+	$(MAKE) -C $(FASTBOOT) $(PROGRAM_MKFLAGS) mini-boot.clean
 	$(AT)rm -f $(FASTBOOT)/*.reg
 
 $(CONFIG_FILE): $(if $(OBJ_DIR), $(OBJ_DIR)/copy_code,) force
@@ -493,11 +493,11 @@ distclean: clean
 
 clean :
 ifeq ($(OBJ_DIR),)
-	make -C $(PRODUCT)  $(MKFLAGS) clean
-	make -C $(MINIBOOT) distclean
+	$(MAKE) -C $(PRODUCT)  $(MKFLAGS) clean
+	$(MAKE) -C $(MINIBOOT) distclean
 ifeq ($(CFG_HI_UNIFIED_BOOT_SUPPORT),y)
 ifeq ($(CONFIG_AUXCODE_COMPILE_SUPPORT),y)
-	make -C $(AUXCODE) $(MKFLAGS) clean
+	$(MAKE) -C $(AUXCODE) $(MKFLAGS) clean
 endif
 endif
 	$(AT)rm -f $(MINIBOOT)/*.reg

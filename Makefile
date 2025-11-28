@@ -23,9 +23,9 @@ endif
 
 build: prebuilts hiboot $(PROGRAMMER) rootbox
 ifeq ($(CFG_HI_FS_BUILDIN),y)
-	$(AT)make -C $(KERNEL_DIR) fs_buildin
+	$(AT)+$(MAKE) -C $(KERNEL_DIR) fs_buildin
 else
-	$(AT)make $(IMAGES)
+	$(AT)+$(MAKE) $(IMAGES)
 ifeq ($(CFG_HI_ADVCA_TYPE)_$(CFG_HI_LOADER_APPLOADER), CONAX_y)
 	$(AT)cp -f  $(LINUX_DIR)/arch/$(CFG_HI_CPU_ARCH)/boot/uImage $(HI_IMAGE_DIR)/hi_kernel.bin
 	$(AT)test -e $(HI_IMAGE_DIR)/hi_kernel.bin && test -e $(HI_IMAGE_DIR)/rootfs.squashfs \
@@ -44,9 +44,9 @@ endif
 endif
 	$(AT)rm -rf $(HI_IMAGE_DIR)/hi_kernel.bin $(HI_IMAGE_DIR)/apploader.bin $(HI_IMAGE_DIR)/rootfs.squashfs
 ifneq ($(CFG_HI_LOADER_APPLOADER),y)
-	$(AT)make -C $(SAMPLE_DIR) all
+	$(AT)+$(MAKE) -C $(SAMPLE_DIR) all
 endif
-	$(AT)make signature
+	$(AT)+$(MAKE) signature
 
 clean:
 	$(AT)rm -rf $(HI_OUT_DIR)
@@ -84,7 +84,7 @@ signature:
 ifneq ($(SIGNATURE_SCRIPT_DIR),none)
 	mkdir -p $(CREATE_SIGNATURE_DIR)
 	cp -rf $(SDK_DIR)/tools/linux/utils/advca/* $(CREATE_SIGNATURE_DIR)/
-	make -C $(CREATE_SIGNATURE_DIR)/CreateSignature/$(SIGNATURE_SCRIPT_DIR) all
+	+$(MAKE) -C $(CREATE_SIGNATURE_DIR)/CreateSignature/$(SIGNATURE_SCRIPT_DIR) all
 
 endif
 
@@ -107,10 +107,10 @@ endif
 .PHONY: tools  tools_clean
 #++++++++++++++++++++++++++++++++++++++++++++++++++++
 tools:
-	$(AT)make -C $(HI_TOOLS_DIR) all
+	$(AT)+$(MAKE) -C $(HI_TOOLS_DIR) all
 
 tools_clean:
-	$(AT)make -C $(HI_TOOLS_DIR) clean
+	$(AT)+$(MAKE) -C $(HI_TOOLS_DIR) clean
 
 #====================================================================================
 #                   prebuilts
@@ -119,7 +119,7 @@ tools_clean:
 include prebuilts.mak
 
 prebuilts:
-	$(AT)make prebuilts_compose
+	$(AT)+$(MAKE) prebuilts_compose
 	$(AT)echo "make prebuilts over"
 
 #====================================================================================
@@ -130,19 +130,19 @@ prebuilts:
 hiboot:
 ifneq ($(CFG_HI_LOADER_APPLOADER),y)
 ifneq ($(CFG_HI_TWOSTAGEBOOT_SUPPORT),y)
-	$(AT)make -C $(BOOT_DIR) all $(if $(HI_OUT_DIR),O=$(HI_OUT_DIR)/obj/source/boot,)
+	$(AT)+$(MAKE) -C $(BOOT_DIR) all $(if $(HI_OUT_DIR),O=$(HI_OUT_DIR)/obj/source/boot,)
 else
-	$(AT)make -C $(BOOT_DIR) all $(if $(HI_OUT_DIR),O=$(HI_OUT_DIR)/obj/source/boot_fbl,) CFG_HI_BOOT_ENV_STARTADDR=0
-	$(AT)make -C $(BOOT_DIR) all $(if $(HI_OUT_DIR),O=$(HI_OUT_DIR)/obj/source/boot_sbl,)
+	$(AT)+$(MAKE) -C $(BOOT_DIR) all $(if $(HI_OUT_DIR),O=$(HI_OUT_DIR)/obj/source/boot_fbl,) CFG_HI_BOOT_ENV_STARTADDR=0
+	$(AT)+$(MAKE) -C $(BOOT_DIR) all $(if $(HI_OUT_DIR),O=$(HI_OUT_DIR)/obj/source/boot_sbl,)
 endif
 endif
 
 hiboot_clean:
-	$(AT)make -C $(BOOT_DIR) clean $(if $(HI_OUT_DIR),O=$(HI_OUT_DIR)/obj/source/boot,)
+	$(AT)+$(MAKE) -C $(BOOT_DIR) clean $(if $(HI_OUT_DIR),O=$(HI_OUT_DIR)/obj/source/boot,)
 
 advca_programmer:
 ifneq ($(CFG_HI_LOADER_APPLOADER),y)
-	$(AT)make -C $(BOOT_DIR) advca_programmer_install BOOT_ADVCA_PROGRAMMER=y $(if $(HI_OUT_DIR),O=$(HI_OUT_DIR)/obj/source/programmer,)
+	$(AT)+$(MAKE) -C $(BOOT_DIR) advca_programmer_install BOOT_ADVCA_PROGRAMMER=y $(if $(HI_OUT_DIR),O=$(HI_OUT_DIR)/obj/source/programmer,)
 endif
 
 #====================================================================================
@@ -151,10 +151,10 @@ endif
 .PHONY:  linux linux_clean
 
 linux:
-	$(AT)make -C $(KERNEL_DIR) all
+	$(AT)+$(MAKE) -C $(KERNEL_DIR) all
 
 linux_clean:
-	$(AT)make -C $(KERNEL_DIR) clean
+	$(AT)+$(MAKE) -C $(KERNEL_DIR) clean
 
 #====================================================================================
 #                   rootfs
@@ -162,10 +162,10 @@ linux_clean:
 .PHONY:  rootfs  rootfs_clean
 
 rootfs:
-	$(AT)make -C $(ROOTFS_SRC_DIR) all
+	$(AT)+$(MAKE) -C $(ROOTFS_SRC_DIR) all
 
 rootfs_clean:
-	$(AT)make -C $(ROOTFS_SRC_DIR) clean
+	$(AT)+$(MAKE) -C $(ROOTFS_SRC_DIR) clean
 
 #====================================================================================
 #                   common
@@ -173,10 +173,10 @@ rootfs_clean:
 .PHONY:  common common_clean
 
 common:
-	$(AT)make -C $(COMMON_DIR)/api all
+	$(AT)+$(MAKE) -C $(COMMON_DIR)/api all
 
 common_clean:
-	$(AT)make -C $(COMMON_DIR)/api clean
+	$(AT)+$(MAKE) -C $(COMMON_DIR)/api clean
 
 #====================================================================================
 #                   msp
@@ -184,10 +184,10 @@ common_clean:
 .PHONY:  msp  msp_clean
 
 msp:
-	$(AT)make -C $(MSP_DIR)/api all
+	$(AT)+$(MAKE) -C $(MSP_DIR)/api all
 
 msp_clean:
-	$(AT)make -C $(MSP_DIR)/api clean
+	$(AT)+$(MAKE) -C $(MSP_DIR)/api clean
 
 #====================================================================================
 #                   hal
@@ -196,12 +196,12 @@ msp_clean:
 #++++++++++++++++++++++++++++++++++++++++++++++++++++
 hal:
 ifeq ($(CFG_GSTREAMER_SUPPORT),y)
-	$(AT)make -C $(HI_HAL_DIR) all
+	$(AT)+$(MAKE) -C $(HI_HAL_DIR) all
 endif
 
 hal_clean:
 ifeq ($(CFG_GSTREAMER_SUPPORT),y)
-	$(AT)make -C $(HI_HAL_DIR) clean
+	$(AT)+$(MAKE) -C $(HI_HAL_DIR) clean
 endif
 #====================================================================================
 #                   higo
@@ -209,10 +209,10 @@ endif
 .PHONY:  higo  higo_clean
 
 higo:
-	$(AT)make -C $(MSP_DIR)/api/higo all
+	$(AT)+$(MAKE) -C $(MSP_DIR)/api/higo all
 
 higo_clean:
-	$(AT)make -C $(MSP_DIR)/api/higo clean
+	$(AT)+$(MAKE) -C $(MSP_DIR)/api/higo clean
 
 #====================================================================================
 #                   jpeg
@@ -221,11 +221,11 @@ higo_clean:
 
 jpeg:
 ifneq ($(CFG_HI_LOADER_APPLOADER),y)
-	$(AT)make -C $(MSP_DIR)/api/jpeg all
+	$(AT)+$(MAKE) -C $(MSP_DIR)/api/jpeg all
 endif
 
 jpeg_clean:
-	$(AT)make -C $(MSP_DIR)/api/jpeg clean
+	$(AT)+$(MAKE) -C $(MSP_DIR)/api/jpeg clean
 
 #====================================================================================
 #                   png
@@ -234,11 +234,11 @@ jpeg_clean:
 
 png:
 ifneq ($(CFG_HI_LOADER_APPLOADER),y)
-	$(AT)make -C $(MSP_DIR)/api/png all
+	$(AT)+$(MAKE) -C $(MSP_DIR)/api/png all
 endif
 
 png_clean:
-	$(AT)make -C $(MSP_DIR)/api/png clean
+	$(AT)+$(MAKE) -C $(MSP_DIR)/api/png clean
 
 #====================================================================================
 #                   omx
@@ -247,11 +247,11 @@ png_clean:
 
 omx:
 ifneq ($(CFG_HI_LOADER_APPLOADER),y)
-	$(AT)make -C $(MSP_DIR)/api/omx all
+	$(AT)+$(MAKE) -C $(MSP_DIR)/api/omx all
 endif
 
 omx_clean:
-	$(AT)make -C $(MSP_DIR)/api/omx clean
+	$(AT)+$(MAKE) -C $(MSP_DIR)/api/omx clean
 
 #====================================================================================
 #                   gpu
@@ -260,11 +260,11 @@ omx_clean:
 
 gpu:
 ifneq ($(CFG_HI_LOADER_APPLOADER),y)
-	$(AT)make -C $(MSP_DIR)/api/gpu all
+	$(AT)+$(MAKE) -C $(MSP_DIR)/api/gpu all
 endif
 
 gpu_clean:
-	$(AT)make -C $(MSP_DIR)/api/gpu clean
+	$(AT)+$(MAKE) -C $(MSP_DIR)/api/gpu clean
 
 #====================================================================================
 #                   component
@@ -272,10 +272,10 @@ gpu_clean:
 .PHONY:  component  component_clean
 
 component:
-	$(AT)make -C $(COMPONENT_DIR) all
+	$(AT)+$(MAKE) -C $(COMPONENT_DIR) all
 
 component_clean:
-	$(AT)make -C $(COMPONENT_DIR) clean
+	$(AT)+$(MAKE) -C $(COMPONENT_DIR) clean
 
 #====================================================================================
 #                   tee
@@ -284,11 +284,11 @@ component_clean:
 
 tee:
 ifeq ($(CFG_HI_TEE_SUPPORT),y)
-	$(AT)[ ! -d $(HI_TEE_OS_DIR) ] || make -C $(HI_TEE_OS_DIR) all
+	$(AT)[ ! -d $(HI_TEE_OS_DIR) ] || +$(MAKE) -C $(HI_TEE_OS_DIR) all
 endif
 
 tee_clean:
-	$(AT)[ ! -d $(HI_TEE_OS_DIR) ] || make -C $(HI_TEE_OS_DIR) clean
+	$(AT)[ ! -d $(HI_TEE_OS_DIR) ] || +$(MAKE) -C $(HI_TEE_OS_DIR) clean
 
 #====================================================================================
 #                   sample
@@ -296,10 +296,11 @@ tee_clean:
 .PHONY:  sample  sample_clean
 
 sample:
-	$(AT)make -C $(SAMPLE_DIR) all
+	@echo "SAMPLE_DIR = $(SAMPLE_DIR)"
+	$(AT)+$(MAKE) -C $(SAMPLE_DIR) all
 
 sample_clean:
-	$(AT)make -C $(SAMPLE_DIR) clean
+	$(AT)+$(MAKE) -C $(SAMPLE_DIR) clean
 
 #====================================================================================
 #                   rootbox
@@ -310,20 +311,20 @@ include rootbox.mak
 
 rootbox: linux tee tools rootfs common msp higo jpeg png gpu omx hal component
 ifeq ($(CFG_HI_DIRECTFB_SUPPORT),y)
-	$(AT)make -C $(COMPONENT_DIR)/directfb all
+	$(AT)+$(MAKE) -C $(COMPONENT_DIR)/directfb all
 endif
 
 ifeq ($(CFG_HI_QT_SUPPORT),y)
-	$(AT)make -C $(COMPONENT_DIR)/qt all
+	$(AT)+$(MAKE) -C $(COMPONENT_DIR)/qt all
 endif
 
-	$(AT)make rootbox_compose
+	$(AT)+$(MAKE) rootbox_compose
 	$(AT)echo "rootbox is ready"
 
 rootbox_clean:
 	$(AT)rm -rf $(HI_ROOTBOX_DIR)
 ifeq ($(CFG_HI_QT_SUPPORT),y)
-	$(AT)make -C $(COMPONENT_DIR)/qt clean
+	$(AT)+$(MAKE) -C $(COMPONENT_DIR)/qt clean
 endif
 
 #====================================================================================
@@ -450,7 +451,7 @@ KCONFIG_CFG := scripts/kconfig/mainKconfig
 #++++++++++++++++++++++++++++++++++++++++++++++++++++
 $(KCONFIG_EXE):
 	$(AT)mkdir -p $(KCONFIG_OUT_DIR)
-	$(AT)make -C $(KCONFIG_SRC_DIR) O=$(KCONFIG_OUT_DIR)
+	$(AT)+$(MAKE) -C $(KCONFIG_SRC_DIR) O=$(KCONFIG_OUT_DIR)
 
 #++++++++++++++++++++++++++++++++++++++++++++++++++++
 menuconfig: $(KCONFIG_EXE)
@@ -461,11 +462,11 @@ menuconfig: $(KCONFIG_EXE)
 #     build apploader.bin quickly just for the second time
 #====================================================================================
 loader_rebuild:
-	$(AT)make -C $(COMPONENT_DIR) loader_clean
-	$(AT)make -C $(COMPONENT_DIR) loader
+	$(AT)+$(MAKE) -C $(COMPONENT_DIR) loader_clean
+	$(AT)+$(MAKE) -C $(COMPONENT_DIR) loader
 ifeq ($(CFG_HI_ADVCA_TYPE), CONAX)
-	$(AT)make rootbox_compose
-	$(AT)make $(IMAGES)
+	$(AT)+$(MAKE) rootbox_compose
+	$(AT)+$(MAKE) $(IMAGES)
 	$(AT)cp -f  $(LINUX_DIR)/arch/$(CFG_HI_CPU_ARCH)/boot/uImage $(HI_IMAGE_DIR)/hi_kernel.bin
 	$(AT)test -e $(HI_IMAGE_DIR)/hi_kernel.bin && test -e $(HI_IMAGE_DIR)/rootfs.squashfs \
 		&& $(MKBOOTIMG) --kernel $(HI_IMAGE_DIR)/hi_kernel.bin --ramdisk $(HI_IMAGE_DIR)/rootfs.squashfs \
@@ -481,7 +482,7 @@ ifeq ($(CFG_HI_SPI_SUPPORT)_$(CFG_HI_EMMC_SUPPORT),y_y)
 endif
 	$(AT)rm -rf $(HI_IMAGE_DIR)/hi_kernel.bin $(HI_IMAGE_DIR)/apploader.bin $(HI_IMAGE_DIR)/rootfs.squashfs
 else
-	$(AT)make -C $(KERNEL_DIR) fs_buildin
+	$(AT)+$(MAKE) -C $(KERNEL_DIR) fs_buildin
 endif
 #====================================================================================
 

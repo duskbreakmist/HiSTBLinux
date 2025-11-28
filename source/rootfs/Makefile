@@ -155,10 +155,10 @@ check:
 ################################################################################
 %.build: check
 	@echo -e $(PURPLE)Build $(patsubst %.build,%,$@) ...$(NORMAL)
-	make -C $(patsubst %.build,%,$@) $(MKFLAGS)
+	$(MAKE) -C $(patsubst %.build,%,$@) $(MKFLAGS)
 
 %.clean:
-	make -C $(patsubst %.clean,%,$@) $(MKFLAGS) clean
+	$(MAKE) -C $(patsubst %.clean,%,$@) $(MKFLAGS) clean
 
 PHONYS += clean
 clean: $(patsubst %,%.clean,$(TOOLS-y))

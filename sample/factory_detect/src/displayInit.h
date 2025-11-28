@@ -14,7 +14,8 @@ HI_S32 Display_Init()
 {
     HI_SYS_Init();
 
-    HIADP_Disp_Init(HI_UNF_ENC_FMT_720P_50);
+    // HIADP_Disp_Init(HI_UNF_ENC_FMT_720P_50);
+    HIADP_Disp_Init(HI_UNF_ENC_FMT_1080P_60);
     return 0;
 }
 HI_S32 Display_DeInit()

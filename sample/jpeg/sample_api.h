@@ -352,7 +352,8 @@ Date                Author                Modification
         {
             HI_SYS_Init();
             HIADP_MCE_Exit();
-            HIADP_Disp_Init(HI_UNF_ENC_FMT_720P_50);
+                // HIADP_Disp_Init(HI_UNF_ENC_FMT_720P_50);
+            HIADP_Disp_Init(HI_UNF_ENC_FMT_1080P_60);
             return HI_SUCCESS;
         }
 

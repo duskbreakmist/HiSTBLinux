@@ -4,4 +4,5 @@ echo "source ./env.sh并开始编译"
 # mkdir -p ./mylogs
 source ./env.sh 
 FORCE_UNSAFE_CONFIGURE=1 make -j 8 KCFLAGS="-Wno-error" build 2>&1 | tee ./mylogs/build-$(date +%Y%m%d-%H%M).log ; echo -e "\a"
+chmod 777 ./mylogs
 echo "编译全部(rootfs+kernel+fastboot+sample)结束"

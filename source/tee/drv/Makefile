@@ -224,14 +224,13 @@ $(LIBS): $(objects)
 prepare:
 	echo "prepare done!"
 $(objects): | prepare
-	make -C $@ all
+	$(MAKE) -C $@ all
 
 $(objects_clean):
-	make -C $(patsubst %_clean,%,$@) clean
+	$(MAKE) -C $(patsubst %_clean,%,$@) clean
 
 $(objects_install):
-	make -C $(patsubst %_clean,%,$@) install
+	$(MAKE) -C $(patsubst %_clean,%,$@) install
 
 $(objects_uninstall):
-	make -C $(patsubst %_clean,%,$@) uninstall
-
+	$(MAKE) -C $(patsubst %_clean,%,$@) uninstall

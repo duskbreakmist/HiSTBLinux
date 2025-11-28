@@ -33,7 +33,8 @@ HI_S32 Display_Init()
 {
     HI_SYS_Init();
     HIADP_MCE_Exit();
-    HIADP_Disp_Init(HI_UNF_ENC_FMT_720P_50);
+    // HIADP_Disp_Init(HI_UNF_ENC_FMT_720P_50);
+    HIADP_Disp_Init(HI_UNF_ENC_FMT_1080P_60);
     return 0;
 }
 HI_S32 Display_DeInit()
@@ -550,4 +551,3 @@ HI_S32 HI_TDE_ShowSurface( TDE2_SURFACE_S *pstSurface, HI_U32 u32PosX, HI_U32 u3
 }
 #endif  /* __cplusplus */
 #endif  /* __cplusplus */
-

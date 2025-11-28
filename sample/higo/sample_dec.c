@@ -42,9 +42,10 @@ Date                       Author                   Modification
 #define FLIP_COUNT               2
 
 
-#define DISPLAY_WIDTH            1280
-#define DISPLAY_HEIGHT           720
-
+// #define DISPLAY_WIDTH            1280
+// #define DISPLAY_HEIGHT           720
+#define DISPLAY_WIDTH 1920
+#define DISPLAY_HEIGHT 1080
 
 /*************************** Structure Definition ****************************/
 

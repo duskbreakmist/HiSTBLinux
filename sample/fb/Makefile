@@ -15,7 +15,7 @@ ifeq ($(CFG_HI_FB_DECOMPRESS_SUPPORT),y)
 CFLAGS := -DHI_FB_DECOMPRESS_SUPPORT
 endif
 
-SAMPLE_IMAGES := sample_fb sample_decmp_fb
+SAMPLE_IMAGES := sample_fb sample_decmp_fb sample_fb1080p set_1080p
 
 COMMON_OBJS := $(COMMON_SRCS:%.c=%.o)
 

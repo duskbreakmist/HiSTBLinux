@@ -215,16 +215,16 @@ all: $(objects)
 clean: $(objects_clean)
 
 $(objects): sample_common
-	$(AT)make -C $@
+	$(AT)$(MAKE) -C $@
 
 $(objects_clean): sample_common_clean
-	$(AT)make -C $(patsubst %_clean, %, $@) clean
+	$(AT)$(MAKE) -C $(patsubst %_clean, %, $@) clean
 
 sample_common: prepare
-	$(AT)make -C common
+	$(AT)$(MAKE) -C common
 
 sample_common_clean:
-	$(AT)make -C common clean
+	$(AT)$(MAKE) -C common clean
 
 prepare:
 ifeq ($(HI_USER_SPACE_LIB),y)

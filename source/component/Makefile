@@ -138,31 +138,31 @@ clean: $(depends_clean)
 .PHONY: $(depends) $(objects_clean)
 
 $(objects):
-	$(AT)make -C $@ all
+	$(AT)$(MAKE) -C $@ all
 
 $(objects_clean):
-	$(AT)make -C $(patsubst %_clean,%,$@) clean
+	$(AT)$(MAKE) -C $(patsubst %_clean,%,$@) clean
 
 loader: freetype harfbuzz $(if $(findstring $(CFG_HI_CURL_SUPPORT),y),curl,)
-	$(AT)make -C loader all
+	$(AT)$(MAKE) -C loader all
 
 loader_clean:
-	$(AT)make -C loader clean
+	$(AT)$(MAKE) -C loader clean
 
 hiplayer:
-	$(AT)test ! -d hiplayer || make -C hiplayer all
+	$(AT)test ! -d hiplayer || $(MAKE) -C hiplayer all
 
 hiplayer_clean:
-	$(AT)test ! -d hiplayer || make -C hiplayer clean
+	$(AT)test ! -d hiplayer || $(MAKE) -C hiplayer clean
 
 gstreamer:
-	$(AT)test ! -d gstreamer/integration || make -C gstreamer/integration all
+	$(AT)test ! -d gstreamer/integration || $(MAKE) -C gstreamer/integration all
 
 gstreamer_clean:
-	$(AT)test ! -d gstreamer/integration || make -C gstreamer/integration clean
+	$(AT)test ! -d gstreamer/integration || $(MAKE) -C gstreamer/integration clean
 
 karaoke: alsa
-	$(AT)test -d karaoke && make -C karaoke all
+	$(AT)test -d karaoke && $(MAKE) -C karaoke all
 
 karaoke_clean:
-	$(AT)test -d karaoke && make -C karaoke clean
+	$(AT)test -d karaoke && $(MAKE) -C karaoke clean

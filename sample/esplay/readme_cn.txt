@@ -6,3 +6,10 @@
           atype：音频协议类型，可选aac/mp3/dts/dra/mlp/pcm/ddp
 命令参考：sample_esplay ./h264.es h264 ./mp3.es mp3    
 注意事项：如果只播音频，vfile和vtype需要置为null，如果只播视频，afile和atype需要置为null
+
+2025-11-12 23:36:21
+示例：
+    ./sample_esplay /mnt/sdcard/my_sh/output.h264 h264 /mnt/sdcard/my_sh/output.aa
+c  aac -fps 25 1080p_60
+windows将mp4转裸流：
+    ffmpeg -i output.mp4 -c:v copy -bsf:v h264_mp4toannexb output.h264 -c:a copy output.aac

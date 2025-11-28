@@ -177,7 +177,7 @@ ifeq ($(CFG_HI_SPI_SUPPORT)_$(CFG_HI_EMMC_SUPPORT),y_y)
 endif
 
 $(TEE_OS_NAME):
-	$(AT)make -C $(TEE_OS_NAME) all HI_SDK_DIR=$(SDK_DIR) O=$(OUTPUT_DIR)
+	$(AT)$(MAKE) -C $(TEE_OS_NAME) all HI_SDK_DIR=$(SDK_DIR) O=$(OUTPUT_DIR)
 ifeq ($(CFG_HI_TEE_RESERVED_MEM),y)
 ifeq ($(CFG_HI_CPU_ARCH),arm64)
 	$(AT)test -d $(ATF_OUT_DIR) || mkdir -p $(ATF_OUT_DIR)
@@ -205,10 +205,10 @@ endif
 
 teec:
 ifeq ($(HI_USER_SPACE_LIB),y)
-	$(AT)make -C libteec all CROSS_COMPILE=$(CFG_HI_ARM_TOOLCHAINS_NAME)-
+	$(AT)$(MAKE) -C libteec all CROSS_COMPILE=$(CFG_HI_ARM_TOOLCHAINS_NAME)-
 endif
 ifeq ($(HI_USER_SPACE_LIB64),y)
-	$(AT)make -C libteec all CROSS_COMPILE=$(CFG_HI_AARCH64_TOOLCHAINS_NAME)-
+	$(AT)$(MAKE) -C libteec all CROSS_COMPILE=$(CFG_HI_AARCH64_TOOLCHAINS_NAME)-
 endif
 ifeq ($(HI_USER_SPACE_LIB),y)
 	$(AT)test -d $(HI_ROOTFS_DIR)/usr/sbin/ || mkdir -p $(HI_ROOTFS_DIR)/usr/sbin

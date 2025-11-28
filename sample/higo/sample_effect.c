@@ -176,8 +176,12 @@ HI_S32 file_dec(HI_CHAR *pszFileName, HI_HANDLE *pSurface)
         return ret;
     }
 
-    ImgAttr.Width  = 1280 ;
-    ImgAttr.Height = 720;
+    // ImgAttr.Width  = 1280 ;
+    // ImgAttr.Height = 720;
+
+    ImgAttr.Width  = 1920 ;
+    ImgAttr.Height = 1080;
+
     ImgAttr.Format = HIGO_PF_8888;
     ret  = HI_GO_DecImgData(hDecoder, 0, &ImgAttr, pSurface);
     ret |= HI_GO_DestroyDecoder(hDecoder);
