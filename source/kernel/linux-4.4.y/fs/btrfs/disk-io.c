@@ -2808,6 +2808,7 @@ int open_ctree(struct super_block *sb,
 	 */
 	btrfs_set_super_incompat_flags(disk_super, features);
 
+	//2025-12-11 21:57:21哦这里啊
 	features = btrfs_super_compat_ro_flags(disk_super) &
 		~BTRFS_FEATURE_COMPAT_RO_SUPP;
 	if (!(sb->s_flags & MS_RDONLY) && features) {

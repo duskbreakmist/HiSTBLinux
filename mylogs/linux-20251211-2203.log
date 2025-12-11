@@ -1,0 +1,3069 @@
+make[1]: Entering directory '/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel'
+[DEBUG] kernel MAKE = make
+[DEBUG] MAKELEVEL=1
+[DEBUG] JOBSERVER = 
+[DEBUG] kernel MAKEFLAGS = w
+make[2]: Entering directory '/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y'
+make[3]: Entering directory '/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/out/hi3798mv100/hi3798mv100_out/obj/source/kernel/linux-4.4.y'
+  GEN     ./Makefile
+#
+# configuration written to .config
+#
+make[3]: Leaving directory '/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/out/hi3798mv100/hi3798mv100_out/obj/source/kernel/linux-4.4.y'
+make[2]: Leaving directory '/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y'
+make pcie_config
+make[2]: Entering directory '/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+[DEBUG] kernel MAKE = make
+[DEBUG] MAKELEVEL=2
+[DEBUG] JOBSERVER = 
+[DEBUG] kernel MAKEFLAGS = w
+make[2]: Nothing to be done for 'pcie_config'.
+make[2]: Leaving directory '/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel'
+make[2]: Entering directory '/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y'
+make[3]: Entering directory '/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/out/hi3798mv100/hi3798mv100_out/obj/source/kernel/linux-4.4.y'
+  GEN     ./Makefile
+scripts/kconfig/conf  --oldconfig Kconfig
+#
+# configuration written to .config
+#
+make[3]: Leaving directory '/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/out/hi3798mv100/hi3798mv100_out/obj/source/kernel/linux-4.4.y'
+make[2]: Leaving directory '/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y'
+make -C /home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y ARCH=arm \
+	CROSS_COMPILE=arm-histbv310-linux- \
+	O=/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/out/hi3798mv100/hi3798mv100_out/obj/source/kernel/linux-4.4.y \
+	CONFIG_MSP=y \
+	HI_CONFIG_WIFI=y \
+	HI_CONFIG_BLUETOOTH= \
+	CONFIG_ADVCA= \
+	 \
+	CFLAGS_KERNEL= AFLAGS_KERNEL= uImage modules
+make[2]: Entering directory '/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y'
+make[3]: Entering directory '/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/out/hi3798mv100/hi3798mv100_out/obj/source/kernel/linux-4.4.y'
+  GEN     ./Makefile
+scripts/kconfig/conf  --silentoldconfig Kconfig
+  CHK     include/config/kernel.release
+  GEN     ./Makefile
+  CHK     include/generated/uapi/linux/version.h
+  CHK     include/generated/utsrelease.h
+  Using /home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y as source for kernel
+  CC      scripts/mod/empty.o
+  CC      scripts/mod/devicetable-offsets.s
+  MKELF   scripts/mod/elfconfig.h
+  HOSTCC  scripts/mod/modpost.o
+  HOSTCC  scripts/mod/sumversion.o
+make[4]: 'include/generated/mach-types.h' is up to date.
+grep: include/linux/mali/mali_utgard_uk_types.h: No such file or directory
+  CC      kernel/bounds.s
+  CHK     include/generated/timeconst.h
+  CHK     include/generated/bounds.h
+  CC      arch/arm/kernel/asm-offsets.s
+  CHK     include/generated/asm-offsets.h
+  GEN     scripts/mod/devicetable-offsets.h
+  CALL    /home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/scripts/checksyscalls.sh
+  HOSTCC  scripts/mod/file2alias.o
+  HOSTLD  scripts/mod/modpost
+  CC      init/main.o
+  CHK     include/generated/compile.h
+  CC      arch/arm/vfp/vfpmodule.o
+  CC      arch/arm/nwfpe/fpa11.o
+  CC      arch/arm/nwfpe/fpa11_cpdo.o
+  CC      arch/arm/vfp/vfpsingle.o
+  CC      init/do_mounts.o
+  CC      arch/arm/nwfpe/fpa11_cpdt.o
+  CC      arch/arm/nwfpe/fpa11_cprt.o
+  CC      arch/arm/vfp/vfpdouble.o
+  CC      arch/arm/nwfpe/fpmodule.o
+  CC      init/do_mounts_rd.o
+  CC      arch/arm/common/firmware.o
+  CC      arch/arm/nwfpe/fpopcode.o
+  CC      arch/arm/nwfpe/softfloat.o
+  CC      arch/arm/nwfpe/single_cpdo.o
+  CC      arch/arm/vdso/vgettimeofday.o
+  CC      arch/arm/net/bpf_jit_32.o
+  CC      arch/arm/mm/dma-mapping.o
+  CC      arch/arm/nwfpe/double_cpdo.o
+  CC      init/do_mounts_initrd.o
+  CC      arch/arm/kernel/elf.o
+  CC      arch/arm/mm/extable.o
+  CC      init/noinitramfs.o
+  CC      arch/arm/mm/fault.o
+  VDSO    arch/arm/vdso/vdso.so.raw
+  LD      arch/arm/common/built-in.o
+  CC      init/initramfs.o
+  MUNGE   arch/arm/vdso/vdso.so.dbg
+  OBJCOPY arch/arm/vdso/vdso.so
+  AS      arch/arm/vdso/vdso.o
+  CC      arch/arm/mach-hi3798mx/core.o
+  LD      arch/arm/vdso/built-in.o
+  CC      init/calibrate.o
+  CC      arch/arm/kernel/irq.o
+  CC      arch/arm/mm/init.o
+  LD      arch/arm/vfp/vfp.o
+  LD      arch/arm/vfp/built-in.o
+  CC      arch/arm/nwfpe/extended_cpdo.o
+  CC      arch/arm/mach-hi3798mx/pmu.o
+  CC      init/init_task.o
+  CC      arch/arm/kernel/opcodes.o
+  CC      arch/arm/mm/iomap.o
+  CC      arch/arm/mach-hi3798mx/platsmp.o
+  CC      arch/arm/kernel/process.o
+  CC      arch/arm/mm/fault-armv.o
+  CC      arch/arm/kernel/ptrace.o
+  CC      init/version.o
+  CC      arch/arm/mm/flush.o
+  CC      ipc/util.o
+  CC      kernel/fork.o
+  CC      ipc/msgutil.o
+  CC      mm/filemap.o
+  CC      ipc/msg.o
+  CC      kernel/exec_domain.o
+  CC      arch/arm/mach-hi3798mx/hotplug.o
+  LD      init/mounts.o
+  CC      mm/mempool.o
+  LD      init/built-in.o
+  CC      mm/oom_kill.o
+  LD      arch/arm/mach-hi3798mx/built-in.o
+  CC      security/integrity/iint.o
+  CC      mm/maccess.o
+  CC      ipc/sem.o
+  CC      security/integrity/integrity_audit.o
+  CC      mm/page_alloc.o
+  CC      arch/arm/mm/idmap.o
+  LD      arch/arm/nwfpe/nwfpe.o
+  CC      fs/open.o
+  LD      arch/arm/nwfpe/built-in.o
+  CC      arch/arm/kernel/reboot.o
+  CC      fs/read_write.o
+  CC      security/keys/gc.o
+  CC      arch/arm/mm/ioremap.o
+  CC      ipc/shm.o
+  CC      security/keys/key.o
+  CC      security/keys/keyring.o
+  LD      security/integrity/integrity.o
+  LD      security/integrity/built-in.o
+  CC      security/keys/keyctl.o
+  CC      security/commoncap.o
+  CC      arch/arm/kernel/return_address.o
+  CC      kernel/panic.o
+  CC      arch/arm/mm/mmap.o
+  CC      arch/arm/kernel/setup.o
+  CC      security/keys/permission.o
+  CC      mm/page-writeback.o
+  CC      ipc/syscall.o
+  CC      fs/file_table.o
+  LD      arch/arm/net/built-in.o
+  CC      crypto/api.o
+  CC      security/min_addr.o
+  CC      fs/super.o
+  CC      security/security.o
+  CC      kernel/cpu.o
+  CC      arch/arm/mm/pgd.o
+  CC      crypto/cipher.o
+  CC      security/lsm_audit.o
+  CC      security/keys/process_keys.o
+  CC      block/bio.o
+  CC      arch/arm/kernel/signal.o
+  CC      block/elevator.o
+  CC      ipc/ipc_sysctl.o
+  CC      ipc/mqueue.o
+  CC      arch/arm/mm/mmu.o
+  CC      block/blk-core.o
+  CC      fs/char_dev.o
+  CC      crypto/compress.o
+  CC      security/keys/request_key.o
+  CC      kernel/exit.o
+  CC      kernel/softirq.o
+  CC      arch/arm/kernel/stacktrace.o
+  CC      kernel/resource.o
+  CC      drivers/amba/bus.o
+  CC      security/keys/request_key_auth.o
+  CC      crypto/memneq.o
+  CC      arch/arm/kernel/sys_arm.o
+  CC      mm/readahead.o
+  CC      fs/stat.o
+  CC      arch/arm/mm/pageattr.o
+  CC      arch/arm/kernel/time.o
+  LD      drivers/amba/built-in.o
+  CC      arch/arm/kernel/traps.o
+  CC      arch/arm/kernel/atags_parse.o
+  CC      security/keys/user_defined.o
+  CC      ipc/namespace.o
+  CC      crypto/crypto_wq.o
+  CC      arch/arm/mm/proc-syms.o
+  CC      fs/exec.o
+  CC      arch/arm/kernel/cpuidle.o
+  CC      security/device_cgroup.o
+  CC      drivers/base/component.o
+  CC      sound/sound_core.o
+  CC      mm/swap.o
+  CC      drivers/block/brd.o
+  CC      security/keys/proc.o
+  CC      drivers/bluetooth/btusb.o
+  CC      sound/sound_firmware.o
+  CC      ipc/mq_sysctl.o
+  CC      drivers/bluetooth/btintel.o
+  CC      arch/arm/mm/alignment.o
+  CC      crypto/algapi.o
+  CC      drivers/base/core.o
+  LD      ipc/built-in.o
+  CC      kernel/sysctl.o
+  CC      arch/arm/kernel/armksyms.o
+  CC      fs/pipe.o
+  CC      fs/namei.o
+  CC      drivers/block/loop.o
+  CC      security/keys/sysctl.o
+  CC      arch/arm/mm/highmem.o
+  LD      security/keys/built-in.o
+  LD      security/built-in.o
+  CC      arch/arm/kernel/module.o
+  CC      sound/core/sound.o
+  CC      fs/fcntl.o
+  CC      kernel/sysctl_binary.o
+  CC      block/blk-tag.o
+  CC      fs/ioctl.o
+  CC      mm/truncate.o
+  CC      crypto/scatterwalk.o
+  CC      sound/core/init.o
+  CC      arch/arm/mm/copypage-v6.o
+  CC      arch/arm/kernel/module-plts.o
+  CC      arch/arm/mm/context.o
+  CC      fs/readdir.o
+  CC      block/blk-sysfs.o
+  CC      drivers/base/bus.o
+  LD      drivers/block/built-in.o
+  CC      crypto/proc.o
+  CC      arch/arm/kernel/bios32.o
+  LD      drivers/bluetooth/built-in.o
+  CC      kernel/capability.o
+  CC      fs/select.o
+  CC      arch/arm/kernel/isa.o
+  CC      mm/vmscan.o
+  CC      block/blk-flush.o
+  CC      crypto/aead.o
+  CC      drivers/base/dd.o
+  LD      arch/arm/mm/built-in.o
+  CC      drivers/char/mem.o
+  CC      drivers/base/syscore.o
+  CC      sound/core/memory.o
+  CC      drivers/char/random.o
+  CC      sound/core/control.o
+  CC      drivers/char/misc.o
+  CC      fs/dcache.o
+  CC      kernel/ptrace.o
+  CC      block/blk-settings.o
+  CC      mm/shmem.o
+  CC      arch/arm/kernel/suspend.o
+  CC      arch/arm/oprofile/../../../drivers/oprofile/oprof.o
+  CC      drivers/clk/clk-devres.o
+  CC      drivers/base/driver.o
+  CC      crypto/ablkcipher.o
+  CC      drivers/clk/clkdev.o
+  CC      block/blk-ioc.o
+  CC      kernel/user.o
+  CC      arch/arm/kernel/smp.o
+  CC      drivers/char/apm-emulation.o
+  CC      drivers/base/class.o
+  CC      arch/arm/oprofile/../../../drivers/oprofile/cpu_buffer.o
+  CC      net/socket.o
+  CC      arch/arm/kernel/smp_tlb.o
+  CC      sound/core/misc.o
+  CC      kernel/signal.o
+  CC      drivers/clk/clk.o
+  CC      sound/core/device.o
+  CC      block/blk-map.o
+  CC      drivers/base/platform.o
+  CC      kernel/sys.o
+  CC      arch/arm/oprofile/../../../drivers/oprofile/buffer_sync.o
+  CC      crypto/blkcipher.o
+  CC      kernel/kmod.o
+  CC      kernel/workqueue.o
+  CC      arch/arm/kernel/arch_timer.o
+  LD      drivers/char/built-in.o
+/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/block/blk-map.c: In function 'blk_rq_map_user_iov':
+/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/block/blk-map.c:93:21: warning: passing argument 1 of 'iter_is_iovec' discards 'const' qualifier from pointer target type
+  if (!iter_is_iovec(iter))
+                     ^
+In file included from /home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/block/blk-map.c:8:0:
+/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/include/linux/uio.h:109:20: note: expected 'struct iov_iter *' but argument is of type 'const struct iov_iter *'
+ static inline bool iter_is_iovec(struct iov_iter *i)
+                    ^
+  CC      sound/core/info.o
+  CC      arch/arm/kernel/ftrace.o
+  CC      fs/inode.o
+  CC      arch/arm/lib/xor-neon.o
+  CC      block/blk-exec.o
+  CC      arch/arm/oprofile/../../../drivers/oprofile/event_buffer.o
+  CC      crypto/skcipher.o
+  CC      arch/arm/kernel/insn.o
+  CC      block/blk-merge.o
+  CC      arch/arm/kernel/jump_label.o
+  CC      arch/arm/lib/delay.o
+  CC      drivers/base/cpu.o
+  CC      crypto/chainiv.o
+  CC      mm/util.o
+  CC      arch/arm/kernel/patch.o
+  CC      arch/arm/oprofile/../../../drivers/oprofile/oprofile_files.o
+  CC      sound/core/ctljack.o
+  LD      arch/arm/lib/built-in.o
+  AR      arch/arm/lib/lib.a
+  CC      net/802/p8022.o
+  CC      arch/arm/oprofile/../../../drivers/oprofile/oprofilefs.o
+  CC      lib/lockref.o
+  CC      drivers/base/firmware.o
+  CC      crypto/eseqiv.o
+  CC      sound/core/jack.o
+  CC      drivers/base/init.o
+  CC      fs/attr.o
+  CC      lib/bcd.o
+  CC      arch/arm/kernel/sys_oabi-compat.o
+  CC      crypto/ahash.o
+  CC      mm/mmzone.o
+  CC      lib/div64.o
+  CC      net/802/psnap.o
+  CC      kernel/pid.o
+  CC      arch/arm/oprofile/../../../drivers/oprofile/oprofile_stats.o
+  CC      block/blk-softirq.o
+  CC      drivers/base/map.o
+  CC      lib/sort.o
+  CC      sound/core/hwdep.o
+  CC      mm/vmstat.o
+  CC      drivers/clk/clk-divider.o
+  CC      lib/parser.o
+  CC      kernel/task_work.o
+  CC      lib/halfmd4.o
+  CC      fs/bad_inode.o
+  CC      net/8021q/vlan_core.o
+  CC      arch/arm/oprofile/../../../drivers/oprofile/timer_int.o
+  CC      drivers/base/devres.o
+  CC      arch/arm/kernel/unwind.o
+  CC      lib/debug_locks.o
+  CC      drivers/clocksource/clksrc-probe.o
+  CC      block/blk-timeout.o
+  CC      crypto/shash.o
+  CC      fs/file.o
+  CC      crypto/pcompress.o
+  CC      net/802/stp.o
+  CC      arch/arm/oprofile/../../../drivers/oprofile/oprofile_perf.o
+  CC      arch/arm/kernel/devtree.o
+  CC      lib/random32.o
+  CC      drivers/clk/clk-fixed-factor.o
+  CC      sound/core/timer.o
+  CC      drivers/clocksource/mmio.o
+  CC      drivers/base/attribute_container.o
+  CC      kernel/extable.o
+  CC      drivers/clk/clk-fixed-rate.o
+  CC      lib/bust_spinlocks.o
+  CC      block/blk-iopoll.o
+  CC      net/8021q/vlan.o
+  CC      drivers/clocksource/arm_arch_timer.o
+  CC      mm/backing-dev.o
+  CC      mm/mm_init.o
+  CC      arch/arm/oprofile/common.o
+  CC      arch/arm/kernel/swp_emulate.o
+  LD      net/802/built-in.o
+  CC      net/bluetooth/af_bluetooth.o
+  CC      mm/mmu_context.o
+  CC      drivers/base/transport_class.o
+  CC      drivers/clk/clk-gate.o
+  CC      kernel/params.o
+  CC      lib/kasprintf.o
+  CC      fs/filesystems.o
+  CC      crypto/akcipher.o
+  CC      drivers/base/topology.o
+  CC      drivers/clk/clk-multiplier.o
+  CC      arch/arm/kernel/hw_breakpoint.o
+  LD      arch/arm/oprofile/oprofile.o
+  CC      block/blk-lib.o
+  CC      lib/bitmap.o
+  LD      arch/arm/oprofile/built-in.o
+  CC      lib/scatterlist.o
+  CC      lib/gcd.o
+  CC [M]  drivers/common/himedia/himedia_base.o
+  CC      drivers/clocksource/timer-sp804.o
+  CC      block/blk-mq.o
+  CC      drivers/clk/clk-mux.o
+  CC      fs/namespace.o
+  CC      drivers/base/container.o
+  CC      net/8021q/vlan_dev.o
+  CC      kernel/kthread.o
+  CC      crypto/algboss.o
+  CC      block/blk-mq-tag.o
+  CC      drivers/clocksource/dummy_timer.o
+  CC      sound/core/pcm.o
+  CC      drivers/clk/clk-composite.o
+  CC      drivers/base/property.o
+  CC      mm/percpu.o
+  CC      lib/lcm.o
+  CC [M]  drivers/common/himedia/himedia.o
+  CC      lib/list_sort.o
+  CC      net/bluetooth/hci_core.o
+  CC      arch/arm/kernel/perf_regs.o
+  LD      drivers/clocksource/built-in.o
+  CC      net/bridge/br.o
+  CC      lib/uuid.o
+  CC      drivers/connector/cn_queue.o
+  CC      drivers/clk/clk-fractional-divider.o
+  CC      lib/flex_array.o
+  CC [M]  drivers/common/mmz/drv_mmz_ext_k.o
+  CC      kernel/sys_ni.o
+  CC      crypto/testmgr.o
+  CC      net/8021q/vlan_netlink.o
+  CC      drivers/clk/clk-gpio.o
+  CC      arch/arm/kernel/perf_callchain.o
+  CC      kernel/nsproxy.o
+  CC      lib/iov_iter.o
+  CC      sound/core/pcm_native.o
+  CC      drivers/base/cacheinfo.o
+  CC      drivers/clk/clk-conf.o
+  CC      drivers/base/devtmpfs.o
+  CC      drivers/connector/connector.o
+  CC [M]  drivers/common/mmz/drv_mmz_intf.o
+  CC      crypto/cmac.o
+  CC      block/blk-mq-sysfs.o
+  CC      arch/arm/kernel/perf_event_xscale.o
+  CC      arch/arm/kernel/perf_event_v6.o
+  CC      net/8021q/vlanproc.o
+  CC      mm/slab_common.o
+  CC      kernel/notifier.o
+  LD      drivers/clk/built-in.o
+  CC      net/bridge/br_device.o
+  CC      fs/seq_file.o
+  CC      arch/arm/kernel/perf_event_v7.o
+  CC      block/blk-mq-cpu.o
+  CC      drivers/base/dma-contiguous.o
+  CC [M]  drivers/common/mmz/drv_tzsmmu.o
+  CC      kernel/ksysfs.o
+  CC      crypto/hmac.o
+  LD      drivers/connector/cn.o
+  LD      drivers/connector/built-in.o
+  CC      net/bluetooth/hci_conn.o
+  CC [M]  drivers/common/mmz/drv_mmz_userdev.o
+  CC      block/blk-mq-cpumap.o
+  CC      lib/clz_ctz.o
+  LD      net/8021q/8021q.o
+  LD      net/8021q/built-in.o
+  CC      lib/bsearch.o
+  CC      fs/xattr.o
+  CC      arch/arm/kernel/topology.o
+  CC      drivers/base/power/sysfs.o
+  CC      net/core/sock.o
+  CC      kernel/cred.o
+  CC      lib/find_bit.o
+  CC      drivers/base/regmap/regmap.o
+  CC      lib/llist.o
+  CC      drivers/base/regmap/regcache.o
+  CC      block/ioctl.o
+  CC      net/bridge/br_fdb.o
+  CC      crypto/crypto_null.o
+  CC      lib/memweight.o
+  CC      arch/arm/kernel/vdso.o
+  CC      drivers/base/power/generic_ops.o
+  CC      mm/compaction.o
+  CC      lib/kfifo.o
+  CC [M]  drivers/common/mmz/drv_media_mem.o
+  CC      crypto/md4.o
+  CC      kernel/reboot.o
+  CC      net/bluetooth/hci_event.o
+  CC      sound/core/pcm_lib.o
+  CC      drivers/base/dma-mapping.o
+  CC      arch/arm/kernel/io.o
+  CC      fs/libfs.o
+  CC      drivers/base/power/common.o
+  CC      block/genhd.o
+  CC      arch/arm/kernel/psci_smp.o
+  CC      lib/percpu-refcount.o
+  CC      crypto/md5.o
+  CC      kernel/async.o
+  CC      drivers/base/power/qos.o
+  CC      kernel/range.o
+  LD      arch/arm/kernel/built-in.o
+  CC      sound/core/pcm_misc.o
+  CC      fs/fs-writeback.o
+  CC      lib/percpu_ida.o
+  CC      sound/core/pcm_memory.o
+  CC      net/bridge/br_forward.o
+  CC      crypto/sha1_generic.o
+  CC      kernel/smpboot.o
+  CC [M]  drivers/common/sys/drv_base_ext_k.o
+  CC [M]  drivers/common/sys/drv_sys_ext_k.o
+  CC      lib/rhashtable.o
+  CC      drivers/cpufreq/cpufreq.o
+  CC      mm/vmacache.o
+  CC      crypto/sha256_generic.o
+  CC      net/core/request_sock.o
+  CC      drivers/base/regmap/regcache-rbtree.o
+  CC      block/scsi_ioctl.o
+  CC      kernel/groups.o
+  CC      lib/reciprocal_div.o
+  CC      drivers/base/power/runtime.o
+  CC      mm/interval_tree.o
+  CC      net/bridge/br_if.o
+  CC      crypto/ecb.o
+  CC      lib/once.o
+  CC      sound/core/memalloc.o
+  CC [M]  drivers/common/dev/drv_dev_ext_k.o
+  CC      net/bluetooth/mgmt.o
+  CC      drivers/base/regmap/regcache-lzo.o
+  CC      mm/list_lru.o
+  CC      net/core/skbuff.o
+  CC      net/bluetooth/hci_sock.o
+  CC      sound/core/pcm_timer.o
+  CC      block/partition-generic.o
+  CC      kernel/bpf/core.o
+  CC      lib/string_helpers.o
+  CC [M]  drivers/common/stat/drv_stat_ext_k.o
+  CC      crypto/cbc.o
+  CC      drivers/base/regmap/regcache-flat.o
+  CC      drivers/base/power/wakeirq.o
+  CC      lib/hexdump.o
+  CC [M]  drivers/common/proc/drv_proc_ext_k.o
+  CC      sound/core/rawmidi.o
+  CC      net/bridge/br_input.o
+  CC      drivers/base/regmap/regmap-debugfs.o
+  CC      lib/kstrtox.o
+  CC      drivers/base/power/main.o
+  CC      mm/workingset.o
+  CC [M]  drivers/common/log/drv_log_ext_k.o
+  CC      crypto/des_generic.o
+  CC      block/ioprio.o
+  CC      drivers/cpufreq/freq_table.o
+  CC      lib/pci_iomap.o
+  CC      mm/debug.o
+  CC      drivers/cpufreq/cpufreq_stats.o
+  CC      drivers/base/regmap/regmap-i2c.o
+  CC      kernel/bpf/syscall.o
+  CC      net/dcb/dcbnl.o
+  CC      fs/pnode.o
+  CC      net/bridge/br_ioctl.o
+  CC      block/partitions/check.o
+  CC      crypto/blowfish_generic.o
+  LD      sound/core/snd.o
+  CC [M]  drivers/common/sys/drv_base_ext.o
+  LD      sound/core/snd-hwdep.o
+  LD      sound/core/snd-timer.o
+  CC      lib/iomap_copy.o
+  LD      sound/core/snd-pcm.o
+  LD      sound/core/snd-rawmidi.o
+  CC      drivers/cpufreq/cpufreq_performance.o
+  LD      sound/core/built-in.o
+  CC      mm/gup.o
+  CC      lib/devres.o
+  CC      drivers/base/regmap/regmap-spi.o
+  CC      fs/splice.o
+  CC      drivers/cpufreq/cpufreq_powersave.o
+  CC      drivers/base/power/wakeup.o
+  CC      block/partitions/cmdline.o
+  CC      drivers/cpufreq/cpufreq_userspace.o
+  CC      crypto/blowfish_common.o
+  CC [M]  drivers/common/sys/drv_sys_ext.o
+  LD      drivers/base/regmap/built-in.o
+  CC      net/bridge/br_stp.o
+  CC      net/dcb/dcbevent.o
+  CC      drivers/cpufreq/cpufreq_ondemand.o
+  CC      lib/hweight.o
+  CC      kernel/bpf/verifier.o
+  CC      net/bridge/br_stp_bpdu.o
+  CC      block/partitions/msdos.o
+  CC      crypto/aes_generic.o
+  CC      lib/assoc_array.o
+  CC [M]  drivers/common/sys/drv_reg_common.o
+  CC      net/core/datagram.o
+  CC      mm/highmem.o
+  CC [M]  drivers/common/stat/drv_stat_ext.o
+  CC      net/core/stream.o
+  LD      net/dcb/built-in.o
+  CC      net/core/scm.o
+  CC      drivers/base/power/opp/core.o
+  CC      drivers/cpufreq/cpufreq_conservative.o
+  CC      block/partitions/efi.o
+  CC      lib/bitrev.o
+  CC      fs/sync.o
+  CC      lib/rational.o
+  CC [M]  drivers/common/mem/drv_mutils.o
+  CC      lib/crc-ccitt.o
+  CC      drivers/base/dma-coherent.o
+  CC      mm/memory.o
+  CC      sound/soc/soc-core.o
+  CC      net/bridge/br_stp_if.o
+  CC      drivers/cpufreq/cpufreq_interactive.o
+  CC      kernel/bpf/inode.o
+  CC [M]  drivers/common/module/drv_module_ext.o
+  CC      lib/crc16.o
+  CC      net/bluetooth/hci_sysfs.o
+  CC      net/core/gen_stats.o
+  CC      drivers/base/power/opp/cpu.o
+  CC      crypto/arc4.o
+  CC      fs/utimes.o
+  CC      lib/crc-itu-t.o
+  CC      drivers/base/power/opp/debugfs.o
+  LD      block/partitions/built-in.o
+  CC      block/bounce.o
+  CC      kernel/events/core.o
+  CC      drivers/cpuidle/cpuidle.o
+  CC      lib/crc32.o
+  CC [M]  drivers/common/file/drv_file_ext.o
+  LD      drivers/base/power/opp/built-in.o
+  CC      drivers/base/power/clock_ops.o
+  CC      net/core/gen_estimator.o
+  CC      kernel/bpf/helpers.o
+  CC      crypto/deflate.o
+  CC      net/bluetooth/l2cap_core.o
+  CC      fs/stack.o
+  CC      net/bridge/br_stp_timer.o
+  CC      net/dccp/ccid.o
+  CC [M]  drivers/common/proc/drv_proc_ext.o
+  CC      kernel/bpf/hashtab.o
+  LD      drivers/base/power/built-in.o
+  CC      drivers/base/firmware_class.o
+  CC      fs/fs_struct.o
+  CC      drivers/cpufreq/cpufreq_governor.o
+  CC      crypto/zlib.o
+  CC      block/bsg.o
+  CC      lib/libcrc32c.o
+  CC      drivers/cpuidle/driver.o
+  CC      mm/mincore.o
+  CC      net/core/net_namespace.o
+  CC [M]  drivers/common/log/drv_log_ext.o
+  CC      lib/genalloc.o
+  CC      fs/statfs.o
+  CC      crypto/crc32c_generic.o
+  CC      drivers/cpuidle/governor.o
+  LD      drivers/cpufreq/built-in.o
+  CC      net/bridge/br_netlink.o
+  CC      net/core/secure_seq.o
+  CC      net/dccp/feat.o
+  CC      kernel/bpf/arraymap.o
+  CC      drivers/cpuidle/sysfs.o
+  CC      mm/mlock.o
+  CC      net/bridge/br_sysfs_if.o
+  CC [M]  drivers/common/memdev/drv_memdev.o
+  CC      block/blk-cgroup.o
+  CC      lib/lz4/lz4_compress.o
+  CC      drivers/base/module.o
+  CC      sound/soc/soc-dapm.o
+  CC      crypto/authenc.o
+  CC      fs/fs_pin.o
+  CC      net/core/flow_dissector.o
+  CC      lib/lz4/lz4_decompress.o
+  CC      drivers/cpuidle/governors/ladder.o
+  LD      drivers/base/built-in.o
+  LD      kernel/bpf/built-in.o
+  CC [M]  drivers/common/userproc/drv_userproc.o
+  CC      net/bridge/br_sysfs_br.o
+  CC      drivers/cpuidle/governors/menu.o
+  CC      fs/nsfs.o
+  LD      lib/lz4/built-in.o
+  CC      fs/buffer.o
+  CC      lib/lzo/lzo1x_compress.o
+  CC [M]  drivers/common/osal/drv_osal.o
+  CC      mm/mmap.o
+  CC      crypto/authencesn.o
+  CC      block/noop-iosched.o
+  CC      lib/raid6/algos.o
+  LD      drivers/cpuidle/governors/built-in.o
+  CC      drivers/cpuidle/dt_idle_states.o
+  CC      net/dccp/input.o
+  CC      lib/lzo/lzo1x_decompress_safe.o
+  CC      crypto/lzo.o
+  CC      net/dccp/minisocks.o
+  LD [M]  drivers/common/hi_media.o
+  LD [M]  drivers/common/hi_mmz.o
+  LD [M]  drivers/common/hi_common.o
+  LD      lib/lzo/lzo_compress.o
+  LD      lib/lzo/lzo_decompress.o
+  CC      block/deadline-iosched.o
+  LD      lib/lzo/built-in.o
+  CC      lib/raid6/recov.o
+  CC      drivers/cpuidle/cpuidle-arm.o
+  CC      kernel/events/ring_buffer.o
+  CC      net/core/sysctl_net_core.o
+  CC      net/bridge/br_nf_core.o
+  CC      kernel/irq/irqdesc.o
+  CC      net/bluetooth/l2cap_sock.o
+  CC      crypto/lz4.o
+  CC      sound/soc/soc-jack.o
+  LD      drivers/cpuidle/built-in.o
+  CC      kernel/events/callchain.o
+  CC      lib/raid6/tables.o
+  CC      drivers/devfreq/devfreq.o
+  CC      crypto/rng.o
+  CC      block/cfq-iosched.o
+  CC      net/dccp/options.o
+  CC      net/bluetooth/smp.o
+  CC      kernel/irq/handle.o
+  CC      kernel/irq/manage.o
+  CC      mm/mprotect.o
+  CC      net/bridge/br_multicast.o
+  CC      kernel/events/hw_breakpoint.o
+  CC      net/core/dev.o
+  CC      fs/block_dev.o
+  CC      net/bridge/br_mdb.o
+  CC      lib/raid6/int1.o
+  CC      sound/soc/soc-cache.o
+  CC      crypto/ansi_cprng.o
+  CC      drivers/devfreq/devfreq-event.o
+  CC      crypto/af_alg.o
+  CC      net/dccp/output.o
+  LD      kernel/events/built-in.o
+  CC      crypto/algif_hash.o
+  CC      sound/soc/soc-utils.o
+  CC      drivers/devfreq/governor_simpleondemand.o
+  CC      mm/mremap.o
+  CC      lib/raid6/int2.o
+  CC      crypto/xor.o
+  CC      kernel/irq/spurious.o
+  CC      kernel/irq/resend.o
+  CC      drivers/devfreq/governor_performance.o
+  CC      fs/direct-io.o
+  CC      net/core/ethtool.o
+  CC      drivers/devfreq/governor_powersave.o
+  CC [M]  crypto/seqiv.o
+  CC      kernel/irq/chip.o
+  CC      sound/soc/soc-pcm.o
+  CC      lib/raid6/int4.o
+  CC      net/dns_resolver/dns_key.o
+  CC      net/bridge/br_vlan.o
+  CC      net/dccp/proto.o
+  CC [M]  crypto/echainiv.o
+  CC      net/bridge/br_netfilter_hooks.o
+  CC      mm/msync.o
+  CC      drivers/devfreq/governor_userspace.o
+  CC      net/dns_resolver/dns_query.o
+  CC      lib/raid6/int8.o
+  CC      net/bluetooth/lib.o
+  CC      mm/rmap.o
+  CC [M]  crypto/gf128mul.o
+  CC      kernel/irq/dummychip.o
+  LD      drivers/devfreq/built-in.o
+  LD      net/dns_resolver/dns_resolver.o
+  CC      drivers/dma/dmaengine.o
+  LD      net/dns_resolver/built-in.o
+  CC      block/cmdline-parser.o
+  CC      net/core/dev_addr_lists.o
+  CC      drivers/dma/of-dma.o
+  CC      kernel/irq/devres.o
+  CC      lib/raid6/int16.o
+  CC [M]  crypto/ctr.o
+  CC      net/bluetooth/ecc.o
+  CC      net/bluetooth/hci_request.o
+  CC      net/dccp/timer.o
+  CC      kernel/irq/autoprobe.o
+  CC      mm/vmalloc.o
+  LD      block/built-in.o
+  CC      fs/mpage.o
+  CC      lib/raid6/int32.o
+  CC      drivers/dma-buf/dma-buf.o
+  CC      kernel/irq/irqdomain.o
+  LD      drivers/dma/built-in.o
+  CC      drivers/dma-buf/fence.o
+  CC      lib/raid6/neon.o
+  CC      net/ethernet/eth.o
+  CC [M]  crypto/gcm.o
+  LD      net/bridge/bridge.o
+  LD      net/bridge/br_netfilter.o
+  LD      net/bridge/built-in.o
+  CC      sound/soc/soc-io.o
+  CC      net/dccp/qpolicy.o
+  CC      mm/pagewalk.o
+  CC      sound/soc/soc-devres.o
+  CC      net/bluetooth/mgmt_util.o
+  CC      lib/raid6/neon1.o
+  CC      net/bluetooth/sco.o
+  CC      kernel/irq/proc.o
+  CC      drivers/extcon/extcon.o
+  CC      mm/pgtable-generic.o
+  CC      lib/raid6/neon2.o
+  CC      drivers/extcon/extcon-gpio.o
+  CC      sound/soc/soc-ops.o
+  CC      drivers/dma-buf/reservation.o
+  CC      fs/proc_namespace.o
+  CC      lib/raid6/neon4.o
+  LD      net/ethernet/built-in.o
+  CC      net/dccp/ccids/ccid2.o
+  CC      net/dccp/ackvec.o
+  CC      lib/xz/xz_dec_syms.o
+  CC      kernel/irq/pm.o
+  CC      net/core/dst.o
+  CC [M]  crypto/ccm.o
+  CC      net/dccp/ccids/ccid3.o
+  CC      mm/process_vm_access.o
+  CC      lib/raid6/neon8.o
+  CC [M]  crypto/drbg.o
+  CC      sound/usb/card.o
+  CC      lib/xz/xz_dec_stream.o
+  CC      drivers/extcon/extcon-usb-gpio.o
+  CC      drivers/dma-buf/seqno-fence.o
+  CC      fs/autofs4/init.o
+  LD      kernel/irq/built-in.o
+  LD      lib/raid6/raid6_pq.o
+  CC      lib/xz/xz_dec_lzma2.o
+  LD      lib/raid6/built-in.o
+  LD      drivers/extcon/built-in.o
+  CC      fs/autofs4/inode.o
+  CC      kernel/locking/mutex.o
+  CC      mm/init-mm.o
+  CC      mm/nobootmem.o
+  LD      drivers/dma-buf/built-in.o
+  CC      net/bluetooth/a2mp.o
+  CC      sound/usb/clock.o
+  CC      drivers/firmware/psci.o
+  CC      net/core/netevent.o
+  CC      fs/autofs4/root.o
+  CC      kernel/locking/semaphore.o
+  CC      net/dccp/ccids/lib/tfrc.o
+  CC      kernel/power/qos.o
+  CC [M]  crypto/jitterentropy.o
+  CC      drivers/gpio/devres.o
+  CC      lib/xz/xz_dec_bcj.o
+  CC [M]  crypto/jitterentropy-kcapi.o
+  CC      drivers/gpio/gpiolib.o
+  CC      mm/fadvise.o
+  CC      kernel/power/main.o
+  CC      net/core/neighbour.o
+  CC      sound/usb/endpoint.o
+  CC      net/ipv4/route.o
+  CC      net/core/rtnetlink.o
+  LD      drivers/firmware/built-in.o
+  CC      net/ipv4/inetpeer.o
+  CC      kernel/locking/rwsem.o
+  LD      sound/soc/snd-soc-core.o
+  LD      lib/xz/xz_dec.o
+  LD      lib/xz/built-in.o
+  CC      lib/zlib_deflate/deflate.o
+  CC      fs/autofs4/symlink.o
+  CC      net/dccp/ccids/lib/tfrc_equation.o
+  CC      mm/madvise.o
+  CC      kernel/locking/percpu-rwsem.o
+  CC [M]  crypto/ghash-generic.o
+  LD      sound/soc/built-in.o
+  CC      lib/zlib_deflate/deftree.o
+  CC      net/bluetooth/amp.o
+  CC      lib/zlib_inflate/inffast.o
+  CC      kernel/power/console.o
+  CC      fs/autofs4/waitq.o
+  CC      sound/usb/format.o
+  CC      kernel/locking/spinlock.o
+  CC      lib/zlib_inflate/inflate.o
+  CC      mm/memblock.o
+  LD      crypto/crypto.o
+  CC      lib/zlib_deflate/deflate_syms.o
+  LD      crypto/crypto_algapi.o
+  LD      crypto/crypto_blkcipher.o
+  LD      crypto/crypto_hash.o
+  CC      fs/autofs4/expire.o
+  CC      net/dccp/ccids/lib/packet_history.o
+  LD      crypto/cryptomgr.o
+  CC      lib/percpu_counter.o
+  CC      kernel/power/process.o
+  LD [M]  crypto/jitterentropy_rng.o
+  CC      kernel/locking/osq_lock.o
+  LD      crypto/built-in.o
+  CC      net/core/utils.o
+  CC      fs/autofs4/dev-ioctl.o
+  LD      lib/zlib_deflate/zlib_deflate.o
+  LD      lib/zlib_deflate/built-in.o
+  CC      drivers/gpio/gpiolib-legacy.o
+  CC      kernel/locking/lglock.o
+  CC      sound/usb/helper.o
+  CC      net/bluetooth/hci_debugfs.o
+  CC      sound/last.o
+  CC      mm/page_io.o
+  CC      drivers/gpio/gpiolib-of.o
+  CC      kernel/power/suspend.o
+  CC      lib/zlib_inflate/infutil.o
+  CC      net/ipv6/addrconf_core.o
+  CC      kernel/locking/rtmutex.o
+  CC      net/core/link_watch.o
+  CC      sound/usb/mixer.o
+  CC      drivers/gpio/gpiolib-sysfs.o
+  LD      fs/autofs4/autofs4.o
+  LD      fs/autofs4/built-in.o
+  CC      sound/usb/mixer_quirks.o
+  CC      net/dccp/ccids/lib/loss_interval.o
+  CC      fs/btrfs/super.o
+  CC      net/dccp/sysctl.o
+  CC      kernel/printk/printk.o
+  CC      lib/zlib_inflate/inftrees.o
+  CC      fs/btrfs/ctree.o
+  CC      mm/swap_state.o
+  CC      lib/zlib_inflate/inflate_syms.o
+  CC      kernel/locking/rwsem-xadd.o
+  CC      drivers/gpio/gpio-generic.o
+  CC      net/ipv4/protocol.o
+  CC      net/ipv6/exthdrs_core.o
+  CC      kernel/power/wakelock.o
+  LD      lib/zlib_inflate/zlib_inflate.o
+  LD      lib/zlib_inflate/built-in.o
+  CC      lib/audit.o
+  CC      net/ipv4/ip_input.o
+  CC      net/core/filter.o
+  CC      net/ipv4/ip_fragment.o
+  LD      kernel/locking/built-in.o
+  CC      drivers/gpio/gpio-pl061.o
+  CC      net/bluetooth/bnep/core.o
+  CC      net/core/sock_diag.o
+  CC      net/dccp/ipv4.o
+  CC      mm/swapfile.o
+  CC      net/bluetooth/bnep/sock.o
+  CC      lib/swiotlb.o
+  CC      kernel/power/poweroff.o
+  CC      net/ipv6/ip6_checksum.o
+  CC      sound/usb/mixer_scarlett.o
+  LD      drivers/gpio/built-in.o
+  CC      kernel/power/wakeup_reason.o
+  LD      kernel/printk/built-in.o
+  CC      drivers/gpu/vga/vgaarb.o
+  CC      drivers/hid/hid-core.o
+  CC      net/key/af_key.o
+  LD      sound/soundcore.o
+  CC      net/core/dev_ioctl.o
+  CC      drivers/gpu/drm/drm_auth.o
+  CC      sound/usb/pcm.o
+  CC      net/ipv6/ip6_icmp.o
+  LD      kernel/power/built-in.o
+  CC      net/ipv4/ip_forward.o
+  CC      lib/iommu-helper.o
+  CC      net/bluetooth/bnep/netdev.o
+  CC      kernel/rcu/update.o
+  CC      net/dccp/diag.o
+  CC      lib/iommu-common.o
+  CC      net/ipv4/ip_options.o
+  CC      drivers/gpu/drm/drm_bufs.o
+  CC      net/core/tso.o
+  CC      lib/syscall.o
+  LD      drivers/gpu/vga/built-in.o
+  CC      sound/usb/proc.o
+  CC      kernel/rcu/sync.o
+  CC      net/ipv6/output_core.o
+  CC      mm/dmapool.o
+  LD      net/dccp/dccp.o
+  LD      net/bluetooth/bnep/bnep.o
+  LD      net/dccp/dccp_ipv4.o
+  LD      net/bluetooth/bnep/built-in.o
+  CC      drivers/hid/hid-input.o
+  LD      net/dccp/dccp_diag.o
+  CC      fs/cachefiles/bind.o
+  LD      net/dccp/built-in.o
+  CC      kernel/rcu/srcu.o
+  CC      fs/btrfs/extent-tree.o
+  CC      lib/dynamic_debug.o
+  CC      net/bluetooth/hidp/core.o
+  CC      drivers/hisilicon/atags/atags2fdt.o
+  CC      sound/usb/quirks.o
+/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/drivers/hisilicon/atags/atags2fdt.c: In function 'deal_atags':
+/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/drivers/hisilicon/atags/atags2fdt.c:274:15: warning: unused variable 'node' [-Wunused-variable]
+  int memsize, node;
+               ^
+  CC      drivers/hisilicon/atags/atags.o
+  CC      net/core/flow.o
+  CC      mm/ksm.o
+  CC      fs/cachefiles/daemon.o
+  CC      mm/slub.o
+  CC      net/ipv6/protocol.o
+  CC      kernel/rcu/tree.o
+  CC      drivers/hisilicon/atags/tag-param.o
+  CC      net/ipv4/ip_output.o
+  CC      drivers/hisilicon/atags/tag-sdkver.o
+  CC      drivers/gpu/drm/drm_cache.o
+  CC      sound/usb/stream.o
+  CC      drivers/hisilicon/atags/tag-net.o
+  CC      lib/nlattr.o
+  CC      net/core/net-sysfs.o
+  CC      net/ipv6/ip6_offload.o
+  CC      net/core/net-procfs.o
+  CC      drivers/hisilicon/atags/tag-chiptrim.o
+  CC      fs/cachefiles/interface.o
+  CC      drivers/hisilicon/atags/tag-emmc.o
+  CC      drivers/gpu/drm/drm_context.o
+  LD      net/key/built-in.o
+  CC      net/bluetooth/hidp/sock.o
+  CC      net/core/fib_rules.o
+  CC      drivers/hisilicon/atags/tag-bootreg.o
+  CC      sound/usb/midi.o
+  CC      drivers/hid/hid-debug.o
+  LD      drivers/hisilicon/atags/built-in.o
+  CC      lib/cpu_rmap.o
+  CC      net/core/net-traces.o
+  CC      drivers/hisilicon/clk/hi3798mx/clk-hi3798mv100.o
+  CC      fs/cachefiles/key.o
+  CC      net/ipv6/tcpv6_offload.o
+  CC      net/core/netprio_cgroup.o
+  CC      lib/cordic.o
+  CC      drivers/hisilicon/clk/hi3798mx/clk-hiusb2.o
+  LD      net/bluetooth/hidp/hidp.o
+  CC      drivers/hid/uhid.o
+  LD      net/bluetooth/hidp/built-in.o
+  CC      drivers/gpu/drm/drm_dma.o
+  CC      fs/cachefiles/main.o
+  CC      net/bluetooth/rfcomm/core.o
+  CC      lib/dynamic_queue_limits.o
+  CC      drivers/hisilicon/clk/hi3798mx/clk-hiusb3.o
+  CC      net/bluetooth/rfcomm/sock.o
+  CC      lib/jedec_ddr_data.o
+  CC      net/ipv6/udp_offload.o
+  CC      drivers/hisilicon/clk/hi3798mx/clk-hiir.o
+  CC      fs/cachefiles/namei.o
+  CC      lib/strncpy_from_user.o
+  CC      lib/strnlen_user.o
+  CC      net/ipv4/ip_sockglue.o
+  CC      kernel/sched/core.o
+  CC      drivers/gpu/drm/drm_fops.o
+  LD      drivers/hisilicon/clk/hi3798mx/built-in.o
+  CC      drivers/hid/hid-generic.o
+  CC      drivers/hisilicon/clk/clk-hisi.o
+  CC      lib/net_utils.o
+  CC      drivers/gpu/drm/drm_gem.o
+  CC      mm/migrate.o
+  CC      drivers/hid/hid-a4tech.o
+  LD      sound/usb/snd-usb-audio.o
+  LD      kernel/rcu/built-in.o
+  LD      sound/usb/snd-usbmidi-lib.o
+  CC      kernel/sched/loadavg.o
+  LD      sound/usb/built-in.o
+  CC      net/core/netclassid_cgroup.o
+  CC      net/ipv6/exthdrs_offload.o
+  CC      drivers/hisilicon/clk/reset-hisilicon.o
+  LD      sound/built-in.o
+  CC      fs/cachefiles/rdwr.o
+  CC      kernel/sched/clock.o
+  CC      kernel/sched/cputime.o
+  CC      lib/oid_registry.o
+  CC      drivers/hid/hid-apple.o
+  CC      net/llc/llc_core.o
+  LD      drivers/hisilicon/clk/built-in.o
+  CC      lib/argv_split.o
+  CC      drivers/hisilicon/cma/hi_cma.o
+  LD      net/ipv6/built-in.o
+  CC      net/ipv4/inet_hashtables.o
+  CC      drivers/i2c/i2c-boardinfo.o
+  CC      drivers/gpu/drm/drm_ioctl.o
+  CC      lib/bug.o
+  CC      mm/page_counter.o
+  CC      drivers/hid/hid-belkin.o
+  CC      net/core/lwtunnel.o
+  CC      fs/cifs/cifsfs.o
+  CC      net/bluetooth/rfcomm/tty.o
+  CC      drivers/i2c/i2c-core.o
+  LD      drivers/hisilicon/cma/built-in.o
+  CC      net/llc/llc_input.o
+  CC      drivers/i2c/i2c-dev.o
+  CC      fs/cachefiles/security.o
+  CC      drivers/hisilicon/flash_stats/flash_stats.o
+  CC      lib/cmdline.o
+  CC      drivers/hid/hid-cherry.o
+  CC      mm/memcontrol.o
+  CC      lib/cpumask.o
+  CC      fs/cachefiles/xattr.o
+  CC [M]  net/mac80211/main.o
+  CC      drivers/hid/hid-chicony.o
+  CC      drivers/gpu/drm/drm_irq.o
+  CC      net/llc/llc_output.o
+  CC      drivers/hisilicon/flash_stats/stats_rwe.o
+  CC      lib/ctype.o
+  CC      lib/dec_and_lock.o
+  CC      net/ipv4/inet_timewait_sock.o
+  CC      drivers/gpu/drm/drm_lock.o
+  CC      lib/decompress.o
+  LD      net/core/built-in.o
+  CC      drivers/hid/hid-cypress.o
+  LD      fs/cachefiles/cachefiles.o
+  CC      lib/decompress_bunzip2.o
+  CC      drivers/hisilicon/flash_stats/stats_ecc.o
+  CC      drivers/gpu/drm/drm_memory.o
+  LD      fs/cachefiles/built-in.o
+  CC      kernel/sched/idle_task.o
+  LD      net/bluetooth/rfcomm/rfcomm.o
+  CC      fs/cifs/cifssmb.o
+/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/mm/memcontrol.c:5355:12: warning: initialization from incompatible pointer type
+  .attach = mem_cgroup_move_task,
+            ^
+/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/mm/memcontrol.c:5355:12: warning: (near initialization for 'memory_cgrp_subsys.attach')
+  LD      net/bluetooth/rfcomm/built-in.o
+  LD      net/bluetooth/bluetooth.o
+  LD      net/bluetooth/built-in.o
+  LD      net/llc/llc.o
+  CC      fs/cifs/cifs_debug.o
+  LD      net/llc/built-in.o
+  CC      mm/vmpressure.o
+  CC      drivers/hisilicon/flash_stats/stats_read_retry.o
+  CC      drivers/hid/hid-ezkey.o
+  CC      net/ipv4/inet_connection_sock.o
+  CC      drivers/gpu/drm/drm_drv.o
+  CC      lib/decompress_inflate.o
+  CC      net/mpls/mpls_gso.o
+  CC      fs/configfs/inode.o
+  LD      drivers/hisilicon/flash_stats/built-in.o
+  CC [M]  net/mac80211/status.o
+  CC      lib/decompress_unlz4.o
+  CC      drivers/hisilicon/hash_vrf_dev/verify.o
+  CC      drivers/hid/hid-kensington.o
+  CC      drivers/i2c/i2c-mux.o
+  CC      drivers/i2c/algos/i2c-algo-bit.o
+  CC      fs/btrfs/print-tree.o
+  CC      kernel/sched/fair.o
+  CC      lib/decompress_unlzma.o
+  CC      drivers/hid/hid-lg.o
+  LD      net/mpls/built-in.o
+  CC      lib/decompress_unlzo.o
+/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/drivers/hisilicon/hash_vrf_dev/verify.c: In function 'part_find_num':
+/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/drivers/hisilicon/hash_vrf_dev/verify.c:84:12: warning: passing argument 1 of 'strim' from incompatible pointer type
+  b = strim(buffer);
+            ^
+In file included from /home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/include/linux/bitmap.h:8:0,
+                 from /home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/include/linux/nodemask.h:92,
+                 from /home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/include/linux/mmzone.h:16,
+                 from /home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/include/linux/gfp.h:5,
+                 from /home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/include/linux/kmod.h:22,
+                 from /home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/include/linux/module.h:13,
+                 from /home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/drivers/hisilicon/hash_vrf_dev/verify.c:9:
+/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/include/linux/string.h:66:14: note: expected 'char *' but argument is of type 'char **'
+ extern char *strim(char *);
+              ^
+/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/drivers/hisilicon/hash_vrf_dev/verify.c:79:9: warning: unused variable 'has_st' [-Wunused-variable]
+  char * has_st ;
+         ^
+/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/drivers/hisilicon/hash_vrf_dev/verify.c:76:9: warning: unused variable 'haspart' [-Wunused-variable]
+  char * haspart;
+         ^
+/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/drivers/hisilicon/hash_vrf_dev/verify.c: In function 'early_verify_paramter':
+/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/drivers/hisilicon/hash_vrf_dev/verify.c:106:12: warning: passing argument 1 of 'strim' from incompatible pointer type
+  b = strim(buffer);
+            ^
+In file included from /home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/include/linux/bitmap.h:8:0,
+                 from /home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/include/linux/nodemask.h:92,
+                 from /home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/include/linux/mmzone.h:16,
+                 from /home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/include/linux/gfp.h:5,
+                 from /home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/include/linux/kmod.h:22,
+                 from /home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/include/linux/module.h:13,
+                 from /home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/drivers/hisilicon/hash_vrf_dev/verify.c:9:
+/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/include/linux/string.h:66:14: note: expected 'char *' but argument is of type 'char **'
+ extern char *strim(char *);
+              ^
+/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/drivers/hisilicon/hash_vrf_dev/verify.c: In function 'sha256_string':
+/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/drivers/hisilicon/hash_vrf_dev/verify.c:265:6: warning: unused variable 'readlen' [-Wunused-variable]
+  int readlen;
+      ^
+/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/drivers/hisilicon/hash_vrf_dev/verify.c: At top level:
+/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/drivers/hisilicon/hash_vrf_dev/verify.c:235:13: warning: 'compose_num' defined but not used [-Wunused-function]
+ static char compose_num(char a,char b)
+             ^
+  CC      kernel/time/time.o
+  CC      drivers/gpu/drm/drm_vm.o
+  CC      fs/cramfs/inode.o
+  CC      fs/configfs/file.o
+  LD      drivers/hisilicon/hash_vrf_dev/built-in.o
+  LD      drivers/i2c/algos/built-in.o
+  CC      fs/cramfs/uncompress.o
+  CC      drivers/hisilicon/initfile/initfile.o
+  CC      drivers/i2c/i2c-slave-eeprom.o
+  CC      lib/decompress_unxz.o
+  CC      net/ipv4/tcp.o
+  CC      fs/configfs/dir.o
+  CC      mm/swap_cgroup.o
+  CC      fs/btrfs/root-tree.o
+  CC      drivers/hid/hid-lgff.o
+  CC      drivers/gpu/drm/drm_scatter.o
+  CC      lib/dump_stack.o
+  LD      fs/cramfs/cramfs.o
+  LD      drivers/i2c/built-in.o
+  LD      fs/cramfs/built-in.o
+  CC      fs/cifs/connect.o
+  CC [M]  net/mac80211/driver-ops.o
+  LD      drivers/hisilicon/initfile/built-in.o
+  CC      kernel/time/timer.o
+  CC      drivers/hisilicon/initmrd/initmrd.o
+  CC      drivers/hid/hid-lg2ff.o
+  CC      drivers/hid/hid-lg3ff.o
+  CC      lib/earlycpio.o
+  CC      kernel/trace/trace_clock.o
+  CC      mm/cleancache.o
+  CC      kernel/sched/rt.o
+  CC      lib/extable.o
+  CC      lib/fdt.o
+  CC      drivers/gpu/drm/drm_pci.o
+  CC      fs/configfs/symlink.o
+  CC      drivers/hid/hid-lg4ff.o
+  LD      drivers/hisilicon/initmrd/built-in.o
+  CC      kernel/trace/ftrace.o
+  CC      net/ipv4/tcp_input.o
+  CC      lib/fdt_empty_tree.o
+  CC      drivers/hisilicon/kapi/sem.o
+  CC      mm/page_isolation.o
+  CC      lib/fdt_ro.o
+  CC      fs/btrfs/dir-item.o
+  CC      fs/configfs/mount.o
+  CC      kernel/trace/ring_buffer.o
+  CC [M]  net/mac80211/sta_info.o
+  CC      drivers/hisilicon/kapi/mem.o
+  CC      lib/fdt_rw.o
+  CC      drivers/gpu/drm/drm_platform.o
+  CC      drivers/hid/hid-microsoft.o
+  CC      kernel/time/hrtimer.o
+  CC      mm/zpool.o
+  CC      fs/configfs/item.o
+  CC      lib/fdt_strerror.o
+  CC      drivers/hisilicon/kapi/param.o
+  CC      drivers/hisilicon/misc/hisp804-timer.o
+  CC      lib/fdt_sw.o
+  CC      drivers/hisilicon/kapi/ultohstr.o
+  CC      drivers/hid/hid-monterey.o
+  LD      fs/configfs/configfs.o
+  LD      fs/configfs/built-in.o
+  CC      fs/btrfs/file-item.o
+  CC      mm/zsmalloc.o
+  CC      drivers/hisilicon/kapi/match.o
+  CC      drivers/gpu/drm/drm_sysfs.o
+  CC      lib/fdt_wip.o
+  CC      drivers/hisilicon/misc/hifixtimer.o
+  CC      drivers/hisilicon/kapi/pdm.o
+  CC      lib/flex_proportions.o
+  CC      drivers/iio/industrialio-core.o
+  CC      drivers/iio/industrialio-event.o
+  CC      drivers/hid/usbhid/hid-core.o
+  CC      drivers/hisilicon/misc/romblock.o
+  CC      drivers/hisilicon/kapi/sram.o
+  CC      kernel/time/itimer.o
+  CC      lib/idr.o
+  CC      fs/cifs/dir.o
+/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/drivers/hisilicon/kapi/sram.c:84:27: warning: 'sram_pm_syscore_ops' defined but not used [-Wunused-variable]
+ static struct syscore_ops sram_pm_syscore_ops = {
+                           ^
+  CC      lib/int_sqrt.o
+  CC      drivers/gpu/drm/drm_hashtab.o
+  CC      drivers/hisilicon/misc/export_sym.o
+  LD      drivers/hisilicon/kapi/built-in.o
+  CC      kernel/trace/trace.o
+  CC      kernel/kcmp.o
+  CC      drivers/hisilicon/soc/cputable.o
+  CC      net/ipv4/tcp_output.o
+  CC      mm/cma.o
+  CC      drivers/hisilicon/soc/hi3798mv100/cpu-hi3798mv100.o
+  CC      lib/ioremap.o
+  CC      drivers/hisilicon/misc/part-change.o
+  CC      drivers/iio/inkern.o
+  CC      fs/btrfs/inode-item.o
+  CC      drivers/hisilicon/soc/hi3798mv100/hipm.o
+  CC      drivers/gpu/drm/drm_mm.o
+  CC [M]  net/mac80211/wep.o
+  CC      kernel/time/posix-timers.o
+  CC      drivers/gpu/drm/drm_crtc.o
+  CC      lib/irq_regs.o
+  CC      drivers/hid/usbhid/hid-quirks.o
+  CC      fs/cifs/file.o
+  CC      lib/is_single_threaded.o
+  CC      drivers/hisilicon/misc/i2c-hisi.o
+/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/drivers/hisilicon/soc/hi3798mv100/hipm.c: In function 'do_ca_pm_suspend':
+/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/drivers/hisilicon/soc/hi3798mv100/hipm.c:52:6: warning: unused variable 'ret' [-Wunused-variable]
+  int ret = 0;
+      ^
+  CC      mm/page_ext.o
+  CC [M]  net/mac80211/wpa.o
+  CC      drivers/hid/usbhid/hiddev.o
+  LD      drivers/hisilicon/soc/hi3798mv100/built-in.o
+  LD      drivers/hisilicon/soc/built-in.o
+  CC      kernel/sched/deadline.o
+  CC      lib/klist.o
+  CC [M]  net/mac80211/scan.o
+  CC      kernel/trace/trace_output.o
+  CC      fs/btrfs/inode-map.o
+  CC      drivers/hisilicon/misc/hw_breakpoint.o
+  CC      kernel/time/posix-cpu-timers.o
+  CC      mm/page_idle.o
+  CC      lib/kobject.o
+  LD      drivers/iio/industrialio.o
+  CC      lib/kobject_uevent.o
+  LD      drivers/iio/built-in.o
+  CC      fs/btrfs/disk-io.o
+  CC [M]  drivers/hisilicon/misc/hrtimer_test.o
+  CC      mm/frame_vector.o
+  LD      drivers/hid/usbhid/usbhid.o
+  LD      drivers/hid/usbhid/built-in.o
+  CC      kernel/sched/stop_task.o
+  LD      drivers/hid/hid.o
+  LD      drivers/hid/hid-logitech.o
+  LD      drivers/hid/built-in.o
+  CC      fs/btrfs/transaction.o
+  CC      kernel/time/timekeeping.o
+  CC      fs/btrfs/inode.o
+  CC      drivers/gpu/drm/drm_modes.o
+  CC      net/ipv4/tcp_timer.o
+  LD      drivers/hisilicon/misc/built-in.o
+  CC      fs/debugfs/inode.o
+  CC      kernel/sched/wait.o
+  CC      drivers/hisilicon/usbotg/hiotg.o
+  LD      mm/built-in.o
+In file included from /home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/fs/btrfs/disk-io.c:35:0:
+/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/fs/btrfs/disk-io.c: In function 'open_ctree':
+/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/fs/btrfs/ctree.h:532:10: error: 'BTRFS_FEATURE_COMPAT_RO_FREE_SPACE_TREE' undeclared (first use in this function)
+         (BTRFS_FEATURE_COMPAT_RO_FREE_SPACE_TREE | \
+          ^
+/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/fs/btrfs/disk-io.c:2813:4: note: in expansion of macro 'BTRFS_FEATURE_COMPAT_RO_SUPP'
+   ~BTRFS_FEATURE_COMPAT_RO_SUPP;
+    ^
+/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/fs/btrfs/ctree.h:532:10: note: each undeclared identifier is reported only once for each function it appears in
+         (BTRFS_FEATURE_COMPAT_RO_FREE_SPACE_TREE | \
+          ^
+/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/fs/btrfs/disk-io.c:2813:4: note: in expansion of macro 'BTRFS_FEATURE_COMPAT_RO_SUPP'
+   ~BTRFS_FEATURE_COMPAT_RO_SUPP;
+    ^
+/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/fs/btrfs/ctree.h:533:10: error: 'BTRFS_FEATURE_COMPAT_RO_EXTENDED_IREF' undeclared (first use in this function)
+          BTRFS_FEATURE_COMPAT_RO_EXTENDED_IREF)
+          ^
+/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/fs/btrfs/disk-io.c:2813:4: note: in expansion of macro 'BTRFS_FEATURE_COMPAT_RO_SUPP'
+   ~BTRFS_FEATURE_COMPAT_RO_SUPP;
+    ^
+  CC      lib/md5.o
+  CC      kernel/freezer.o
+make[5]: *** [/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/scripts/Makefile.build:258: fs/btrfs/disk-io.o] Error 1
+make[5]: *** Waiting for unfinished jobs....
+  CC      kernel/trace/trace_seq.o
+  CC      lib/nmi_backtrace.o
+  CC [M]  net/mac80211/offchannel.o
+  CC      net/netfilter/core.o
+  CC      drivers/input/input.o
+  CC      kernel/time/ntp.o
+  LD      drivers/hisilicon/usbotg/built-in.o
+  LD      drivers/hisilicon/built-in.o
+  CC      drivers/input/input-compat.o
+  CC      kernel/sched/completion.o
+  CC      fs/debugfs/file.o
+  CC      drivers/input/gameport/gameport.o
+  CC      lib/plist.o
+  CC      drivers/gpu/drm/drm_edid.o
+  CC      kernel/trace/trace_stat.o
+  CC      lib/proportions.o
+  CC      fs/cifs/inode.o
+  CC      drivers/input/serio/serio.o
+  CC      kernel/sched/idle.o
+  CC      net/ipv4/tcp_ipv4.o
+  CC      kernel/time/clocksource.o
+  LD      drivers/input/gameport/built-in.o
+  CC [M]  net/mac80211/ht.o
+  CC      drivers/iommu/iommu.o
+  CC      lib/radix-tree.o
+  CC      net/netfilter/nf_log.o
+  CC      drivers/iommu/iommu-traces.o
+  LD      fs/debugfs/debugfs.o
+  LD      fs/debugfs/built-in.o
+  CC      kernel/profile.o
+  CC      kernel/sched/cpupri.o
+  CC      kernel/trace/trace_printk.o
+  CC      drivers/input/serio/serport.o
+  CC      kernel/time/jiffies.o
+  CC      kernel/time/timer_list.o
+  CC      drivers/input/input-mt.o
+  CC      kernel/sched/cpudeadline.o
+  CC      drivers/iommu/iommu-sysfs.o
+  CC      lib/ratelimit.o
+  CC      drivers/input/serio/libps2.o
+  CC      drivers/gpu/drm/drm_info.o
+  CC      kernel/trace/trace_sched_switch.o
+  CC      lib/rbtree.o
+  CC      kernel/time/timeconv.o
+  CC      net/ipv4/tcp_minisocks.o
+  CC      fs/cifs/link.o
+  CC      net/netfilter/nf_queue.o
+  CC      kernel/sched/energy.o
+  CC      drivers/iommu/io-pgtable.o
+  CC      kernel/time/timecounter.o
+  CC      drivers/input/ff-core.o
+  CC [M]  net/mac80211/agg-tx.o
+  CC      kernel/time/posix-clock.o
+  CC      drivers/gpu/drm/drm_debugfs.o
+  CC      drivers/iommu/io-pgtable-arm.o
+  CC      lib/seq_buf.o
+  CC      kernel/trace/trace_functions.o
+  CC      lib/sha1.o
+  CC      kernel/sched/auto_group.o
+  CC      kernel/time/alarmtimer.o
+  LD      drivers/input/serio/built-in.o
+  CC      drivers/gpu/drm/drm_encoder_slave.o
+  CC      fs/devpts/inode.o
+  CC      drivers/input/ff-memless.o
+  CC      kernel/time/clockevents.o
+  CC [M]  net/mac80211/agg-rx.o
+  CC      net/netfilter/nf_sockopt.o
+  CC      lib/show_mem.o
+  CC      net/ipv4/tcp_cong.o
+  CC      kernel/sched/debug.o
+  CC      kernel/trace/trace_nop.o
+  LD      fs/devpts/devpts.o
+  CC      drivers/iommu/of_iommu.o
+  CC      drivers/gpu/drm/drm_trace_points.o
+  LD      fs/devpts/built-in.o
+  CC      kernel/trace/trace_functions_graph.o
+  CC      drivers/iommu/arm-smmu.o
+  CC      kernel/stacktrace.o
+  CC      drivers/input/input-leds.o
+  CC      fs/cifs/misc.o
+  CC      lib/string.o
+  CC      kernel/time/tick-common.o
+  CC      net/netlink/af_netlink.o
+  CC      lib/timerqueue.o
+  CC      net/netfilter/nfnetlink.o
+  CC      drivers/gpu/drm/drm_global.o
+  CC      lib/vsprintf.o
+  CC      net/netlink/genetlink.o
+  CC      drivers/input/mousedev.o
+  CC      kernel/sched/cpuacct.o
+  CC [M]  net/mac80211/vht.o
+  CC [M]  net/mac80211/ibss.o
+  CC      drivers/gpu/drm/drm_prime.o
+  CC      net/ipv4/tcp_metrics.o
+  CC      kernel/trace/blktrace.o
+  CC [M]  net/mac80211/iface.o
+  CC      drivers/iommu/hisi-iommu.o
+  CC      kernel/time/tick-broadcast.o
+  CC      fs/cifs/netmisc.o
+  LD      kernel/sched/built-in.o
+  CC      fs/cifs/smbencrypt.o
+  CC      net/netfilter/nfnetlink_acct.o
+  CC      drivers/input/joydev.o
+make[4]: *** [/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/scripts/Makefile.build:403: fs/btrfs] Error 2
+make[4]: *** Waiting for unfinished jobs....
+  CC      kernel/futex.o
+  CC      kernel/trace/trace_events.o
+  CC      drivers/gpu/drm/drm_rect.o
+  CC      kernel/time/tick-broadcast-hrtimer.o
+  CC      net/netlink/diag.o
+  CC      drivers/iommu/hisi-iommu-domain.o
+  CC      drivers/irqchip/irqchip.o
+  CC      fs/cifs/transport.o
+  LD      lib/built-in.o
+  CC      kernel/time/sched_clock.o
+  CC      net/openvswitch/actions.o
+  AR      lib/lib.a
+  CC      net/ipv4/tcp_fastopen.o
+  CC      drivers/gpu/drm/drm_vma_manager.o
+  CC      net/openvswitch/datapath.o
+  CC      drivers/irqchip/irq-gic.o
+  CC      drivers/gpu/drm/drm_flip_work.o
+  CC      drivers/input/evdev.o
+  CC      net/ipv4/tcp_recovery.o
+  LD      drivers/iommu/built-in.o
+  CC      kernel/time/tick-oneshot.o
+  CC      net/netfilter/nfnetlink_queue.o
+  CC [M]  net/mac80211/rate.o
+  CC      net/ipv4/tcp_offload.o
+  CC      kernel/time/tick-sched.o
+  CC      drivers/gpu/drm/drm_modeset_lock.o
+  CC      net/packet/af_packet.o
+  CC      drivers/irqchip/irq-gic-common.o
+  LD      net/netlink/netlink_diag.o
+  LD      net/netlink/built-in.o
+  CC      kernel/smp.o
+  CC      drivers/gpu/drm/drm_atomic.o
+  CC      kernel/trace/trace_export.o
+  CC      drivers/input/joystick/xpad.o
+  CC      fs/cifs/asn1.o
+  CC      kernel/time/timekeeping_debug.o
+  CC      drivers/gpu/drm/drm_bridge.o
+  LD      drivers/irqchip/built-in.o
+  CC      net/openvswitch/dp_notify.o
+  CC      net/ipv4/datagram.o
+  CC      net/packet/diag.o
+  CC      net/ipv4/raw.o
+  CC      fs/cifs/cifs_unicode.o
+  CC      net/rfkill/core.o
+  CC      net/netfilter/nf_conntrack_core.o
+  CC [M]  net/mac80211/michael.o
+  CC      kernel/trace/trace_event_perf.o
+  CC      drivers/input/keyboard/atkbd.o
+  LD      kernel/time/built-in.o
+  CC      net/ipv4/udp.o
+  CC [M]  net/mac80211/tkip.o
+  CC      net/openvswitch/flow.o
+  LD      drivers/input/joystick/built-in.o
+  CC      kernel/trace/trace_events_filter.o
+  CC      net/ipv4/udplite.o
+  CC      drivers/gpu/drm/ati_pcigart.o
+  CC      kernel/trace/trace_events_trigger.o
+  CC      net/ipv4/udp_offload.o
+  CC      fs/cifs/nterr.o
+  CC      net/netfilter/nf_conntrack_standalone.o
+  LD      net/rfkill/rfkill.o
+  LD      net/rfkill/built-in.o
+  CC      net/sched/sch_generic.o
+  LD      drivers/input/keyboard/built-in.o
+  CC      fs/cifs/xattr.o
+  CC      drivers/leds/led-core.o
+  CC      drivers/input/misc/uinput.o
+  CC      drivers/gpu/drm/drm_of.o
+  CC [M]  drivers/input/tablet/wacom_serial4.o
+  CC      drivers/input/mouse/psmouse-base.o
+  CC [M]  net/mac80211/aes_ccm.o
+  LD      net/packet/af_packet_diag.o
+  LD      net/packet/built-in.o
+  CC      drivers/input/mouse/synaptics.o
+  CC      net/netfilter/nf_conntrack_expect.o
+  CC      drivers/leds/led-class.o
+  CC      net/ipv4/arp.o
+  CC      net/sched/sch_mq.o
+  CC      kernel/trace/power-traces.o
+  LD      drivers/input/misc/built-in.o
+  CC      net/openvswitch/flow_netlink.o
+  CC      fs/cifs/cifsencrypt.o
+  CC      kernel/trace/rpm-traces.o
+  CC      drivers/leds/led-triggers.o
+  CC      net/openvswitch/flow_table.o
+  CC      kernel/uid16.o
+  LD      drivers/gpu/drm/drm.o
+  CC      net/openvswitch/vport.o
+  LD      drivers/gpu/drm/built-in.o
+  LD      drivers/gpu/built-in.o
+  CC [M]  net/mac80211/aes_gcm.o
+  CC      drivers/input/mouse/focaltech.o
+  CC      net/ipv4/icmp.o
+  LD      drivers/leds/built-in.o
+  CC      net/ipv4/devinet.o
+  CC      fs/cifs/readdir.o
+  LD      drivers/input/input-core.o
+  LD      net/sched/built-in.o
+  CC      net/ipv4/af_inet.o
+  CC      fs/cifs/ioctl.o
+  CC      net/netfilter/nf_conntrack_helper.o
+  CC [M]  net/mac80211/aes_cmac.o
+  CC      drivers/input/mouse/alps.o
+  CC      net/openvswitch/vport-internal_dev.o
+  LD      kernel/trace/libftrace.o
+  CC      kernel/module.o
+  CC      net/ipv4/igmp.o
+  LD      kernel/trace/built-in.o
+  CC      net/openvswitch/vport-netdev.o
+  CC      net/netfilter/nf_conntrack_proto.o
+  CC      drivers/input/mouse/logips2pp.o
+  CC [M]  net/mac80211/aes_gmac.o
+  CC      fs/cifs/sess.o
+  CC      net/sctp/sm_statetable.o
+  CC      drivers/media/i2c/ir-kbd-i2c.o
+  CC      drivers/input/mouse/trackpoint.o
+  CC [M]  net/mac80211/cfg.o
+  CC      kernel/kallsyms.o
+  CC      fs/cifs/export.o
+  CC      net/sunrpc/clnt.o
+  CC      net/sctp/sm_statefuns.o
+  CC      net/openvswitch/conntrack.o
+  CC      net/sunrpc/xprt.o
+  CC      net/netfilter/nf_conntrack_l3proto_generic.o
+  LD      drivers/media/i2c/built-in.o
+  CC      net/sunrpc/socklib.o
+  CC      net/netfilter/nf_conntrack_proto_generic.o
+  CC      drivers/memory/of_memory.o
+  CC      net/netfilter/nf_conntrack_proto_tcp.o
+  CC      drivers/input/mouse/cypress_ps2.o
+  CC      net/netfilter/nf_conntrack_proto_udp.o
+  LD      drivers/memory/built-in.o
+  CC      fs/cifs/smb1ops.o
+  CC      fs/cifs/winucase.o
+  CC      drivers/media/platform/sh_veu.o
+  CC      fs/cifs/smb2ops.o
+  CC [M]  net/mac80211/ethtool.o
+  CC [M]  net/mac80211/rx.o
+  CC [M]  net/mac80211/spectmgmt.o
+  LD      drivers/input/mouse/psmouse.o
+  LD      drivers/input/mouse/built-in.o
+  LD      drivers/input/built-in.o
+  CC      net/openvswitch/vport-gre.o
+  CC [M]  net/mac80211/tx.o
+  CC      net/ipv4/fib_frontend.o
+  CC      net/unix/af_unix.o
+  CC      net/sctp/sm_sideeffect.o
+  CC      kernel/cgroup.o
+  CC      drivers/media/platform/m2m-deinterlace.o
+  CC      net/sunrpc/xprtsock.o
+  CC [M]  net/mac80211/key.o
+  CC      net/sunrpc/sched.o
+  CC      net/netfilter/nf_conntrack_extend.o
+  CC      net/vmw_vsock/af_vsock.o
+  LD      net/openvswitch/openvswitch.o
+  LD      net/openvswitch/built-in.o
+  CC      net/ipv4/fib_semantics.o
+  CC      fs/cifs/smb2maperror.o
+  CC      net/vmw_vsock/vsock_addr.o
+  LD      drivers/media/platform/built-in.o
+  CC      net/netfilter/nf_conntrack_acct.o
+  CC      net/sctp/protocol.o
+  CC      net/unix/garbage.o
+  CC      drivers/media/rc/rc-main.o
+  CC      net/sunrpc/auth.o
+  CC      fs/cifs/smb2transport.o
+  CC      net/netfilter/nf_conntrack_seqadj.o
+  LD      net/vmw_vsock/vsock.o
+  CC      drivers/media/tuners/tuner-xc2028.o
+  CC      net/ipv4/fib_trie.o
+  LD      net/vmw_vsock/built-in.o
+  CC      net/unix/sysctl_net_unix.o
+  CC      drivers/media/tuners/tuner-simple.o
+  CC      net/wireless/wext-core.o
+  CC [M]  net/mac80211/util.o
+  CC      drivers/media/rc/rc-ir-raw.o
+  CC      drivers/media/rc/keymaps/rc-adstech-dvb-t-pci.o
+  CC      net/sctp/endpointola.o
+  CC      drivers/media/rc/keymaps/rc-alink-dtu-m.o
+  CC      kernel/cgroup_freezer.o
+  CC      net/sunrpc/auth_null.o
+  CC      fs/cifs/smb2misc.o
+  CC      net/unix/diag.o
+  CC      net/netfilter/nf_conntrack_proto_dccp.o
+  CC      net/wireless/wext-proc.o
+  CC      drivers/media/rc/keymaps/rc-anysee.o
+  CC      drivers/mmc/card/block.o
+  CC [M]  drivers/media/usb/gspca/gspca.o
+  CC [M]  net/mac80211/wme.o
+  CC      drivers/media/rc/keymaps/rc-apac-viewcomp.o
+  CC      kernel/cgroup_pids.o
+  CC [M]  drivers/media/usb/gspca/autogain_functions.o
+  CC      drivers/media/tuners/tuner-types.o
+  CC      drivers/media/v4l2-core/v4l2-dev.o
+  CC      net/sctp/associola.o
+  CC      drivers/media/rc/keymaps/rc-asus-pc39.o
+  CC      net/sunrpc/auth_unix.o
+  CC      net/wireless/wext-priv.o
+  LD      net/unix/unix.o
+  CC      fs/cifs/smb2pdu.o
+  LD      net/unix/unix_diag.o
+  LD      net/unix/built-in.o
+  CC      kernel/cpuset.o
+  CC      net/netfilter/nf_conntrack_proto_sctp.o
+  CC      drivers/media/tuners/mt20xx.o
+  CC [M]  net/wireless/core.o
+  CC      drivers/media/rc/keymaps/rc-asus-ps3-100.o
+  CC      net/ipv4/inet_fragment.o
+  CC      net/sctp/transport.o
+  CC      drivers/media/tuners/tda8290.o
+  CC      drivers/media/rc/keymaps/rc-ati-tv-wonder-hd-600.o
+  CC      drivers/media/media-device.o
+  CC      net/sunrpc/auth_generic.o
+  CC      drivers/media/rc/keymaps/rc-ati-x10.o
+  CC      drivers/media/v4l2-core/v4l2-ioctl.o
+  CC      net/sunrpc/svc.o
+  CC [M]  net/mac80211/chan.o
+  CC      drivers/media/v4l2-core/v4l2-device.o
+  LD [M]  drivers/media/usb/gspca/gspca_main.o
+  CC      drivers/media/rc/keymaps/rc-avermedia-a16d.o
+  CC      net/netfilter/nf_conntrack_netlink.o
+  CC      drivers/mmc/card/queue.o
+  CC      drivers/media/v4l2-core/v4l2-fh.o
+  CC      net/ipv4/ping.o
+  CC      net/sctp/chunk.o
+  CC      drivers/media/tuners/tda9887.o
+  CC      kernel/utsname.o
+  CC      drivers/media/rc/keymaps/rc-avermedia.o
+  CC      net/ipv4/ip_tunnel_core.o
+  CC      drivers/media/usb/uvc/uvc_driver.o
+  CC [M]  net/wireless/sysfs.o
+  CC      fs/cifs/smb2inode.o
+  CC      drivers/media/rc/keymaps/rc-avermedia-cardbus.o
+  CC      kernel/user_namespace.o
+  CC      drivers/media/tuners/tda827x.o
+  CC      drivers/media/rc/keymaps/rc-avermedia-dvbt.o
+  CC      drivers/mmc/card/sdio_uart.o
+  CC      net/sunrpc/svcsock.o
+  CC      drivers/media/rc/ir-nec-decoder.o
+  CC      drivers/media/media-devnode.o
+  CC      net/sctp/sm_make_chunk.o
+  CC      drivers/media/rc/keymaps/rc-avermedia-m135a.o
+  CC      net/sctp/ulpevent.o
+  CC      kernel/pid_namespace.o
+  CC      fs/cifs/smb2file.o
+  CC [M]  net/wireless/radiotap.o
+  CC      drivers/media/tuners/tda18271-maps.o
+  CC      net/netfilter/nf_conntrack_tftp.o
+  CC      drivers/media/rc/keymaps/rc-avermedia-m733a-rm-k6.o
+  CC      net/ipv4/gre_offload.o
+  CC [M]  net/mac80211/trace.o
+  CC      drivers/media/v4l2-core/v4l2-event.o
+  CC [M]  net/wireless/util.o
+  CC      drivers/media/rc/keymaps/rc-avermedia-rm-ks.o
+  LD      drivers/mmc/card/mmc_block.o
+  LD      drivers/mmc/card/built-in.o
+  CC [M]  drivers/msp/adac/slic/./profiles/profiles8.o
+  GZIP    kernel/config_data.gz
+  CC      drivers/media/tuners/tda18271-common.o
+  CC [M]  drivers/msp/adac/slic/./hal/vp_hal.o
+  CC      kernel/stop_machine.o
+  CC      drivers/mmc/core/core.o
+  CC      drivers/media/rc/keymaps/rc-avertv-303.o
+  CC      net/sunrpc/svcauth.o
+  CC      drivers/media/usb/uvc/uvc_queue.o
+  CC [M]  drivers/msp/adec/adec_v1_1/drv_adec.o
+  CC      drivers/media/v4l2-core/v4l2-ctrls.o
+  LD      fs/cifs/cifs.o
+  CC      net/netfilter/nf_nat_core.o
+  CC      drivers/mmc/core/bus.o
+  CC      net/ipv4/ip_tunnel.o
+  LD      fs/cifs/built-in.o
+make[3]: *** [/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/Makefile:961: fs] Error 2
+  CC      drivers/media/rc/keymaps/rc-azurewave-ad-tu700.o
+  CC      drivers/media/v4l2-core/v4l2-subdev.o
+make[3]: *** Waiting for unfinished jobs....
+  CC [M]  drivers/msp/adac/slic/./hal/sys_service.o
+  CC      net/sunrpc/svcauth_unix.o
+  CC      kernel/audit.o
+  CC [M]  drivers/msp/adac/slic/./common/vp_api_init.o
+  CC      drivers/media/rc/keymaps/rc-behold.o
+  CC      net/sctp/inqueue.o
+  CC [M]  drivers/msp/adec/adec_v1_1/drv_adec_k.o
+  CC      drivers/media/usb/uvc/uvc_v4l2.o
+  CC      drivers/media/tuners/tda18271-fe.o
+  CC [M]  drivers/msp/adac/slic/./common/vp_api_control.o
+  CC      drivers/media/v4l2-core/v4l2-clk.o
+  CC      drivers/media/rc/keymaps/rc-behold-columbus.o
+  CC [M]  drivers/msp/adac/slic/./common/vp_api_query.o
+  CC [M]  net/wireless/reg.o
+  CC      drivers/media/rc/ir-rc5-decoder.o
+  LD [M]  drivers/msp/adec/adec_v1_1/hi_adec.o
+  CC      drivers/media/rc/keymaps/rc-budget-ci-old.o
+  CC [M]  net/mac80211/mlme.o
+  CC      net/sctp/outqueue.o
+  CC [M]  drivers/msp/adac/slic/./common/vp_api_common.o
+  CC      net/sunrpc/addr.o
+  CC [M]  net/mac80211/tdls.o
+  CC      net/netfilter/nf_nat_proto_unknown.o
+  CC      drivers/mmc/core/host.o
+  CC      drivers/media/rc/keymaps/rc-cinergy-1400.o
+  CC      net/ipv4/sysctl_net_ipv4.o
+  CC      drivers/media/v4l2-core/v4l2-async.o
+  CC      drivers/media/usb/uvc/uvc_video.o
+  CC      drivers/media/v4l2-core/v4l2-of.o
+  CC      drivers/media/tuners/xc5000.o
+  CC      drivers/media/rc/keymaps/rc-cinergy.o
+  CC [M]  drivers/msp/adac/slic/./common/vp_api_cslac_seq.o
+  CC      kernel/auditfilter.o
+  CC      net/netfilter/nf_nat_proto_common.o
+  CC      net/netfilter/nf_nat_proto_udp.o
+  CC      drivers/media/rc/keymaps/rc-delock-61959.o
+  CC      net/sunrpc/rpcb_clnt.o
+  CC      drivers/mmc/core/mmc.o
+  CC      drivers/media/v4l2-core/vb2-trace.o
+  CC [M]  drivers/msp/adac/slic/./common/vp_api_config.o
+  CC      drivers/media/tuners/xc4000.o
+  CC      net/ipv4/sysfs_net_ipv4.o
+  CC [M]  drivers/msp/adac/slic/./common/vp_debug.o
+  CC      drivers/media/rc/keymaps/rc-dib0700-nec.o
+  CC      net/sctp/ulpqueue.o
+  CC      net/netfilter/nf_nat_proto_tcp.o
+  CC      net/ipv4/proc.o
+  CC [M]  drivers/msp/adac/slic/./common/vp_api_test.o
+  CC      drivers/media/v4l2-core/v4l2-trace.o
+  CC      drivers/media/usb/uvc/uvc_ctrl.o
+  CC      drivers/media/rc/keymaps/rc-dib0700-rc5.o
+  CC      net/netfilter/nf_nat_helper.o
+  CC [M]  drivers/msp/adac/slic/./vp890_api/vp890_config.o
+  CC      net/sunrpc/timer.o
+  CC [M]  net/wireless/scan.o
+  CC      kernel/seccomp.o
+  CC      net/sctp/tsnmap.o
+  CC      drivers/media/rc/keymaps/rc-digitalnow-tinytwin.o
+  CC [M]  drivers/msp/adac/slic/./vp890_api/vp890_init.o
+  CC      drivers/media/tuners/mc44s803.o
+  CC      drivers/mmc/core/mmc_ops.o
+  CC      drivers/media/media-entity.o
+  CC      drivers/media/rc/keymaps/rc-digittrade.o
+  CC      drivers/media/v4l2-core/v4l2-common.o
+  CC      kernel/relay.o
+  CC      net/ipv4/fib_rules.o
+  CC [M]  drivers/msp/adac/slic/./vp890_api/vp890_control.o
+  CC      drivers/media/rc/keymaps/rc-dm1105-nec.o
+  CC      net/sunrpc/xdr.o
+  LD      drivers/media/tuners/tda18271.o
+  LD      drivers/media/tuners/built-in.o
+  CC      net/netfilter/nf_nat_proto_dccp.o
+  CC      kernel/utsname_sysctl.o
+  CC      net/sctp/bind_addr.o
+  CC [M]  drivers/msp/adsp/adsp_v1_1/drv_adsp_intf.o
+  CC [M]  drivers/msp/adac/slic/./vp890_api/vp890_common.o
+  CC      drivers/mmc/core/sd.o
+  CC      drivers/media/rc/keymaps/rc-dntv-live-dvb-t.o
+  CC      drivers/media/usb/uvc/uvc_status.o
+  CC      drivers/media/v4l2-core/v4l2-dv-timings.o
+  CC [M]  drivers/msp/adac/slic/./vp890_api/vp890_apiCal.o
+  CC      net/sctp/socket.o
+  CC [M]  drivers/msp/adac/slic/./vp890_api/vp890_query.o
+  CC [M]  drivers/msp/adsp/adsp_v1_1/drv_adsp.o
+  CC      drivers/media/rc/ir-rc6-decoder.o
+  CC      net/ipv4/ipmr.o
+  CC      kernel/tracepoint.o
+  CC      drivers/media/rc/keymaps/rc-dntv-live-dvbt-pro.o
+  CC [M]  net/mac80211/ocb.o
+  CC      drivers/media/usb/uvc/uvc_isight.o
+  CC      drivers/media/rc/keymaps/rc-dvbsky.o
+  CC [M]  net/wireless/nl80211.o
+  CC      net/sunrpc/sunrpc_syms.o
+  CC      drivers/media/v4l2-core/v4l2-mem2mem.o
+  CC      net/netfilter/nf_nat_proto_sctp.o
+  CC      net/ipv4/ipip.o
+  CC [M]  net/wireless/mlme.o
+  CC      kernel/elfcore.o
+  CC      drivers/mmc/core/sd_ops.o
+  CC      drivers/media/rc/keymaps/rc-em-terratec.o
+  CC [M]  drivers/msp/adsp/adsp_v1_1/drv_adsp_hal.o
+  CC [M]  drivers/msp/adac/slic/./vp890_api/vp890_seq.o
+  CC      net/xfrm/xfrm_policy.o
+  CC      drivers/media/usb/uvc/uvc_debugfs.o
+  CC [M]  net/mac80211/led.o
+  CC      kernel/irq_work.o
+  CC      drivers/media/rc/keymaps/rc-encore-enltv2.o
+  CC      drivers/mmc/core/sdio.o
+  CC      drivers/media/v4l2-core/videobuf2-core.o
+  CC [M]  drivers/msp/adsp/adsp_v1_1/drv_adsp_proc.o
+  CC [M]  drivers/msp/adac/slic/./vp890_api/vp890_fxo_control.o
+  CC      net/netfilter/nf_nat_tftp.o
+  CC      net/sunrpc/cache.o
+  CC      kernel/cpu_pm.o
+  CC      drivers/media/usb/uvc/uvc_entity.o
+  CC      drivers/media/rc/keymaps/rc-encore-enltv.o
+  CC      net/ipv4/fou.o
+  CC      kernel/jump_label.o
+  CC      drivers/media/rc/keymaps/rc-encore-enltv-fm53.o
+  CC [M]  drivers/msp/adac/slic/./vp890_api/vp890_fxs_control.o
+  CC      net/netfilter/x_tables.o
+  CC [M]  drivers/msp/adsp/adsp_v1_1/osal/adsp_osal.o
+  CC [M]  net/mac80211/mesh.o
+  CC      drivers/mmc/core/sdio_ops.o
+  CC      drivers/mmc/host/ushc.o
+  LD      drivers/media/usb/uvc/uvcvideo.o
+  LD      drivers/media/usb/uvc/built-in.o
+  LD      drivers/media/usb/built-in.o
+  CC      drivers/media/rc/keymaps/rc-evga-indtube.o
+  CC      kernel/context_tracking.o
+  CC      drivers/media/rc/keymaps/rc-eztv.o
+  CC      drivers/mtd/mtdcore.o
+  CC [M]  drivers/msp/adac/slic/./vp890_api/vp890_lp_control.o
+  CC      drivers/mtd/mtdsuper.o
+  CC      drivers/mmc/core/sdio_bus.o
+  LD [M]  drivers/msp/adsp/adsp_v1_1/hi_adsp.o
+  CC      net/ipv4/gre_demux.o
+  CC      drivers/media/rc/keymaps/rc-flydvb.o
+  CC      drivers/media/v4l2-core/videobuf2-v4l2.o
+  CC [M]  drivers/msp/adac/slic/./slac.o
+  CC [M]  drivers/msp/advca/drv_advca_intf.o
+  CC      drivers/mmc/host/himciv200/himciv200.o
+  CC      kernel/membarrier.o
+  CC      drivers/mtd/mtdconcat.o
+  CC      drivers/media/rc/keymaps/rc-flyvideo.o
+  CC      net/sunrpc/rpc_pipe.o
+  CC      net/netfilter/xt_tcpudp.o
+  CC      drivers/mmc/core/sdio_cis.o
+  CC      kernel/memremap.o
+  CC      net/sysctl_net.o
+  CC      drivers/media/rc/keymaps/rc-fusionhdtv-mce.o
+  CC [M]  drivers/msp/advca/drv_advca.o
+  CC      net/ipv4/ip_gre.o
+  CC [M]  net/mac80211/mesh_pathtbl.o
+  CC [M]  drivers/msp/adac/slic/./slac89116.o
+  CC      drivers/media/rc/keymaps/rc-gadmei-rm008z.o
+  CC [M]  drivers/msp/advca/drv_advca_common.o
+  CC      drivers/media/v4l2-core/videobuf2-memops.o
+  CHK     kernel/config_data.h
+  CC      drivers/mtd/mtdpart.o
+  LD      net/netfilter/netfilter.o
+  CC      net/sctp/primitive.o
+  CC      drivers/mmc/core/sdio_io.o
+  LD      net/netfilter/nf_conntrack.o
+  CC      net/xfrm/xfrm_state.o
+  CC      kernel/configs.o
+  LD      net/netfilter/nf_nat.o
+  LD      net/netfilter/built-in.o
+  LD [M]  drivers/msp/adac/slic/hi_slic.o
+  CC      drivers/media/rc/keymaps/rc-genius-tvgo-a11mce.o
+  CC      net/ipv4/udp_tunnel.o
+  CC      drivers/mmc/core/sdio_irq.o
+  CC [M]  drivers/msp/advca/drv_tee_advca.o
+  CC      drivers/net/Space.o
+  CC      drivers/mmc/host/himciv200/himciv200_dbg.o
+  CC      net/sunrpc/svc_xprt.o
+  LD      kernel/built-in.o
+  CC      drivers/media/v4l2-core/videobuf2-vmalloc.o
+  CC [M]  drivers/msp/advca/V300/hal_advca_v300.o
+  CC      drivers/media/rc/keymaps/rc-gotview7135.o
+  CC      drivers/net/loopback.o
+  LD      drivers/media/media.o
+  CC [M]  net/mac80211/mesh_plink.o
+  CC      net/sctp/output.o
+  CC      drivers/mtd/mtdchar.o
+  CC      drivers/media/rc/keymaps/rc-imon-mce.o
+  CC      net/sctp/input.o
+  CC [M]  net/wireless/ibss.o
+  CC      net/ipv4/ip_vti.o
+  LD      drivers/mmc/host/himciv200/built-in.o
+  LD      drivers/mmc/host/built-in.o
+  CC      drivers/mmc/core/quirks.o
+  CC      net/xfrm/xfrm_hash.o
+  CC      drivers/media/rc/keymaps/rc-imon-pad.o
+  CC      drivers/media/v4l2-core/videobuf2-dma-contig.o
+  CC      drivers/media/rc/ir-jvc-decoder.o
+  CC      drivers/mmc/core/slot-gpio.o
+  CC      drivers/media/rc/keymaps/rc-iodata-bctv7e.o
+  CC      drivers/media/rc/keymaps/rc-it913x-v1.o
+  CC [M]  drivers/msp/advca/V300/drv_advca_v300.o
+  CC      drivers/mmc/core/pwrseq.o
+  CC      drivers/media/rc/keymaps/rc-it913x-v2.o
+  CC [M]  net/mac80211/mesh_hwmp.o
+  CC      drivers/media/rc/keymaps/rc-kaiomy.o
+  CC      net/sunrpc/backchannel_rqst.o
+  CC      drivers/media/rc/ir-sony-decoder.o
+  CC      drivers/mtd/ofpart.o
+  CC      net/sunrpc/stats.o
+  CC      net/ipv4/syncookies.o
+  LD      drivers/media/v4l2-core/videodev.o
+  LD      drivers/media/v4l2-core/built-in.o
+  CC      net/xfrm/xfrm_input.o
+  CC [M]  drivers/msp/aenc/drv_aenc.o
+  CC      drivers/media/rc/keymaps/rc-kworld-315u.o
+  CC [M]  drivers/msp/advca/ca_otp/ca_otpv200/drv_ca_otp_v200.o
+  CC      drivers/mmc/core/pwrseq_simple.o
+  CC      net/sctp/debug.o
+  CC      drivers/mtd/cmdlinepart.o
+  CC      drivers/media/rc/keymaps/rc-kworld-pc150u.o
+  CC      net/sunrpc/sysctl.o
+  CC      drivers/mtd/mtd_blkdevs.o
+  CC [M]  net/wireless/sme.o
+  CC      drivers/mtd/mtdblock.o
+  CC      drivers/media/rc/keymaps/rc-kworld-plus-tv-analog.o
+  CC      drivers/mmc/core/pwrseq_emmc.o
+  CC [M]  net/mac80211/mesh_sync.o
+  LD [M]  drivers/msp/aenc/hi_aenc.o
+  CC [M]  drivers/msp/aiao/aiao_v1_1/drv_aiao_module.o
+  CC [M]  net/mac80211/mesh_ps.o
+  CC      drivers/net/ethernet/hieth/mdio.o
+  CC      net/ipv4/ah4.o
+  CC      drivers/media/rc/keymaps/rc-leadtek-y04g0051.o
+  CC      net/sctp/ssnmap.o
+  CC      net/xfrm/xfrm_output.o
+  CC      net/sunrpc/auth_gss/auth_gss.o
+  CC [M]  drivers/msp/aiao/aiao_v1_1/common/src/audio_util.o
+  CC      drivers/mmc/core/debugfs.o
+  CC      drivers/net/ethernet/hieth/hieth.o
+  CC      drivers/media/rc/keymaps/rc-lirc.o
+  CC      net/xfrm/xfrm_sysctl.o
+  CC      drivers/mtd/chips/chipreg.o
+  CC      drivers/media/rc/keymaps/rc-lme2510.o
+  CC [M]  net/mac80211/pm.o
+  CC      drivers/nvmem/core.o
+  CC [M]  net/wireless/chan.o
+  LD      drivers/mmc/core/mmc_core.o
+  LD      drivers/mmc/core/built-in.o
+  LD      drivers/mtd/chips/built-in.o
+  LD      drivers/mmc/built-in.o
+  CC      drivers/mtd/devices/block2mtd.o
+  CC      net/ipv4/esp4.o
+  CC      net/sctp/auth.o
+  CC [M]  drivers/msp/aiao/aiao_v1_1/common/src/hal_aiao.o
+  CC      drivers/media/rc/keymaps/rc-manli.o
+  CC      net/ipv4/ipcomp.o
+  CC [M]  drivers/msp/aiao/aiao_v1_1/common/src/hal_aiao_func.o
+  CC      drivers/net/phy/phy.o
+  CC      net/xfrm/xfrm_replay.o
+  CC      drivers/media/rc/keymaps/rc-medion-x10.o
+  LD      drivers/nvmem/nvmem_core.o
+  LD      drivers/nvmem/built-in.o
+  CC      drivers/net/ethernet/hieth/phy.o
+  CC      net/sunrpc/auth_gss/gss_generic_token.o
+  CC [M]  drivers/msp/aiao/aiao_v1_1/common/src/hal_aiao_priv.o
+  LD      drivers/mtd/devices/built-in.o
+  CC      drivers/media/rc/keymaps/rc-medion-x10-digitainer.o
+  CC      drivers/media/rc/keymaps/rc-medion-x10-or2x.o
+  CC [M]  net/mac80211/rc80211_minstrel.o
+  CC      drivers/mtd/nand/nand_base.o
+  CC      drivers/media/rc/ir-sanyo-decoder.o
+  CC      net/sunrpc/auth_gss/gss_mech_switch.o
+  CC [M]  net/mac80211/rc80211_minstrel_ht.o
+  CC      drivers/media/rc/keymaps/rc-msi-digivox-ii.o
+  CC      drivers/net/phy/phy_device.o
+  CC [M]  net/wireless/ethtool.o
+  CC      net/sctp/proc.o
+  CC      drivers/net/ppp/ppp_generic.o
+  CC      net/ipv4/xfrm4_tunnel.o
+  CC      drivers/net/ethernet/hieth/autoeee.o
+  CC      net/xfrm/xfrm_proc.o
+  CC      drivers/media/rc/keymaps/rc-msi-digivox-iii.o
+  CC      drivers/media/rc/ir-sharp-decoder.o
+  CC      net/sunrpc/auth_gss/svcauth_gss.o
+  CC      drivers/media/rc/keymaps/rc-msi-tvanywhere.o
+  CC      drivers/of/base.o
+  CC      net/ipv4/xfrm4_mode_beet.o
+  CC [M]  net/wireless/mesh.o
+  CC      net/sctp/sysctl.o
+  CC      drivers/net/phy/mdio_bus.o
+  CC [M]  net/wireless/ap.o
+  CC      drivers/net/ethernet/hieth/hieth_dbg.o
+  CC [M]  drivers/msp/advca/runtime/sha1.o
+  CC [M]  net/wireless/trace.o
+  CC      net/xfrm/xfrm_algo.o
+  CC      drivers/media/rc/keymaps/rc-msi-tvanywhere-plus.o
+  CC [M]  drivers/msp/aiao/aiao_v1_1/common/src/hal_tianlai_adac.o
+  LD [M]  net/mac80211/mac80211.o
+  CC      drivers/mtd/nand/nand_bbt.o
+  CC      drivers/media/rc/keymaps/rc-nebula.o
+  CC [M]  drivers/msp/advca/runtime/runtime_module.o
+  LD      drivers/net/ethernet/hieth/built-in.o
+  LD      net/sctp/sctp.o
+  CC [M]  drivers/msp/aiao/aiao_v1_1/ao/drv_ao.o
+  LD      net/sctp/built-in.o
+  CC [M]  drivers/msp/aiao/aiao_v1_1/ao/drv_ao_op.o
+  CC      drivers/media/rc/keymaps/rc-nec-terratec-cinergy-xs.o
+  LD      drivers/net/phy/libphy.o
+  CC [M]  drivers/msp/aiao/aiao_v1_1/ao/drv_ao_track.o
+  CC      net/sunrpc/auth_gss/gss_rpc_upcall.o
+  CC      drivers/net/ppp/ppp_async.o
+  LD      drivers/net/phy/built-in.o
+  CC      drivers/net/slip/slhc.o
+  CC      net/ipv4/inet_lro.o
+  CC      drivers/of/device.o
+  CC      net/sunrpc/auth_gss/gss_rpc_xdr.o
+  CC      drivers/media/rc/keymaps/rc-norwood.o
+  CC      drivers/mtd/nand/nand_timings.o
+  CC      net/xfrm/xfrm_user.o
+  LD [M]  drivers/msp/advca/hi_advca.o
+  CC      drivers/media/rc/keymaps/rc-npgtech.o
+  CC      drivers/of/platform.o
+  CC      drivers/mtd/nand/hinfc_gen.o
+  CC      drivers/pci/access.o
+  CC      drivers/media/rc/keymaps/rc-pctv-sedna.o
+  CC      drivers/media/rc/ir-mce_kbd-decoder.o
+  CC      drivers/of/dynamic.o
+  LD      drivers/net/ethernet/built-in.o
+  CC      net/ipv4/tunnel4.o
+  CC      drivers/mtd/nand/hinfc_spl_ids.o
+  CC      drivers/net/ppp/bsd_comp.o
+  LD      net/sunrpc/auth_gss/auth_rpcgss.o
+  CC      drivers/media/rc/keymaps/rc-pinnacle-color.o
+  LD      net/sunrpc/auth_gss/built-in.o
+  LD      net/sunrpc/sunrpc.o
+  LD      drivers/net/slip/built-in.o
+  CC      drivers/mtd/nand/nand_ecc.o
+  LD      net/sunrpc/built-in.o
+  CC      net/ipv4/xfrm4_mode_transport.o
+  CC      net/xfrm/xfrm_ipcomp.o
+  CC      drivers/perf/arm_pmu.o
+  CC      drivers/of/fdt.o
+  CC      net/ipv4/xfrm4_mode_tunnel.o
+  CC      net/ipv4/ipconfig.o
+  CC      drivers/media/rc/keymaps/rc-pinnacle-grey.o
+  CC      drivers/net/ppp/ppp_deflate.o
+  CC      drivers/pci/bus.o
+  CC      drivers/mtd/nand/nand_ids.o
+  CC      drivers/net/ppp/ppp_synctty.o
+  CC      drivers/media/rc/keymaps/rc-pinnacle-pctv-hd.o
+  CC      drivers/pci/probe.o
+  CC      net/ipv4/netfilter.o
+  CC      drivers/of/fdt_address.o
+  CC      drivers/media/rc/keymaps/rc-pixelview.o
+  CC      drivers/media/rc/ir-xmp-decoder.o
+  LD      drivers/perf/built-in.o
+  CC      drivers/mtd/nand/hinfc610/hinfc610.o
+  CC      net/ipv4/inet_diag.o
+  CC      drivers/pci/host-bridge.o
+  CC      net/ipv4/netfilter/nf_conntrack_l3proto_ipv4_compat.o
+  CC      drivers/pci/remove.o
+  CC      net/ipv4/tcp_diag.o
+  CC      drivers/of/address.o
+  LD      net/xfrm/built-in.o
+  CC      drivers/media/rc/keymaps/rc-pixelview-mk12.o
+  CC      net/ipv4/udp_diag.o
+  CC      drivers/media/rc/keymaps/rc-pixelview-002t.o
+  CC      drivers/of/irq.o
+  CC      net/ipv4/tcp_cubic.o
+  LD      drivers/net/ppp/built-in.o
+  CC      drivers/mtd/nand/hinfc610/hinfc610_os.o
+  CC      net/ipv4/tcp_memcontrol.o
+  CC [M]  drivers/net/wireless/ath/main.o
+  CC      drivers/media/rc/keymaps/rc-pixelview-new.o
+  CC [M]  drivers/msp/aiao/aiao_v1_1/ao/hal_aoe_func.o
+  CC [M]  drivers/net/wireless/ath/regd.o
+  CC [M]  drivers/msp/aiao/aiao_v1_1/ao/hal_aoe.o
+  CC      net/ipv4/netfilter/nf_conntrack_l3proto_ipv4.o
+  CC      drivers/mtd/nand/hinfc610/hinfc610_gen.o
+  CC      drivers/pci/pci.o
+  CC      drivers/pci/pci-driver.o
+  CC      drivers/media/rc/keymaps/rc-powercolor-real-angel.o
+  CC      drivers/pci/search.o
+  CC      drivers/of/of_net.o
+  CC      net/ipv4/xfrm4_policy.o
+  CC [M]  net/wireless/ocb.o
+  CC      drivers/of/unittest.o
+  CC      net/ipv4/xfrm4_state.o
+  CC      drivers/mtd/nand/hinfc610/hinfc610_dbg_inf.o
+  CC      drivers/mtd/nand/hinfc610/hinfc610_ecc_info.o
+  CC      drivers/media/rc/keymaps/rc-proteus-2309.o
+  CC [M]  net/wireless/wext-compat.o
+  CC      drivers/pci/pci-sysfs.o
+  CC [M]  drivers/net/wireless/ath/hw.o
+  CC      net/ipv4/netfilter/nf_conntrack_proto_icmp.o
+  CC      drivers/media/rc/keymaps/rc-purpletv.o
+  CC [M]  drivers/msp/cipher/drv_cipher.o
+  CC      drivers/media/rc/gpio-ir-recv.o
+  CC [M]  drivers/msp/cipher/hal_cipher.o
+  CC      net/ipv4/netfilter/nf_nat_l3proto_ipv4.o
+  CC      drivers/mtd/nand/hinfc610/hinfc610_rw_latch.o
+  CC      drivers/mtd/nand/hinfc610/hinfc610_read_retry_hynix_bg_cdie.o
+  CC [M]  drivers/msp/aiao/aiao_v1_1/ao/drv_ao_intf.o
+  CC      drivers/media/rc/keymaps/rc-pv951.o
+  CC      drivers/media/rc/keymaps/rc-hauppauge.o
+  CC      drivers/of/of_mdio.o
+  CC      drivers/media/rc/keymaps/rc-rc6-mce.o
+  CC [M]  drivers/net/wireless/ath/key.o
+  CC [M]  drivers/msp/aiao/aiao_v1_1/ao/drv_ao_cast.o
+  CC      drivers/mtd/nand/hinfc610/hinfc610_read_retry_hynix_bg_bdie.o
+  CC [M]  drivers/msp/dbe/hi_dbe.o
+  CC      drivers/power/power_supply_core.o
+  CC [M]  net/wireless/wext-sme.o
+  CC      drivers/media/rc/keymaps/rc-real-audio-220-32-keys.o
+  CC      drivers/mtd/ubi/vtbl.o
+  CC      net/ipv4/netfilter/nf_nat_proto_icmp.o
+  CC      drivers/power/power_supply_sysfs.o
+  CC      drivers/media/rc/keymaps/rc-reddo.o
+  CC      drivers/pci/rom.o
+  CC      drivers/mtd/ubi/vmt.o
+  CC      drivers/mtd/nand/hinfc610/hinfc610_read_retry_hynix_cg_adie.o
+  CC [M]  drivers/msp/cipher/drv_cipher_intf.o
+  CC      drivers/mtd/ubi/upd.o
+  CC      drivers/mtd/nand/hinfc610/hinfc610_read_retry_micron.o
+  CC      drivers/media/rc/keymaps/rc-snapstream-firefly.o
+  CC [M]  drivers/net/wireless/zd1201.o
+  CC      drivers/of/of_pci.o
+  CC      drivers/power/power_supply_leds.o
+  CC      drivers/mtd/nand/hinfc610/hinfc610_read_retry_samsung.o
+  CC [M]  drivers/net/wireless/ath/dfs_pattern_detector.o
+  CC      net/ipv4/netfilter/nf_defrag_ipv4.o
+  CC      drivers/pci/setup-res.o
+  CC      drivers/media/rc/keymaps/rc-streamzap.o
+  CC [M]  drivers/msp/aiao/aiao_v1_1/ao/hal_cast.o
+  LD      drivers/mtd/nand/nand.o
+  LD      drivers/media/rc/rc-core.o
+  CC      drivers/pci/irq.o
+  CC [M]  drivers/msp/cipher/drv_rsa_bignum.o
+  CC [M]  drivers/msp/ddr/detect_ddr.o
+  CC      drivers/media/rc/keymaps/rc-tbs-nec.o
+  CC      drivers/pci/vpd.o
+  CC      drivers/of/of_pci_irq.o
+  LD      drivers/power/power_supply.o
+  LD      drivers/power/built-in.o
+  CC      drivers/mtd/ubi/build.o
+  CC      drivers/pci/setup-bus.o
+  CC      drivers/mtd/nand/hinfc610/hinfc610_read_retry_toshiba_v2012.o
+  CC      net/ipv4/netfilter/nf_nat_masquerade_ipv4.o
+  CC [M]  drivers/net/wireless/ath/dfs_pri_detector.o
+  CC [M]  drivers/msp/aiao/aiao_v1_1/common/src/hal_tianlai_adac_v500.o
+  LD [M]  drivers/msp/ddr/ddr.o
+  CC      drivers/media/rc/keymaps/rc-technisat-ts35.o
+  CC      net/ipv4/netfilter/arp_tables.o
+  CC      drivers/media/rc/keymaps/rc-technisat-usb2.o
+  CC      net/ipv4/netfilter/nf_dup_ipv4.o
+  CC [M]  drivers/msp/demux/demux_v2/drv_demux_intf.o
+  CC [M]  drivers/msp/demux/demux_v2/drv_demux.o
+  CC      drivers/of/of_mtd.o
+  CC      drivers/reset/core.o
+  CC      drivers/mtd/nand/hinfc610/hinfc610_read_retry_toshiba_v2013.o
+  CC      drivers/media/rc/keymaps/rc-terratec-cinergy-c-pci.o
+  CC [M]  drivers/msp/aiao/aiao_v1_1/timer/drv_timer.o
+  CC      drivers/mtd/nand/hinfc610/hinfc610_read_retry.o
+  CC      drivers/of/of_reserved_mem.o
+  CC      drivers/mtd/ubi/cdev.o
+  CC      drivers/media/rc/keymaps/rc-terratec-cinergy-s2-hd.o
+  LD      drivers/reset/built-in.o
+  CC      drivers/pci/vc.o
+  CC      drivers/mtd/nand/hinfc610/hinfc610_sync.o
+  CC      drivers/rtc/rtc-lib.o
+  CC      net/ipv4/xfrm4_input.o
+  CC [M]  drivers/msp/cipher/drv_rsa.o
+  CC      drivers/rtc/hctosys.o
+  CC      net/ipv4/xfrm4_output.o
+  CC      drivers/media/rc/keymaps/rc-terratec-cinergy-xs.o
+  CC [M]  drivers/msp/aiao/aiao_v1_1/ai/drv_ai_intf.o
+  LD      net/wireless/built-in.o
+  CC      drivers/of/resolver.o
+  LD [M]  net/wireless/cfg80211.o
+  LD      net/ipv4/netfilter/nf_conntrack_ipv4.o
+  LD      net/ipv4/netfilter/nf_nat_ipv4.o
+  LD      net/ipv4/netfilter/built-in.o
+  CC      drivers/media/rc/keymaps/rc-terratec-slim.o
+  CC [M]  drivers/msp/aiao/aiao_v1_1/ai/drv_ai.o
+  CC [M]  drivers/msp/demux/demux_v2/drv_demux_func.o
+  CC      drivers/rtc/systohc.o
+  CC [M]  drivers/msp/gpio/drv_gpio_intf.o
+  CC      drivers/pci/proc.o
+  CC      drivers/mtd/nand/hinfc610/hinfc610_sync_onfi_23.o
+  CC [M]  drivers/msp/cipher/cenc/drv_cenc.o
+  CC      drivers/media/rc/keymaps/rc-terratec-slim-2.o
+  CC      drivers/pci/slot.o
+  CC      drivers/mtd/ubi/kapi.o
+  CC      drivers/of/overlay.o
+  CC      net/ipv4/xfrm4_protocol.o
+  CC [M]  drivers/net/wireless/ath/ath9k/beacon.o
+  CC      drivers/rtc/class.o
+  CC      drivers/rtc/interface.o
+  CC      drivers/mtd/nand/hinfc610/hinfc610_sync_toggle.o
+  LD [M]  drivers/msp/cipher/hi_cipher.o
+  CC      drivers/media/rc/keymaps/rc-tevii-nec.o
+  CC [M]  drivers/msp/gpio/drv_gpio.o
+  CC      drivers/mtd/ubi/eba.o
+  LD      drivers/of/built-in.o
+  CC [M]  drivers/net/wireless/ath/ath9k/gpio.o
+grep: include/linux/mali/mali_utgard_uk_types.h: No such file or directory
+  CC [M]  drivers/msp/aiao/aiao_v1_1/alsa/dsp_mix_v2/hiaiao_card.o
+  CC      drivers/media/rc/keymaps/rc-tivo.o
+  CC      drivers/pci/quirks.o
+  CC      drivers/scsi/scsi.o
+  CC      drivers/rtc/rtc-dev.o
+  CC      drivers/mtd/nand/hinfc610/hinfc620_gen.o
+  CC      drivers/media/rc/keymaps/rc-total-media-in-hand.o
+  CC [M]  drivers/msp/demux/demux_v2/hal_demux.o
+  CC      drivers/media/rc/keymaps/rc-total-media-in-hand-02.o
+  CC [M]  drivers/msp/hdmi/hdmi_1_4/hdmi_intf_k.o
+  LD      net/ipv4/gre.o
+  CC [M]  drivers/msp/aiao/aiao_v1_1/alsa/dsp_mix_v2/hiaiao_dma.o
+  LD      net/ipv4/built-in.o
+  CC [M]  drivers/msp/hdmi/hdmi_1_4/hdmi_intf.o
+  CC [M]  drivers/msp/hdmi/hdmi_1_4/drv_hdmi.o
+  CC      drivers/mtd/nand/hinfc610/hinfc610_rw_latch_hi3798mv100.o
+  LD [M]  drivers/msp/gpio/hi_gpio.o
+  LD      net/built-in.o
+  CC [M]  drivers/msp/hdmi/hdmi_1_4/drv_global.o
+  CC      drivers/rtc/rtc-proc.o
+  CC [M]  drivers/msp/gpu/utgard/linux/mali_osk_atomics.o
+  CC      drivers/mtd/nand/hinfc610/hinfc610_dbg.o
+  CC      drivers/media/rc/keymaps/rc-trekstor.o
+  CC [M]  drivers/net/wireless/ath/ath9k/init.o
+  CC      drivers/pci/setup-irq.o
+  CC [M]  drivers/msp/gpu/utgard/linux/mali_osk_irq.o
+  CC      drivers/rtc/rtc-sysfs.o
+  CC      drivers/media/rc/keymaps/rc-tt-1500.o
+  CC      drivers/mtd/ubi/io.o
+  CC      drivers/mtd/nand/hinfc610/hinfc610_dbg_dump.o
+  CC      drivers/scsi/hosts.o
+  CC [M]  drivers/msp/aiao/aiao_v1_1/alsa/dsp_mix_v2/hiaiao_codec.o
+  CC [M]  drivers/msp/demux/demux_v2/drv_demux_osal.o
+  CC      drivers/media/rc/keymaps/rc-twinhan-dtv-cab-ci.o
+  CC [M]  drivers/msp/aiao/aiao_v1_1/alsa/dsp_mix_v2/hiaiao_i2s.o
+  CC [M]  drivers/net/wireless/ath/ath9k/main.o
+  CC      drivers/pci/syscall.o
+  LD      drivers/rtc/rtc-core.o
+  CC [M]  drivers/msp/gpu/utgard/linux/mali_osk_wq.o
+  LD      drivers/rtc/built-in.o
+  CC      drivers/media/rc/keymaps/rc-twinhan1027.o
+  CC      drivers/mtd/ubi/wl.o
+  CC      drivers/scsi/scsi_ioctl.o
+  CC      drivers/mtd/nand/hinfc610/hinfc610_dbg_erase_count.o
+  CC [M]  drivers/msp/hdmi/hdmi_1_4/drv_reg_proc.o
+  CC      drivers/mtd/nand/hinfc610/hinfc610_dbg_read_count.o
+  CC      drivers/scsi/scsicam.o
+  CC [M]  drivers/msp/hifb/./adp/hifb_v1_0/drv_hifb_adp.o
+  CC [M]  drivers/msp/aiao/aiao_v1_1/alsa/dsp_mix_v2/alsa_aiao_proc_func.o
+  CC      drivers/media/rc/keymaps/rc-videomate-m1f.o
+  CC [M]  drivers/msp/gpu/utgard/linux/mali_osk_locks.o
+  CC [M]  drivers/msp/hifb/./adp/hifb_v1_0/drv_hifb_hal.o
+  CC      drivers/pci/of.o
+  CC [M]  drivers/msp/hifb/./adp/alg/optm_alg_csc.o
+  CC      drivers/media/rc/keymaps/rc-videomate-s350.o
+  CC [M]  drivers/msp/gpu/utgard/linux/mali_osk_wait_queue.o
+  CC      drivers/media/rc/keymaps/rc-videomate-tv-pvr.o
+  CC [M]  drivers/net/wireless/ath/ath9k/recv.o
+  CC      drivers/spi/spi.o
+  CC      drivers/mtd/nand/hinfc610/hinfc610_dbg_ecc_count.o
+  CC [M]  drivers/msp/hdmi/hdmi_1_4/drv_compatibility.o
+  CC [M]  drivers/msp/aiao/aiao_v1_1/alsa/dsp_mix_v2/drv_ao_func.o
+  CC      drivers/scsi/scsi_error.o
+  CC [M]  drivers/msp/aiao/aiao_v1_1/alsa/dsp_mix_v2/alsa_aiao_volume_func.o
+  CC      drivers/spi/spidev.o
+  LD      drivers/pci/built-in.o
+  CC [M]  drivers/msp/gpu/utgard/linux/mali_osk_low_level_mem.o
+  CC      drivers/media/rc/keymaps/rc-winfast.o
+  CC      drivers/mtd/ubi/attach.o
+  CC      drivers/spi/spi-bitbang.o
+  CC [M]  drivers/msp/hdmi/hdmi_1_4/hdmi_drv/drv_hlviic.o
+  CC [M]  drivers/msp/gpu/utgard/linux/mali_osk_math.o
+  CC      drivers/mtd/nand/hinfc610/hinfc610_dbg_read_retry.o
+  CC [M]  drivers/msp/gpu/utgard/linux/mali_osk_memory.o
+  CC [M]  drivers/msp/aiao/aiao_v1_1/alsa/dsp_mix_v2/drv_ai_func.o
+  CC      drivers/scsi/scsi_lib.o
+  CC      drivers/media/rc/keymaps/rc-winfast-usbii-deluxe.o
+  CC [M]  drivers/net/wireless/ath/ath9k/xmit.o
+  CC [M]  drivers/msp/gpu/utgard/linux/mali_osk_misc.o
+  CC [M]  drivers/msp/hdmi/hdmi_1_4/hdmi_drv/si_audio.o
+  CC [M]  drivers/msp/hdmi/hdmi_1_4/hdmi_drv/si_cec.o
+  CC      drivers/media/rc/keymaps/rc-su3000.o
+  CC      drivers/staging/staging.o
+  CC [M]  drivers/msp/i2c/gpio_i2c/drv_gpioi2c_intf.o
+  LD      drivers/mtd/nand/hinfc610/built-in.o
+  LD      drivers/mtd/nand/built-in.o
+  LD [M]  drivers/msp/aiao/aiao_v1_1/hi_aiao.o
+  CC [M]  drivers/msp/i2c/gpio_i2c/drv_gpio_i2c.o
+  CC [M]  drivers/msp/i2c/std_i2c/drv_i2c_intf.o
+  CC [M]  drivers/msp/i2c/std_i2c/drv_i2c.o
+  LD      drivers/media/rc/keymaps/built-in.o
+  CC [M]  drivers/msp/hdmi/hdmi_1_4/hdmi_drv/si_crc16.o
+  CC [M]  drivers/msp/hifb/./adp/alg/optm_alg_gsharp.o
+  CC      drivers/staging/android/ion/ion.o
+  CC [M]  drivers/msp/ir/ir_std/drv_ir_intf.o
+  LD      drivers/media/rc/built-in.o
+  CC [M]  drivers/msp/gpu/utgard/linux/mali_osk_mali.o
+  LD      drivers/media/built-in.o
+  CC [M]  drivers/msp/hifb/./adp/alg/optm_alg_gzme.o
+  CC      drivers/tty/tty_io.o
+  CC      drivers/tty/n_tty.o
+  CC      drivers/mtd/ubi/misc.o
+  LD      drivers/mtd/mtd.o
+  CC [M]  drivers/msp/hdmi/hdmi_1_4/hdmi_drv/si_de.o
+  CC      drivers/spi/spi-oc-tiny.o
+/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/drivers/staging/android/ion/ion.c: In function 'ion_sync_for_device':
+/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/drivers/staging/android/ion/ion.c:1491:19: warning: unused variable 'heap' [-Wunused-variable]
+  struct ion_heap *heap = NULL;
+                   ^
+  CC [M]  drivers/msp/gpu/utgard/linux/mali_osk_notification.o
+  CC [M]  drivers/msp/gpu/utgard/linux/mali_osk_time.o
+  CC      drivers/mtd/ubi/debug.o
+  CC [M]  drivers/msp/jpeg/src/jpeg_drv_hal.o
+  LD [M]  drivers/msp/i2c/gpio_i2c/hi_gpio_i2c.o
+  CC      drivers/staging/android/ion/ion_heap.o
+  LD [M]  drivers/msp/ir/ir_std/hi_ir.o
+  CC [M]  drivers/msp/hdmi/hdmi_1_4/hdmi_drv/si_delay.o
+  CC [M]  drivers/msp/hifb/./adp/alg/optm_alg_zme_coef.o
+  CC [M]  drivers/msp/hdmi/hdmi_1_4/hdmi_drv/si_edid.o
+  CC [M]  drivers/msp/hifb/./adp/src/drv_hifb_osi.o
+  CC      drivers/uio/uio.o
+  CC [M]  drivers/msp/gpu/utgard/linux/mali_osk_timers.o
+  LD [M]  drivers/msp/i2c/std_i2c/hi_i2c.o
+  CC      drivers/scsi/scsi_common.o
+  CC [M]  drivers/msp/demux/demux_v2/drv_demux_scd.o
+  CC      drivers/spi/spi-pl022.o
+  CC      drivers/uio/uio_pdrv_genirq.o
+  CC [M]  drivers/net/wireless/ath/ath9k/link.o
+  CC [M]  drivers/msp/jpeg/src/jpeg_drv_proc.o
+  CC      drivers/scsi/scsi_lib_dma.o
+  CC [M]  drivers/msp/jpeg/src/jpeg_drv_suspend.o
+  LD      drivers/mtd/ubi/ubi.o
+  LD      drivers/mtd/ubi/built-in.o
+  LD      drivers/mtd/built-in.o
+  CC      drivers/tty/tty_ioctl.o
+  CC [M]  drivers/msp/gpu/utgard/linux/mali_osk_bitmap.o
+  CC      drivers/staging/android/ion/ion_page_pool.o
+  CC [M]  drivers/msp/demux/demux_v2/drv_demux_bitstream.o
+  CC [M]  drivers/msp/gpu/utgard/linux/mali_memory.o
+  CC [M]  drivers/msp/gpu/utgard/linux/mali_memory_os_alloc.o
+  CC [M]  drivers/msp/hifb/./adp/src/drv_hifb_wbc.o
+  CC [M]  drivers/msp/demux/demux_v2/drv_demux_index.o
+  CC      drivers/scsi/scsi_scan.o
+  CC [M]  drivers/msp/jpeg/src/jpeg_drv_osr.o
+  LD      drivers/uio/built-in.o
+  CC      drivers/scsi/scsi_sysfs.o
+  CC [M]  drivers/msp/hdmi/hdmi_1_4/hdmi_drv/si_eeprom.o
+  CC [M]  drivers/net/wireless/ath/ath9k/antenna.o
+  CC [M]  drivers/msp/gpu/utgard/linux/mali_memory_external.o
+  CC      drivers/staging/android/ion/ion_system_heap.o
+  CC      drivers/tty/tty_ldisc.o
+  CC [M]  drivers/msp/demux/demux_v2/drv_demux_sw.o
+  LD      drivers/spi/built-in.o
+  CC      drivers/tty/tty_buffer.o
+  CC [M]  drivers/msp/hdmi/hdmi_1_4/hdmi_drv/si_fifo.o
+  CC [M]  drivers/msp/hifb/./src/drv_hifb_blit.o
+  CC [M]  drivers/msp/demux/demux_v2/descrambler/drv_descrambler.o
+  CC [M]  drivers/msp/jpge/src/jpge_osr.o
+  CC [M]  drivers/msp/jpge/src/jpge_osal.o
+  CC [M]  drivers/msp/demux/demux_v2/descrambler/drv_descrambler_func.o
+  CC [M]  drivers/msp/hdmi/hdmi_1_4/hdmi_drv/si_hdcp.o
+  CC [M]  drivers/msp/demux/demux_v2/descrambler/hal_descrambler.o
+  CC [M]  drivers/msp/gpu/utgard/linux/mali_memory_block_alloc.o
+  CC      drivers/staging/android/ion/ion_carveout_heap.o
+  CC [M]  drivers/msp/hdmi/hdmi_1_4/hdmi_drv/si_hdmitx.o
+  CC      drivers/tty/tty_port.o
+  CC [M]  drivers/net/wireless/ath/ath9k/channel.o
+  LD [M]  drivers/msp/jpeg/hi_jpeg.o
+  CC      drivers/tty/tty_mutex.o
+  CC      drivers/scsi/scsi_devinfo.o
+  CC [M]  drivers/msp/hifb/./src/drv_hifb_dmabuf.o
+  CC [M]  drivers/msp/jpge/src/jpge_hal.o
+  CC [M]  drivers/msp/gpu/utgard/linux/mali_memory_swap_alloc.o
+  CC [M]  drivers/msp/gpu/utgard/linux/mali_memory_manager.o
+  CC [M]  drivers/net/wireless/ath/ath9k/mci.o
+  CC [M]  drivers/msp/hdmi/hdmi_1_4/hdmi_drv/si_infofrm.o
+  CC      drivers/usb/class/usblp.o
+  CC      drivers/usb/common/common.o
+  CC      drivers/tty/tty_ldsem.o
+  CC      drivers/staging/android/ion/ion_chunk_heap.o
+  CC [M]  drivers/msp/hdmi/hdmi_1_4/hdmi_drv/si_infpkttb.o
+  CC      drivers/usb/class/cdc-wdm.o
+  CC      drivers/staging/android/ion/ion_cma_heap.o
+  CC [M]  drivers/msp/hifb/./src/drv_hifb_fence.o
+  CC      drivers/scsi/scsi_sysctl.o
+  CC [M]  drivers/msp/hifb/./src/drv_hifb_logo.o
+  CC [M]  drivers/msp/keyled/drv_keyled_intf.o
+  CC [M]  drivers/msp/hdmi/hdmi_1_4/hdmi_drv/si_isr.o
+  CC      drivers/usb/common/led.o
+  LD [M]  drivers/msp/jpge/hi_jpge.o
+  CC      drivers/usb/common/usb-otg-fsm.o
+  CC      drivers/tty/pty.o
+  CC [M]  drivers/msp/keyled/keyled_std/drv_keyled_std.o
+  CC [M]  drivers/msp/gpu/utgard/linux/mali_memory_virtual.o
+  CC [M]  drivers/net/wireless/ath/ath9k/pci.o
+  CC [M]  drivers/msp/keyled/keyled_gpiokey/drv_keyled_gpiokey.o
+  CC      drivers/scsi/scsi_proc.o
+  CC [M]  drivers/msp/gpu/utgard/linux/mali_memory_util.o
+  CC [M]  drivers/msp/hdmi/hdmi_1_4/hdmi_drv/si_mddc.o
+  CC      drivers/staging/android/ion/hisi/hisi_ion_device.o
+  CC [M]  drivers/msp/mce/drv_mce_intf.o
+  LD      drivers/usb/common/usb-common.o
+  LD      drivers/usb/class/built-in.o
+  LD      drivers/usb/common/built-in.o
+  CC      drivers/tty/tty_audit.o
+  CC      drivers/usb/core/usb.o
+  CC [M]  drivers/msp/hifb/./src/drv_hifb_mem.o
+  CC      drivers/usb/core/hub.o
+  CC [M]  drivers/msp/hdmi/hdmi_1_4/hdmi_drv/si_regio.o
+  LD [M]  drivers/msp/demux/hi_demux.o
+  CC [M]  drivers/msp/gpu/utgard/linux/mali_memory_cow.o
+  CC [M]  drivers/usb/gadget/function/f_loopback.o
+  CC [M]  drivers/usb/gadget/legacy/zero.o
+  CC      drivers/uwb/address.o
+  CC      drivers/scsi/scsi_trace.o
+  CC      drivers/staging/android/ion/hisi/hisi_ion.o
+  CC      drivers/usb/gadget/udc/udc-core.o
+  CC [M]  drivers/msp/hdmi/hdmi_1_4/hdmi_drv/si_sha.o
+  LD [M]  drivers/msp/mce/hi_mce.o
+  CC [M]  drivers/usb/gadget/usbstring.o
+  CC [M]  drivers/msp/keyled/keyled_fd650/drv_keyled_fd650.o
+  CC      drivers/tty/sysrq.o
+  CC [M]  drivers/net/wireless/ath/ath9k/ar9002_hw.o
+  CC [M]  drivers/usb/gadget/legacy/audio.o
+  CC      drivers/uwb/allocator.o
+/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/drivers/usb/core/hub.c:4227:13: warning: 'hub_set_initial_usb2_lpm_policy' defined but not used [-Wunused-function]
+ static void hub_set_initial_usb2_lpm_policy(struct usb_device *udev)
+             ^
+  CC [M]  drivers/msp/hifb/./src/drv_hifb_osr.o
+  CC [M]  drivers/usb/gadget/function/f_sourcesink.o
+  CC [M]  drivers/net/wireless/ath/ath9k/ar9003_hw.o
+  LD      drivers/staging/android/ion/hisi/built-in.o
+  CC      drivers/scsi/scsi_logging.o
+  LD      drivers/staging/android/ion/built-in.o
+  CC [M]  drivers/msp/hdmi/hdmi_1_4/hdmi_drv/si_sha_hw.o
+  CC [M]  drivers/usb/gadget/legacy/inode.o
+  LD      drivers/staging/android/built-in.o
+  CC [M]  drivers/msp/gpu/utgard/linux/mali_memory_defer_bind.o
+  LD      drivers/staging/built-in.o
+  LD      drivers/usb/gadget/udc/built-in.o
+  CC      drivers/scsi/scsi_pm.o
+  CC [M]  drivers/msp/hifb/./src/drv_hifb_proc.o
+  CC      drivers/uwb/beacon.o
+  CC      drivers/usb/host/pci-quirks.o
+  CC [M]  drivers/msp/omxvdec/omxvdec_v1.0/omxvdec.o
+  CC [M]  drivers/msp/hdmi/hdmi_1_4/hdmi_drv/si_timer.o
+  CC [M]  drivers/msp/keyled/keyled_pt6961/drv_keyled_pt6961.o
+  CC      drivers/tty/serial/serial_core.o
+  CC [M]  drivers/msp/omxvdec/omxvdec_v1.0/channel.o
+  CC [M]  drivers/msp/gpu/utgard/linux/mali_ukk_mem.o
+  CC [M]  drivers/usb/gadget/function/f_mass_storage.o
+  CC      drivers/usb/host/ehci-hcd.o
+  CC      drivers/scsi/sd.o
+  CC      drivers/uwb/driver.o
+  CC [M]  drivers/msp/hdmi/hdmi_1_4/hdmi_drv/si_txvidp.o
+  CC      drivers/uwb/drp.o
+  CC [M]  drivers/usb/gadget/legacy/g_ffs.o
+  CC [M]  drivers/msp/hdmi/hdmi_1_4/hdmi_drv/si_txvptbl.o
+  CC      drivers/video/hdmi.o
+  CC [M]  drivers/msp/gpu/utgard/linux/mali_ukk_gp.o
+  CC [M]  drivers/msp/keyled/keyled_pt6964/drv_keyled_pt6964.o
+  CC [M]  drivers/net/wireless/ath/ath9k/hw.o
+  CC      drivers/video/backlight/lcd.o
+  CC [M]  drivers/msp/keyled/keyled_ct1642/drv_keyled_ct1642_inner.o
+  CC [M]  drivers/msp/hdmi/hdmi_1_4/hdmi_drv/si_ucec.o
+  CC      drivers/uwb/drp-avail.o
+  CC [M]  drivers/usb/gadget/legacy/mass_storage.o
+  CC [M]  drivers/msp/omxvdec/omxvdec_v1.0/task.o
+  CC      drivers/tty/vt/vt_ioctl.o
+  CC [M]  drivers/msp/hifb/./src/drv_hifb_refresh.o
+  CC      drivers/tty/serial/earlycon.o
+  CC      drivers/usb/core/hcd.o
+  CC      drivers/video/backlight/backlight.o
+  CC [M]  drivers/msp/gpu/utgard/linux/mali_ukk_pp.o
+  CC      drivers/uwb/drp-ie.o
+  CC [M]  drivers/usb/gadget/legacy/gmidi.o
+  CC [M]  drivers/usb/gadget/legacy/hid.o
+  CC [M]  drivers/msp/hdmi/hdmi_1_4/hdmi_drv/si_video.o
+  CC [M]  drivers/msp/omxvdec/omxvdec_v1.0/message.o
+  LD [M]  drivers/msp/keyled/hi_keyled.o
+  CC      drivers/tty/serial/amba-pl011.o
+  CC [M]  drivers/msp/gpu/utgard/linux/mali_ukk_core.o
+  CC [M]  drivers/usb/gadget/function/storage_common.o
+  CC [M]  drivers/msp/hifb/./src/drv_hifb_scrolltext.o
+  CC [M]  drivers/msp/otp/v100/./drv_otp.o
+  CC [M]  drivers/msp/hdmi/hdmi_1_4/hdmi_drv/si_vmode.o
+  LD      drivers/video/backlight/built-in.o
+  CC [M]  drivers/msp/gpu/utgard/linux/mali_ukk_soft_job.o
+  CC      drivers/video/console/dummycon.o
+  CC      drivers/uwb/est.o
+  CC [M]  drivers/usb/gadget/legacy/webcam.o
+  CC [M]  drivers/msp/hdmi/hdmi_1_4/hdmi_drv/si_vmtables.o
+  CC [M]  drivers/msp/omxvdec/omxvdec_v1.0/decoder_vfmw.o
+  LD      drivers/scsi/scsi_mod.o
+  LD      drivers/scsi/sd_mod.o
+  CC [M]  drivers/msp/otp/v100/./drv_otp_intf.o
+  CC      drivers/tty/vt/vc_screen.o
+  LD      drivers/scsi/built-in.o
+  CC [M]  drivers/msp/gpu/utgard/linux/mali_ukk_timeline.o
+  CC [M]  drivers/msp/hdmi/hdmi_1_4/hdmi_drv/si_phy.o
+  LD      drivers/video/console/built-in.o
+  CC [M]  drivers/usb/gadget/function/f_fs.o
+  CC      drivers/uwb/ie.o
+  CC      drivers/usb/core/urb.o
+  CC      drivers/video/fbdev/udlfb.o
+  CC [M]  drivers/msp/hifb/./src/drv_hifb_snapshot.o
+  LD [M]  drivers/usb/gadget/legacy/g_zero.o
+  LD [M]  drivers/usb/gadget/legacy/g_audio.o
+  LD [M]  drivers/usb/gadget/legacy/gadgetfs.o
+  CC      drivers/video/fbdev/core/fb_notify.o
+  LD [M]  drivers/usb/gadget/legacy/g_mass_storage.o
+  LD [M]  drivers/msp/hdmi/hi_hdmi.o
+  LD [M]  drivers/usb/gadget/legacy/g_midi.o
+  CC [M]  drivers/msp/pdm/drv_pdm_intf.o
+  LD [M]  drivers/usb/gadget/legacy/g_hid.o
+  CC      drivers/video/fbdev/core/fb_cmdline.o
+  LD [M]  drivers/usb/gadget/legacy/g_webcam.o
+  CC [M]  drivers/msp/omxvdec/omxvdec_v1.0/processor_vpss.o
+  CC [M]  drivers/msp/otp/v100/./drv_otp_common.o
+  CC [M]  drivers/net/wireless/ath/ath9k/ar9003_phy.o
+  CC [M]  drivers/msp/gpu/utgard/common/mali_kernel_core.o
+  CC      drivers/tty/vt/selection.o
+  CC [M]  drivers/msp/otp/v100/./otpv200/hal_otp_v200.o
+  CC      drivers/uwb/ie-rcv.o
+  CC [M]  drivers/msp/gpu/utgard/linux/mali_kernel_linux.o
+  CC [M]  drivers/msp/gpu/utgard/common/mali_session.o
+  CC      drivers/usb/core/message.o
+  CC      drivers/video/fbdev/core/fbmem.o
+  CC [M]  drivers/msp/hifb/./src/hifb_main_k.o
+  LD      drivers/tty/serial/built-in.o
+  CC      drivers/usb/core/driver.o
+  CC [M]  drivers/msp/pdm/drv_pdm.o
+  CC      drivers/uwb/lc-dev.o
+  CC [M]  drivers/msp/otp/v100/./otpv200/drv_otp_v200.o
+  CC      drivers/tty/vt/keyboard.o
+  CC      drivers/tty/vt/consolemap.o
+  CC      drivers/tty/vt/consolemap_deftbl.o
+  CC [M]  drivers/msp/omxvdec/omxvdec_v1.0/drv_omxvdec_pts_recv.o
+  CC [M]  drivers/usb/gadget/config.o
+  CC [M]  drivers/net/wireless/ath/ath9k/ar9002_phy.o
+  LD [M]  drivers/msp/hifb/hi_fb.o
+  CC      drivers/usb/host/ehci-pci.o
+  CC [M]  drivers/msp/gpu/utgard/linux/mali_device_pause_resume.o
+  CC      drivers/usb/mon/mon_main.o
+  CC [M]  drivers/usb/gadget/function/f_uac2.o
+  LD [M]  drivers/msp/otp/v100/hi_otp.o
+  CC      drivers/usb/mon/mon_stat.o
+  CC      drivers/uwb/lc-rc.o
+  CC [M]  drivers/msp/omxvdec/omxvdec_v1.0/drv_omxvdec_alg_frd.o
+  CC      drivers/video/fbdev/core/fbmon.o
+  CC [M]  drivers/msp/pdm/db/hi_db.o
+  CC      drivers/usb/core/config.o
+  CC      drivers/video/fbdev/simplefb.o
+  CC      drivers/tty/vt/vt.o
+  CC [M]  drivers/net/wireless/ath/ath9k/ar5008_phy.o
+  CC [M]  drivers/msp/gpu/utgard/common/mali_kernel_vsync.o
+  CC      drivers/usb/host/ehci-platform.o
+  CC [M]  drivers/msp/gpu/utgard/linux/mali_ukk_vsync.o
+  LD [M]  drivers/msp/omxvdec/omxvdec_v1.0/hi_omxvdec.o
+  LD [M]  drivers/msp/pdm/hi_pdm.o
+  CC      drivers/usb/mon/mon_text.o
+  CC      drivers/uwb/neh.o
+  CC      drivers/usb/phy/phy.o
+  CC      drivers/watchdog/watchdog_core.o
+  CC      drivers/usb/mon/mon_bin.o
+  CC [M]  drivers/usb/gadget/epautoconf.o
+  CC [M]  drivers/msp/gpu/utgard/linux/mali_kernel_sysfs.o
+  CC      drivers/tty/vt/defkeymap.o
+  CC [M]  drivers/usb/gadget/function/f_uvc.o
+  CC      drivers/watchdog/watchdog_dev.o
+  CC [M]  drivers/usb/gadget/function/uvc_queue.o
+  CC [M]  drivers/usb/gadget/function/uvc_v4l2.o
+  CC      drivers/watchdog/sp805_wdt.o
+  CC      drivers/usb/host/ohci-hcd.o
+  CC      drivers/usb/phy/of.o
+  CC [M]  drivers/usb/gadget/function/uvc_video.o
+  CC      drivers/usb/core/file.o
+  CC      drivers/video/fbdev/core/fbcmap.o
+  CC      drivers/uwb/pal.o
+  CC [M]  drivers/net/wireless/ath/ath9k/ar9002_calib.o
+  CC      drivers/video/fbdev/core/fbsysfs.o
+  CC      drivers/uwb/radio.o
+  LD      drivers/usb/phy/built-in.o
+  LD      drivers/watchdog/watchdog.o
+  LD      drivers/watchdog/built-in.o
+  CC [M]  drivers/msp/gpu/utgard/common/mali_mmu.o
+  CC [M]  drivers/msp/pm/drv_pmoc_intf.o
+  LD      drivers/usb/mon/usbmon.o
+  CC [M]  drivers/usb/gadget/function/uvc_configfs.o
+  LD      drivers/usb/mon/built-in.o
+  CC [M]  drivers/msp/gpu/utgard/common/mali_mmu_page_directory.o
+  CC [M]  drivers/usb/gadget/composite.o
+  CC      drivers/usb/core/buffer.o
+  CC [M]  drivers/net/wireless/ath/ath9k/ar9003_calib.o
+  CC      drivers/video/fbdev/core/modedb.o
+  CC      drivers/usb/core/sysfs.o
+  CC      drivers/uwb/reset.o
+  CC      drivers/usb/host/ohci-pci.o
+  CC [M]  drivers/msp/png/src/png_osr.o
+  CC      drivers/uwb/rsv.o
+  CC [M]  drivers/msp/png/src/png_hal.o
+  CC      drivers/usb/core/endpoint.o
+  CC [M]  drivers/msp/gpu/utgard/common/mali_mem_validation.o
+  CC [M]  drivers/usb/gadget/functions.o
+  CC      drivers/video/fbdev/core/fbcvt.o
+  CC      drivers/usb/core/devio.o
+  CC [M]  drivers/usb/gadget/configfs.o
+  CC [M]  drivers/msp/gpu/utgard/common/mali_hw_core.o
+  CC [M]  drivers/msp/pm/drv_pmoc_smartstandby.o
+  CC [M]  drivers/msp/gpu/utgard/common/mali_gp.o
+  CC      drivers/uwb/scan.o
+  CC      drivers/usb/serial/usb-serial.o
+  LD      drivers/tty/vt/built-in.o
+  CC      drivers/usb/core/notify.o
+  LD      drivers/tty/built-in.o
+  CC [M]  drivers/msp/png/src/png_osi.o
+  CC      drivers/uwb/uwb-debug.o
+  CC [M]  drivers/usb/gadget/function/f_midi.o
+  CC [M]  drivers/msp/png/src/png_osires.o
+  CC [M]  drivers/net/wireless/ath/ath9k/calib.o
+  CC      drivers/video/fbdev/core/fb_defio.o
+  CC      drivers/usb/host/ohci-platform.o
+  CC      drivers/usb/host/uhci-hcd.o
+  CC      drivers/usb/host/xhci.o
+  CC [M]  drivers/msp/pq/pq_v3_0/mng/pq_mng_dbdr.o
+  CC [M]  drivers/msp/pm/clock_mpu.o
+  CC      drivers/uwb/uwbd.o
+  CC      drivers/usb/storage/scsiglue.o
+  CC      drivers/usb/host/xhci-mem.o
+  CC [M]  drivers/msp/gpu/utgard/common/mali_pp.o
+  CC [M]  drivers/msp/pm/hi_opp_data.o
+  CC      drivers/video/fbdev/core/cfbfillrect.o
+  CC [M]  drivers/usb/gadget/function/f_hid.o
+  CC [M]  drivers/net/wireless/ath/ath9k/eeprom.o
+  CC [M]  drivers/msp/png/src/png_proc.o
+  CC [M]  drivers/msp/pm/opp.o
+  CC [M]  drivers/msp/pvr/drv_pvr_intf.o
+  CC [M]  drivers/msp/pq/pq_v3_0/mng/pq_mng_sharpen.o
+  CC      drivers/usb/serial/generic.o
+  LD      drivers/uwb/uwb.o
+  LD      drivers/uwb/built-in.o
+  CC      drivers/usb/storage/protocol.o
+  CC      drivers/usb/core/generic.o
+  CC [M]  drivers/msp/pq/pq_v3_0/drv_pq_intf.o
+  CC [M]  drivers/msp/pm/hi_dvfs.o
+  LD [M]  drivers/msp/png/hi_png.o
+  CC [M]  drivers/msp/pq/pq_v3_0/drv_pq.o
+  CC      drivers/video/fbdev/core/cfbcopyarea.o
+  CC [M]  drivers/msp/spi/drv_spi.o
+  CC [M]  drivers/msp/gpu/utgard/common/mali_pp_job.o
+  LD [M]  drivers/usb/gadget/function/usb_f_ss_lb.o
+  LD [M]  drivers/msp/pvr/hi_pvr.o
+  LD [M]  drivers/usb/gadget/function/usb_f_mass_storage.o
+  CC [M]  drivers/msp/pq/pq_v3_0/drv_pq_table.o
+  LD [M]  drivers/usb/gadget/function/usb_f_fs.o
+  LD [M]  drivers/usb/gadget/function/usb_f_uac2.o
+  LD [M]  drivers/usb/gadget/function/usb_f_uvc.o
+  LD [M]  drivers/usb/gadget/function/usb_f_midi.o
+  LD [M]  drivers/usb/gadget/function/usb_f_hid.o
+  CC [M]  drivers/usb/gadget/u_f.o
+  CC      drivers/usb/core/quirks.o
+  CC      drivers/usb/storage/transport.o
+  CC      drivers/usb/serial/bus.o
+  CC [M]  drivers/net/wireless/ath/ath9k/eeprom_def.o
+  CC      drivers/video/fbdev/core/cfbimgblt.o
+  CC [M]  drivers/msp/spi/drv_spi_intf.o
+  CC [M]  drivers/msp/pm/clock.o
+  CC [M]  drivers/msp/gpu/utgard/common/mali_gp_job.o
+  LD      drivers/usb/gadget/built-in.o
+  LD [M]  drivers/usb/gadget/libcomposite.o
+  CC [M]  drivers/msp/gpu/utgard/common/mali_soft_job.o
+  CC      drivers/usb/core/devices.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/core/rtw_cmd.o
+  CC      drivers/usb/usbip/usbip_common.o
+  CC [M]  drivers/msp/gpu/utgard/common/mali_scheduler.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/core/rtw_security.o
+  CC      drivers/usb/serial/console.o
+  CC [M]  drivers/msp/pm/hi_cpufreq.o
+  CC      drivers/video/fbdev/core/sysfillrect.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/core/rtw_debug.o
+  CC      drivers/usb/storage/usb.o
+  LD [M]  drivers/msp/spi/hi_spi.o
+  CC [M]  drivers/msp/gpu/utgard/common/mali_executor.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/core/rtw_io.o
+  CC      drivers/usb/serial/ftdi_sio.o
+  CC      drivers/usb/core/port.o
+  CC [M]  drivers/net/wireless/ath/ath9k/eeprom_4k.o
+  LD [M]  drivers/msp/pm/hi_pmoc.o
+  CC [M]  drivers/msp/pq/pq_v3_0/hal/common/pq_hal_comm.o
+  CC      drivers/usb/wusbcore/crypto.o
+  CC      drivers/usb/host/xhci-ring.o
+  CC      drivers/video/fbdev/core/syscopyarea.o
+  CC      drivers/usb/host/xhci-hub.o
+  CC      drivers/usb/usbip/usbip_event.o
+  CC      drivers/usb/core/hcd-pci.o
+  CC      drivers/usb/wusbcore/devconnect.o
+  CC [M]  drivers/msp/pq/pq_v3_0/hal/hi3798mv100/pq_hal_acm.o
+  CC      drivers/usb/wusbcore/dev-sysfs.o
+  CC      drivers/usb/storage/initializers.o
+  CC [M]  drivers/msp/pq/pq_v3_0/hal/hi3798mv100/pq_hal_csc.o
+  CC      drivers/video/fbdev/core/sysimgblt.o
+  CC      drivers/usb/usbip/vhci_sysfs.o
+  CC      drivers/usb/serial/option.o
+  CC [M]  drivers/msp/gpu/utgard/common/mali_group.o
+  CC [M]  drivers/net/wireless/ath/ath9k/eeprom_9287.o
+  CC      drivers/usb/host/xhci-dbg.o
+  LD      drivers/usb/core/usbcore.o
+  CC      drivers/usb/usbip/vhci_tx.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/core/rtw_ioctl_query.o
+  CC      drivers/video/fbdev/core/fb_sys_fops.o
+  CC      drivers/usb/storage/sierra_ms.o
+  LD      drivers/usb/core/built-in.o
+  CC [M]  drivers/msp/sync/drv_sync.o
+  CC      drivers/usb/storage/option_ms.o
+  CC      drivers/usb/wusbcore/mmc.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/core/rtw_ioctl_set.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/core/rtw_ieee80211.o
+  CC      drivers/usb/serial/pl2303.o
+  CC [M]  drivers/msp/pq/pq_v3_0/hal/hi3798mv100/pq_hal_dci.o
+  LD      drivers/video/fbdev/core/fb.o
+  LD      drivers/video/fbdev/core/built-in.o
+  LD      drivers/video/fbdev/built-in.o
+  CC      drivers/usb/usbip/vhci_rx.o
+  CC      drivers/usb/wusbcore/pal.o
+  CC [M]  drivers/msp/sync/drv_sync_intf.o
+  LD      drivers/video/built-in.o
+  CC [M]  drivers/msp/gpu/utgard/common/mali_dlbu.o
+  CC      drivers/usb/usbip/vhci_hcd.o
+  CC      drivers/usb/storage/usual-tables.o
+  CC [M]  drivers/msp/pq/pq_v3_0/hal/hi3798mv100/pq_hal_dei.o
+  CC [M]  drivers/net/wireless/ath/ath9k/ani.o
+  CC [M]  drivers/msp/pq/pq_v3_0/hal/hi3798mv100/pq_hal_dbdr.o
+  CC      drivers/usb/usbip/stub_dev.o
+  CC      drivers/usb/wusbcore/rh.o
+  CC      drivers/usb/storage/realtek_cr.o
+  CC [M]  drivers/msp/sync/drv_sync_intf_k.o
+  CC [M]  drivers/msp/tde/src/tde_osr.o
+  CC      drivers/usb/wusbcore/reservation.o
+  CC      drivers/usb/serial/usb-serial-simple.o
+  CC      drivers/usb/host/xhci-trace.o
+  CC [M]  drivers/net/wireless/ath/ath9k/mac.o
+  CC      drivers/usb/serial/usb_wwan.o
+  CC [M]  drivers/msp/pq/pq_v3_0/hal/hi3798mv100/pq_hal_sharpen.o
+  CC [M]  drivers/msp/tde/src/tde_osr_k.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/core/rtw_mlme.o
+  CC      drivers/usb/usbip/stub_main.o
+  CC      drivers/usb/host/xhci-pci.o
+  CC [M]  drivers/msp/tde/src/tde_handle_k.o
+  CC [M]  drivers/net/wireless/ath/ath9k/ar9002_mac.o
+  CC      drivers/usb/wusbcore/security.o
+  CC [M]  drivers/msp/vad/sil9293/drv_sil9293_intf.o
+  CC [M]  drivers/msp/vad/sil9293/drv_sil9293.o
+  CC [M]  drivers/msp/pq/pq_v3_0/hal/hi3798mv100/pq_hal_zme.o
+  LD [M]  drivers/msp/sync/hi_sync.o
+  CC [M]  drivers/msp/vad/sil9293/hal_sil9293.o
+  LD      drivers/usb/storage/usb-storage.o
+  CC      drivers/usb/host/xhci-plat.o
+  LD      drivers/usb/serial/usbserial.o
+  LD      drivers/usb/serial/built-in.o
+  CC      drivers/usb/usbip/stub_rx.o
+  CC [M]  drivers/msp/gpu/utgard/common/mali_broadcast.o
+  LD      drivers/usb/storage/ums-realtek.o
+  LD      drivers/usb/storage/built-in.o
+  CC      drivers/usb/usbip/stub_tx.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/core/rtw_mlme_ext.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/core/rtw_wlan_util.o
+  CC [M]  drivers/msp/pq/pq_v3_0/hal/hi3798mv100/pq_hal_fmd.o
+  CC      drivers/usb/wusbcore/wusbhc.o
+  CC [M]  drivers/msp/gpu/utgard/common/mali_pm.o
+  CC [M]  drivers/msp/tde/src/tde_osilist_k.o
+  CC [M]  drivers/net/wireless/ath/ath9k/ar9003_mac.o
+  LD      drivers/usb/usbip/usbip-core.o
+  CC [M]  drivers/msp/vdec/vdec_v1.0/drv_vdec_buf_mng.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/core/rtw_vht.o
+  LD      drivers/usb/usbip/vhci-hcd.o
+  CC [M]  drivers/msp/gpu/utgard/common/mali_pmu.o
+  CC [M]  drivers/net/wireless/ath/ath9k/ar9003_eeprom.o
+  LD      drivers/usb/host/xhci-hcd.o
+  LD      drivers/usb/usbip/usbip-host.o
+  LD      drivers/usb/usbip/built-in.o
+  LD      drivers/usb/host/xhci-plat-hcd.o
+  LD      drivers/usb/host/built-in.o
+  CC [M]  drivers/msp/tde/src/tde_proc_k.o
+  CC [M]  drivers/msp/pq/pq_v3_0/hal/hi3798mv100/pq_hal_sr.o
+  LD [M]  drivers/msp/vad/sil9293/hi_sil9293.o
+  CC [M]  drivers/msp/gpu/utgard/common/mali_user_settings_db.o
+  CC [M]  drivers/msp/venc/venc_v1.0/drv_venc_osal.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/core/rtw_pwrctrl.o
+  LD      drivers/usb/wusbcore/wusbcore.o
+  LD      drivers/usb/wusbcore/built-in.o
+  LD      drivers/usb/built-in.o
+  CC [M]  drivers/msp/vdec/vdec_v1.0/drv_vdec_intf.o
+  CC [M]  drivers/msp/pq/pq_v3_0/mng/pq_mng_acm.o
+  CC [M]  drivers/msp/vdec/vdec_v1.0/drv_vdec_intf_k.o
+  CC [M]  drivers/msp/tde/src/wmalloc_k.o
+  CC [M]  drivers/msp/vdec/vdec_v1.0/drv_vdec_pts_recv.o
+  CC [M]  drivers/msp/tde/adp/tde_v1_0/tde_hal_k.o
+  CC [M]  drivers/msp/vdec/vdec_v1.0/drv_vdec_alg_frd.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/core/rtw_rf.o
+  CC [M]  drivers/msp/venc/venc_v1.0/drv_venc_intf.o
+  CC [M]  drivers/msp/pq/pq_v3_0/mng/pq_mng_csc.o
+  CC [M]  drivers/msp/gpu/utgard/common/mali_kernel_utilization.o
+  CC [M]  drivers/msp/vfmw/softlib/sdec_imedia_intf.o
+  CC [M]  drivers/net/wireless/ath/ath9k/ar9003_paprd.o
+  CC [M]  drivers/msp/vi/drv_vi_intf.o
+  CC [M]  drivers/net/wireless/ath/ath9k/btcoex.o
+  CC [M]  drivers/net/wireless/ath/ath9k/ar9003_mci.o
+  CC [M]  drivers/msp/vi/drv_vi.o
+  CC [M]  drivers/msp/gpu/utgard/common/mali_control_timer.o
+  CC [M]  drivers/msp/vpss/vpss_v3_0/vpss_osal.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/core/rtw_recv.o
+  CC [M]  drivers/msp/vo/vdp_v2_0/hal/common/drv_disp_da.o
+  CC [M]  drivers/msp/vfmw/softlib/sdec_imedia.o
+  CC [M]  drivers/msp/tde/adp/tde_v1_0/tde_osictl_k.o
+  CC [M]  drivers/msp/pq/pq_v3_0/mng/pq_mng_dci.o
+  CC [M]  drivers/msp/gpu/utgard/common/mali_l2_cache.o
+  CC [M]  drivers/msp/vo/vdp_v2_0/hal/common/drv_disp_hal.o
+  CC [M]  drivers/msp/venc/venc_v1.0/drv_venc.o
+  CC [M]  drivers/msp/vi/drv_vi_buf.o
+  CC [M]  drivers/net/wireless/ath/ath9k/ar9003_aic.o
+  CC [M]  drivers/msp/pq/pq_v3_0/mng/pq_mng_dei.o
+  CC [M]  drivers/msp/vdec/vdec_v1.0/drv_vdec_alg_api_frd.o
+  CC [M]  drivers/msp/vfmw/softlib/hwmedia_v1.1/src/hwdec/hwutil/avstring.o
+  CC [M]  drivers/msp/vpss/vpss_v3_0/vpss_info.o
+  CC [M]  drivers/msp/gpu/utgard/common/mali_timeline.o
+  CC [M]  drivers/msp/vfmw/vfmw_v4.0/scene/stb/vfmw_intf.o
+  CC [M]  drivers/msp/vi/drv_vi_utils.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/core/rtw_sta_mgt.o
+  CC [M]  drivers/msp/tde/adp/tde_v1_0/tde_adp.o
+  CC [M]  drivers/msp/pq/pq_v3_0/mng/pq_mng_zme.o
+  CC [M]  drivers/msp/vfmw/softlib/hwmedia_v1.1/src/hwdec/hwutil/log.o
+  CC [M]  drivers/msp/vi/drv_vi_proc.o
+  CC [M]  drivers/msp/venc/venc_v1.0/drv_venc_efl.o
+  CC [M]  drivers/msp/vo/vdp_v2_0/hal/common/drv_disp_hw.o
+  CC [M]  drivers/msp/vfmw/softlib/hwmedia_v1.1/src/hwdec/hwutil/mathematics.o
+  CC [M]  drivers/net/wireless/ath/ath9k/ar9003_rtt.o
+  CC [M]  drivers/msp/gpu/utgard/common/mali_timeline_fence_wait.o
+  CC [M]  drivers/msp/vfmw/vfmw_v4.0/scene/stb/vfmw_svdec_intf.o
+  CC [M]  drivers/msp/vdec/vdec_v1.0/drv_vdec_usrdata.o
+  CC [M]  drivers/msp/vpss/vpss_v3_0/vpss_fb.o
+  CC [M]  drivers/msp/vfmw/vfmw_v4.0/firmware/osal/linux_kernel/vfmw_osal.o
+  CC [M]  drivers/msp/vfmw/vfmw_v4.0/firmware/osal/linux_kernel/vfmw_proc.o
+  CC [M]  drivers/msp/vfmw/softlib/hwmedia_v1.1/src/hwdec/hwutil/mem.o
+  CC [M]  drivers/msp/vo/vdp_v2_0/hal/common/drv_disp_intf.o
+  CC [M]  drivers/msp/vpss/vpss_v3_0/vpss_wbc.o
+  CC [M]  drivers/msp/pq/pq_v3_0/mng/pq_mng_ifmd.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/core/rtw_ap.o
+  CC [M]  drivers/msp/vfmw/softlib/hwmedia_v1.1/src/hwdec/hwcodec/Bitstream.o
+  CC [M]  drivers/net/wireless/ath/ath9k/common.o
+  CC [M]  drivers/msp/gpu/utgard/common/mali_timeline_sync_fence.o
+  CC [M]  drivers/net/wireless/ath/ath9k/common-init.o
+  CC [M]  drivers/msp/gpu/utgard/common/mali_spinlock_reentrant.o
+  LD [M]  drivers/msp/vi/hi_vi.o
+  CC [M]  drivers/msp/venc/venc_v1.0/drv_omxvenc.o
+  CC [M]  drivers/msp/vfmw/vfmw_v4.0/firmware/product/Hi3798MV100/HD_FULL/32bit/common/public.o
+  CC [M]  drivers/msp/gpu/utgard/common/mali_pm_domain.o
+  CC [M]  drivers/msp/pq/pq_v3_0/mng/pq_mng_sr.o
+  CC [M]  drivers/msp/vo/vdp_v2_0/hal/common/drv_disp_rwzb.o
+  CC [M]  drivers/msp/vfmw/softlib/hwmedia_v1.1/src/hwdec/hwcodec/dsputil.o
+  CC [M]  drivers/msp/vpss/vpss_v3_0/vpss_in/vpss_src.o
+  CC [M]  drivers/net/wireless/ath/ath9k/common-beacon.o
+  CC [M]  drivers/msp/vpss/vpss_v3_0/vpss_his.o
+  CC [M]  drivers/msp/vo/vdp_v2_0/hal/common/drv_win_hal.o
+  LD [M]  drivers/msp/pq/pq_v3_0/hi_pq.o
+  CC [M]  drivers/msp/vfmw/vfmw_v4.0/firmware/product/Hi3798MV100/HD_FULL/32bit/common/syntax/hidivx3.o
+  CC [M]  drivers/msp/gpu/utgard/linux/mali_osk_pm.o
+  CC [M]  drivers/msp/vpss/vpss_v3_0/vpss_sttinf.o
+  CC [M]  drivers/msp/vfmw/softlib/hwmedia_v1.1/src/hwdec/hwcodec/error_resilience.o
+  CC [M]  drivers/msp/vfmw/vfmw_v4.0/firmware/product/Hi3798MV100/HD_FULL/32bit/driver/HiVDHV300R001/hi_hal_divx3.o
+  CC [M]  drivers/msp/vfmw/softlib/hwmedia_v1.1/src/hwdec/hwcodec/imgconvert.o
+  CC [M]  drivers/msp/gpu/utgard/linux/mali_pmu_power_up_down.o
+  CC [M]  drivers/msp/vpss/vpss_v3_0/vpss_in/vpss_img.o
+  CC [M]  drivers/msp/venc/venc_v1.0/drv_omxvenc_efl.o
+  LD [M]  drivers/msp/vfmw/vfmw_v4.0/hi_vfmw.o
+  CC [M]  drivers/net/wireless/ath/ath9k/common-debug.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/core/rtw_xmit.o
+  CC [M]  drivers/msp/vo/vdp_v2_0/hal/common/drv_win_hw.o
+  CC [M]  drivers/msp/vpss/vpss_v3_0/alg/vpss_alg_ratio.o
+  CC [M]  drivers/msp/gpu/utgard/__malidrv_build_info.o
+  CC [M]  drivers/msp/vfmw/softlib/hwmedia_v1.1/src/hwdec/hwcodec/h263.o
+  CC [M]  drivers/msp/venc/venc_v1.0/drv_venc_buf_mng.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/core/rtw_p2p.o
+  CC [M]  drivers/msp/vpss/vpss_v3_0/alg/vpss_alg_rwzb.o
+  CC [M]  drivers/msp/gpu/utgard/platform/mali450/mali4xx.o
+  CC [M]  drivers/msp/vo/vdp_v2_0/hal/3798m/hal_specific_config.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/core/rtw_tdls.o
+  CC [M]  drivers/msp/vpss/vpss_v3_0/alg/vpss_alg_scd.o
+  CC [M]  drivers/msp/gpu/utgard/platform/mali450/mali4xx_clk.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/core/rtw_br_ext.o
+  CC [M]  drivers/msp/vo/vdp_v2_0/hal/3798m/vdp_driver.o
+  CC [M]  drivers/msp/venc/venc_v1.0/drv_venc_queue_mng.o
+  CC [M]  drivers/msp/vpss/vpss_v3_0/vpss_rwzb.o
+  CC [M]  drivers/net/wireless/ath/ath9k/common-spectral.o
+  CC [M]  drivers/msp/vo/vdp_v2_0/hal/3798m/vdp_software_selfdefine.o
+  CC [M]  drivers/msp/vfmw/softlib/hwmedia_v1.1/src/hwdec/hwcodec/h263dec.o
+  CC [M]  drivers/msp/gpu/utgard/platform/mali450/mali4xx_core_scaling.o
+  CC [M]  drivers/msp/vpss/vpss_v3_0/vpss_instance.o
+  CC [M]  drivers/msp/vo/vdp_v2_0/alg/drv_disp_alg_gamma.o
+  CC [M]  drivers/net/wireless/ath/ath9k/htc_hst.o
+  CC [M]  drivers/msp/venc/venc_v1.0/drv_venc_proc.o
+  LD [M]  drivers/msp/tde/hi_tde.o
+  CC [M]  drivers/msp/gpu/utgard/platform/mali450/mali4xx_pmu.o
+  CC [M]  drivers/msp/vo/vdp_v2_0/alg/drv_disp_alg_rgb2yuv.o
+  CC [M]  drivers/msp/gpu/utgard/platform/mali450/mali4xx_gpu_proc.o
+  LD [M]  drivers/msp/vdec/vdec_v1.0/hi_vdec.o
+  CC [M]  drivers/net/wireless/ath/ath9k/hif_usb.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/core/rtw_iol.o
+  CC [M]  drivers/msp/vpss/vpss_v3_0/vpss_ctrl.o
+  CC [M]  drivers/net/wireless/ath/ath9k/wmi.o
+  CC [M]  drivers/net/wireless/ath/ath9k/htc_drv_txrx.o
+  CC [M]  drivers/msp/vpss/vpss_v3_0/drv_vpss_intf_k.o
+  CC [M]  drivers/msp/vpss/vpss_v3_0/vpss_trans_fb.o
+  CC [M]  drivers/msp/venc/venc_v1.0/hal_venc.o
+  CC [M]  drivers/msp/gpu/utgard/linux/mali_ukk_profiling.o
+  CC [M]  drivers/msp/vfmw/softlib/hwmedia_v1.1/src/hwdec/hwcodec/h263_parser.o
+  CC [M]  drivers/msp/vfmw/softlib/hwmedia_v1.1/src/hwdec/hwcodec/mpegvideo.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/core/rtw_sreset.o
+  CC [M]  drivers/msp/gpu/utgard/linux/mali_osk_profiling.o
+  CC [M]  drivers/msp/vpss/vpss_v3_0/hal/hi3798mv100/vpss_reg_3798m.o
+  CC [M]  drivers/msp/vo/vdp_v2_0/alg/drv_disp_alg_service.o
+  LD [M]  drivers/msp/venc/venc_v1.0/hi_venc.o
+  CC [M]  drivers/net/wireless/ath/ath9k/htc_drv_main.o
+  CC [M]  drivers/net/wireless/ath/ath9k/htc_drv_beacon.o
+  CC [M]  drivers/net/wireless/ath/ath9k/htc_drv_init.o
+  CC [M]  drivers/msp/vo/vdp_v2_0/drv_disp.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/core/rtw_btcoex.o
+  CC [M]  drivers/msp/vpss/vpss_v3_0/hal/hi3798mv100/vpss_hal_3798m.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/core/rtw_beamforming.o
+  CC [M]  drivers/msp/vpss/vpss_v3_0/vpss_in/hi3798mv100/vpss_in_3798mv100.o
+  CC [M]  drivers/net/wireless/ath/ath9k/htc_drv_gpio.o
+  CC [M]  drivers/msp/vfmw/softlib/hwmedia_v1.1/src/hwdec/hwcodec/options.o
+  CC [M]  drivers/msp/gpu/utgard/linux/mali_memory_dma_buf.o
+  CC [M]  drivers/msp/vo/vdp_v2_0/drv_disp_adp2unf.o
+  LD [M]  drivers/net/wireless/ath/ath9k/ath9k.o
+  CC [M]  drivers/msp/vo/vdp_v2_0/drv_disp_intf.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/core/rtw_odm.o
+  LD [M]  drivers/net/wireless/ath/ath9k/ath9k_hw.o
+  CC [M]  drivers/msp/vo/vdp_v2_0/drv_win.o
+  CC [M]  drivers/msp/gpu/utgard/linux/mali_memory_secure.o
+  CC [M]  drivers/msp/vfmw/softlib/hwmedia_v1.1/src/hwdec/hwcodec/utils.o
+  LD [M]  drivers/net/wireless/ath/ath9k/ath9k_common.o
+  CC [M]  drivers/msp/vo/vdp_v2_0/drv_win_intf.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/core/efuse/rtw_efuse.o
+  CC [M]  drivers/msp/vo/vdp_v2_0/com/drv_disp_debug.o
+  LD [M]  drivers/net/wireless/ath/ath9k/ath9k_htc.o
+  LD [M]  drivers/msp/vpss/hi_vpss.o
+  LD [M]  drivers/net/wireless/ath/ath.o
+  CC [M]  drivers/msp/vo/vdp_v2_0/com/drv_disp_osal.o
+  CC [M]  drivers/msp/vfmw/softlib/hwmedia_v1.1/src/hwdec/hwcodec/golomb.o
+  LD      drivers/net/built-in.o
+  CC [M]  drivers/msp/vo/vdp_v2_0/drv/drv_cgms.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/os_dep/osdep_service.o
+  CC [M]  drivers/msp/vfmw/softlib/hwmedia_v1.1/src/hwdec/hwcodec/huffman.o
+  CC [M]  drivers/msp/vo/vdp_v2_0/drv/drv_disp_bufcore.o
+  LD [M]  drivers/msp/gpu/utgard/mali.o
+  CC [M]  drivers/msp/vo/vdp_v2_0/drv/drv_disp_buffer.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/os_dep/linux/os_intfs.o
+  CC [M]  drivers/msp/vfmw/softlib/hwmedia_v1.1/src/hwdec/hwcodec/intrax8dsp.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/os_dep/linux/usb_intf.o
+  CC [M]  drivers/msp/vfmw/softlib/hwmedia_v1.1/src/hwdec/hwcodec/jrevdct.o
+  CC [M]  drivers/msp/vo/vdp_v2_0/drv/drv_disp_cast.o
+  CC [M]  drivers/msp/vo/vdp_v2_0/drv/drv_disp_isr.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/os_dep/linux/usb_ops_linux.o
+  CC [M]  drivers/msp/vfmw/softlib/hwmedia_v1.1/src/hwdec/hwcodec/mdct.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/os_dep/linux/ioctl_linux.o
+  CC [M]  drivers/msp/vfmw/softlib/hwmedia_v1.1/src/hwdec/hwcodec/mpeg4video_parser.o
+  CC [M]  drivers/msp/vo/vdp_v2_0/drv/drv_display.o
+  CC [M]  drivers/msp/vfmw/softlib/hwmedia_v1.1/src/hwdec/hwcodec/parser.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/os_dep/linux/xmit_linux.o
+  CC [M]  drivers/msp/vfmw/softlib/hwmedia_v1.1/src/hwdec/hwcodec/simple_idct.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/os_dep/linux/mlme_linux.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/os_dep/linux/recv_linux.o
+  CC [M]  drivers/msp/vo/vdp_v2_0/drv/drv_mcvn.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/os_dep/linux/ioctl_cfg80211.o
+  CC [M]  drivers/msp/vo/vdp_v2_0/drv/drv_sync.o
+  CC [M]  drivers/msp/vfmw/softlib/hwmedia_v1.1/src/hwdec/hwcodec/h264idct.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/os_dep/linux/rtw_cfgvendor.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/os_dep/linux/wifi_regd.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/os_dep/linux/rtw_android.o
+  CC [M]  drivers/msp/vo/vdp_v2_0/drv/drv_virtual.o
+  CC [M]  drivers/msp/vfmw/softlib/hwmedia_v1.1/src/imedia_viddec.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/os_dep/linux/rtw_proc.o
+  CC [M]  drivers/msp/vfmw/softlib/hwmedia_v1.1/src/imedia_util.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/os_dep/linux/ioctl_mp.o
+  CC [M]  drivers/msp/vfmw/softlib/hwmedia_v1.1/src/hwdec/hwcodec/arm/dsputil_arm.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/hal_intf.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/hal_com.o
+  CC [M]  drivers/msp/vo/vdp_v2_0/drv/drv_win_buffer.o
+  CC [M]  drivers/msp/vo/vdp_v2_0/drv/drv_win_frc.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/hal_com_phycfg.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/hal_phy.o
+  CC [M]  drivers/msp/vo/vdp_v2_0/drv/drv_win_policy.o
+  CC [M]  drivers/msp/vfmw/softlib/hwmedia_v1.1/src/hwdec/hwcodec/arm/float_arm_vfp.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/hal_dm.o
+  CC [M]  drivers/msp/vfmw/softlib/hwmedia_v1.1/src/hwdec/hwcodec/arm/mpegvideo_arm.o
+  CC [M]  drivers/msp/vo/vdp_v2_0/drv/drv_win_prc.o
+  CC [M]  drivers/msp/vfmw/softlib/hwmedia_v1.1/src/hwdec/hwcodec/arm/dsputil_init_armv6.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/hal_btcoex.o
+  CC [M]  drivers/msp/vo/vdp_v2_0/drv/drv_window.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/hal_mp.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/hal_hci/hal_usb.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/led/hal_usb_led.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/HalPwrSeqCmd.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/rtl8188e/Hal8188EPwrSeq.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/rtl8188e/rtl8188e_xmit.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/rtl8188e/rtl8188e_sreset.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/rtl8188e/rtl8188e_hal_init.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/rtl8188e/rtl8188e_phycfg.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/rtl8188e/rtl8188e_rf6052.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/rtl8188e/rtl8188e_dm.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/rtl8188e/rtl8188e_rxdesc.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/rtl8188e/rtl8188e_cmd.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/rtl8188e/usb/usb_halinit.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/rtl8188e/usb/rtl8188eu_led.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/rtl8188e/usb/rtl8188eu_xmit.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/rtl8188e/usb/rtl8188eu_recv.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/rtl8188e/usb/usb_ops_linux.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/efuse/rtl8188e/HalEfuseMask8188E_USB.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/phydm/phydm_debug.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/phydm/phydm_antdiv.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/phydm/phydm_antdect.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/phydm/phydm_interface.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/phydm/phydm_hwconfig.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/phydm/phydm.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/phydm/halphyrf_ce.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/phydm/phydm_edcaturbocheck.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/phydm/phydm_dig.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/phydm/phydm_pathdiv.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/phydm/phydm_rainfo.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/phydm/phydm_dynamicbbpowersaving.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/phydm/phydm_powertracking_ce.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/phydm/phydm_dynamictxpower.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/phydm/phydm_adaptivity.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/phydm/phydm_cfotracking.o
+  LD [M]  drivers/msp/vo/hi_vou.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/phydm/phydm_noisemonitor.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/phydm/phydm_acs.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/phydm/phydm_beamforming.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/phydm/txbf/halcomtxbf.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/phydm/txbf/haltxbfinterface.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/phydm/rtl8188e/halhwimg8188e_mac.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/phydm/rtl8188e/halhwimg8188e_bb.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/phydm/rtl8188e/halhwimg8188e_rf.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/phydm/rtl8188e/halhwimg8188e_t_fw.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/phydm/rtl8188e/halhwimg8188e_s_fw.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/phydm/rtl8188e/halphyrf_8188e_ce.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/phydm/rtl8188e/phydm_regconfig8188e.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/phydm/rtl8188e/hal8188erateadaptive.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/hal/phydm/rtl8188e/phydm_rtl8188e.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/platform/platform_ops.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/core/rtw_mp.o
+  CC [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/core/rtw_mp_ioctl.o
+  LD [M]  drivers/wifi/usb_rtl8188eu/rtl8188EUS_linux_v4.3.24_16705.20160509/rtl8188eu.o
+  LD [M]  drivers/msp/vfmw/softlib/hi_svdec.o
+  LD      drivers/built-in.o
+make[3]: Leaving directory '/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/out/hi3798mv100/hi3798mv100_out/obj/source/kernel/linux-4.4.y'
+make[2]: *** [Makefile:150: sub-make] Error 2
+make[2]: Leaving directory '/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y'
+make[1]: *** [Makefile:193: /home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/out/hi3798mv100/hi3798mv100_out/obj/source/kernel/linux-4.4.y/arch/arm/boot/uImage] Error 2
+make[1]: Leaving directory '/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel'
+make: *** [Makefile:154: linux] Error 2
+
+[1;31m #### make target "-j 16 KCFLAGS=-Wno-error linux" failed !!!(03:00 (mm:ss)) ####[1;0m
+

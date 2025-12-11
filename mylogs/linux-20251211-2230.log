@@ -1,0 +1,294 @@
+make[1]: Entering directory '/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel'
+[DEBUG] kernel MAKE = make
+[DEBUG] MAKELEVEL=1
+[DEBUG] JOBSERVER = 
+[DEBUG] kernel MAKEFLAGS = w
+make[2]: Entering directory '/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y'
+make[3]: Entering directory '/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/out/hi3798mv100/hi3798mv100_out/obj/source/kernel/linux-4.4.y'
+  GEN     ./Makefile
+#
+# configuration written to .config
+#
+make[3]: Leaving directory '/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/out/hi3798mv100/hi3798mv100_out/obj/source/kernel/linux-4.4.y'
+make[2]: Leaving directory '/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y'
+make pcie_config
+make[2]: Entering directory '/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel'
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+[DEBUG] kernel MAKE = make
+[DEBUG] MAKELEVEL=2
+[DEBUG] JOBSERVER = 
+[DEBUG] kernel MAKEFLAGS = w
+make[2]: Nothing to be done for 'pcie_config'.
+make[2]: Leaving directory '/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel'
+make[2]: Entering directory '/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y'
+make[3]: Entering directory '/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/out/hi3798mv100/hi3798mv100_out/obj/source/kernel/linux-4.4.y'
+  GEN     ./Makefile
+scripts/kconfig/conf  --oldconfig Kconfig
+#
+# configuration written to .config
+#
+make[3]: Leaving directory '/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/out/hi3798mv100/hi3798mv100_out/obj/source/kernel/linux-4.4.y'
+make[2]: Leaving directory '/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y'
+make -C /home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y ARCH=arm \
+	CROSS_COMPILE=arm-histbv310-linux- \
+	O=/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/out/hi3798mv100/hi3798mv100_out/obj/source/kernel/linux-4.4.y \
+	CONFIG_MSP=y \
+	HI_CONFIG_WIFI=y \
+	HI_CONFIG_BLUETOOTH= \
+	CONFIG_ADVCA= \
+	 \
+	CFLAGS_KERNEL= AFLAGS_KERNEL= uImage modules
+make[2]: Entering directory '/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y'
+make[3]: Entering directory '/home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/out/hi3798mv100/hi3798mv100_out/obj/source/kernel/linux-4.4.y'
+  GEN     ./Makefile
+scripts/kconfig/conf  --silentoldconfig Kconfig
+  CHK     include/config/kernel.release
+  GEN     ./Makefile
+  CHK     include/generated/uapi/linux/version.h
+  CHK     include/generated/utsrelease.h
+  Using /home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y as source for kernel
+  CC      scripts/mod/empty.o
+  CC      scripts/mod/devicetable-offsets.s
+  MKELF   scripts/mod/elfconfig.h
+  HOSTCC  scripts/mod/modpost.o
+  HOSTCC  scripts/mod/sumversion.o
+  GEN     scripts/mod/devicetable-offsets.h
+  HOSTCC  scripts/mod/file2alias.o
+make[4]: 'include/generated/mach-types.h' is up to date.
+  CC      kernel/bounds.s
+  CHK     include/generated/timeconst.h
+  CHK     include/generated/bounds.h
+  CC      arch/arm/kernel/asm-offsets.s
+grep: include/linux/mali/mali_utgard_uk_types.h: No such file or directory
+  CHK     include/generated/asm-offsets.h
+  CALL    /home/ray/workplace/git_download/HiSTB_origin/HiSTBLinux/source/kernel/linux-4.4.y/scripts/checksyscalls.sh
+  HOSTLD  scripts/mod/modpost
+  CC      init/main.o
+  CHK     include/generated/compile.h
+  CC      arch/arm/nwfpe/fpa11.o
+  CC      arch/arm/vfp/vfpmodule.o
+  CC      arch/arm/nwfpe/fpa11_cpdo.o
+  CC      arch/arm/vfp/vfpsingle.o
+  CC      init/do_mounts.o
+  CC      arch/arm/vfp/vfpdouble.o
+  CC      arch/arm/nwfpe/fpa11_cpdt.o
+  CC      init/do_mounts_rd.o
+  CC      arch/arm/nwfpe/fpa11_cprt.o
+  CC      init/do_mounts_initrd.o
+  CC      arch/arm/common/firmware.o
+  CC      arch/arm/nwfpe/fpmodule.o
+  CC      init/noinitramfs.o
+  CC      arch/arm/vdso/vgettimeofday.o
+  CC      arch/arm/nwfpe/fpopcode.o
+  CC      arch/arm/mm/dma-mapping.o
+  CC      arch/arm/net/bpf_jit_32.o
+  CC      arch/arm/nwfpe/softfloat.o
+  CC      arch/arm/kernel/elf.o
+  VDSO    arch/arm/vdso/vdso.so.raw
+  LD      arch/arm/common/built-in.o
+  CC      init/initramfs.o
+  CC      arch/arm/mm/extable.o
+  CC      init/calibrate.o
+  CC      arch/arm/mm/fault.o
+  MUNGE   arch/arm/vdso/vdso.so.dbg
+  CC      arch/arm/kernel/irq.o
+  OBJCOPY arch/arm/vdso/vdso.so
+  AS      arch/arm/vdso/vdso.o
+  CC      arch/arm/nwfpe/single_cpdo.o
+  LD      arch/arm/vfp/vfp.o
+  LD      arch/arm/vfp/built-in.o
+  CC      arch/arm/mm/init.o
+  LD      arch/arm/vdso/built-in.o
+  CC      arch/arm/kernel/opcodes.o
+  CC      arch/arm/mm/iomap.o
+  CC      arch/arm/mach-hi3798mx/core.o
+  CC      arch/arm/mm/fault-armv.o
+  CC      arch/arm/nwfpe/double_cpdo.o
+  CC      arch/arm/kernel/process.o
+  CC      arch/arm/mm/flush.o
+  CC      arch/arm/mach-hi3798mx/pmu.o
+  CC      arch/arm/kernel/ptrace.o
+  CC      init/init_task.o
+  CC      arch/arm/mach-hi3798mx/platsmp.o
+  CC      arch/arm/mm/idmap.o
+  CC      arch/arm/nwfpe/extended_cpdo.o
+  CC      init/version.o
+  LD      init/mounts.o
+  CC      arch/arm/mm/ioremap.o
+  CC      arch/arm/mm/mmap.o
+  CC      arch/arm/kernel/reboot.o
+  CC      kernel/fork.o
+  CC      arch/arm/mach-hi3798mx/hotplug.o
+  CC      ipc/util.o
+  CC      arch/arm/mm/pgd.o
+  LD      init/built-in.o
+  CC      ipc/msgutil.o
+  CC      kernel/exec_domain.o
+  CC      security/integrity/iint.o
+  CC      security/keys/gc.o
+  CC      security/keys/key.o
+  CC      arch/arm/kernel/return_address.o
+  CC      mm/filemap.o
+  LD      arch/arm/mach-hi3798mx/built-in.o
+  CC      ipc/msg.o
+  CC      kernel/panic.o
+  CC      arch/arm/mm/mmu.o
+  CC      arch/arm/kernel/setup.o
+  CC      fs/open.o
+  CC      ipc/sem.o
+  CC      fs/read_write.o
+  CC      security/integrity/integrity_audit.o
+  CC      fs/file_table.o
+  CC      ipc/shm.o
+  CC      ipc/syscall.o
+  LD      arch/arm/nwfpe/nwfpe.o
+  LD      arch/arm/nwfpe/built-in.o
+  CC      arch/arm/mm/pageattr.o
+  CC      security/keys/keyring.o
+  LD      security/integrity/integrity.o
+  LD      security/integrity/built-in.o
+  CC      mm/mempool.o
+  CC      security/commoncap.o
+  CC      arch/arm/kernel/signal.o
+  CC      mm/oom_kill.o
+  CC      fs/super.o
+  CC      security/keys/keyctl.o
+  CC      kernel/cpu.o
+  LD      arch/arm/net/built-in.o
+  CC      security/min_addr.o
+  CC      kernel/exit.o
+  CC      arch/arm/mm/proc-syms.o
+  CC      fs/char_dev.o
+  CC      arch/arm/kernel/stacktrace.o
+  CC      ipc/ipc_sysctl.o
+  CC      arch/arm/kernel/sys_arm.o
+  CC      security/keys/permission.o
+  CC      arch/arm/kernel/time.o
+  CC      mm/maccess.o
+  CC      arch/arm/kernel/traps.o
+  CC      arch/arm/mm/alignment.o
+  CC      fs/stat.o
+  CC      arch/arm/kernel/atags_parse.o
+  CC      security/security.o
+  CC      ipc/mqueue.o
+  CC      kernel/softirq.o
+  CC      arch/arm/mm/highmem.o
+  CC      mm/page_alloc.o
+  CC      security/keys/process_keys.o
+  CC      fs/exec.o
+  CC      security/lsm_audit.o
+  CC      ipc/namespace.o
+  CC      security/keys/request_key.o
+  CC      fs/pipe.o
+  CC      crypto/api.o
+  CC      crypto/cipher.o
+  CC      arch/arm/kernel/cpuidle.o
+  CC      block/bio.o
+  CC      crypto/compress.o
+  CC      arch/arm/mm/copypage-v6.o
+  CC      block/elevator.o
+  CC      arch/arm/kernel/armksyms.o
+  CC      security/keys/request_key_auth.o
+  CC      arch/arm/mm/context.o
+  CC      arch/arm/kernel/module.o
+  CC      security/device_cgroup.o
+  CC      mm/page-writeback.o
+  CC      kernel/resource.o
+  CC      ipc/mq_sysctl.o
+  CC      security/keys/user_defined.o
+  CC      crypto/memneq.o
+  CC      block/blk-core.o
+  CC      kernel/sysctl.o
+  LD      arch/arm/mm/built-in.o
+  CC      mm/readahead.o
+  LD      ipc/built-in.o
+  CC      fs/namei.o
+  CC      fs/fcntl.o
+  CC      arch/arm/kernel/module-plts.o
+  CC      security/keys/proc.o
+  CC      drivers/amba/bus.o
+  LD      drivers/android/built-in.o
+  CC      crypto/crypto_wq.o
+  CC      kernel/sysctl_binary.o
+  CC      arch/arm/kernel/bios32.o
+  CC      sound/sound_core.o
+  CC      sound/sound_firmware.o
+  CC      security/keys/sysctl.o
+  LD      sound/arm/built-in.o
+  CC      crypto/algapi.o
+  CC      mm/swap.o
+  LD      drivers/amba/built-in.o
+  CC      fs/ioctl.o
+  LD      firmware/built-in.o
+  LD      drivers/auxdisplay/built-in.o
+  CC      drivers/block/brd.o
+  CC      drivers/block/loop.o
+  CC      drivers/base/component.o
+  CC      drivers/base/core.o
+  LD      security/keys/built-in.o
+  CC      drivers/base/bus.o
+  LD      security/built-in.o
+  LD      sound/atmel/built-in.o
+  CC      drivers/base/dd.o
+  CC      arch/arm/kernel/isa.o
+  CC      sound/core/sound.o
+  CC      kernel/capability.o
+  CC      mm/truncate.o
+  CC      mm/vmscan.o
+  CC      drivers/bluetooth/btusb.o
+  CC      arch/arm/kernel/suspend.o
+  CC      arch/arm/kernel/smp.o
+  CC      mm/shmem.o
+  CC      sound/core/init.o
+  CC      kernel/ptrace.o
+  LD      sound/drivers/mpu401/built-in.o
+  LD      sound/drivers/opl3/built-in.o
+  CC      crypto/scatterwalk.o
+  CC      kernel/user.o
+  LD      sound/drivers/opl4/built-in.o
+  LD      drivers/block/built-in.o
+  LD      sound/drivers/pcsp/built-in.o
+  CC      drivers/base/syscore.o
+  CC      crypto/proc.o
+  CC      fs/readdir.o
+  LD      sound/drivers/vx/built-in.o
+  LD      sound/drivers/built-in.o
+  CC      fs/select.o
+  CC      block/blk-tag.o
+  CC      drivers/bluetooth/btintel.o
+  CC      arch/arm/kernel/smp_tlb.o
+  CC      sound/core/memory.o
+  CC      crypto/aead.o
+  LD      drivers/bus/built-in.o
+  CC      mm/util.o
+  CC      drivers/base/driver.o
+  CC      arch/arm/oprofile/../../../drivers/oprofile/oprof.o
+  LD      drivers/cdrom/built-in.o
+  CC      arch/arm/oprofile/../../../drivers/oprofile/cpu_buffer.o
+  CC      kernel/signal.o
+  CC      sound/core/control.o
+  CC      mm/mmzone.o
+  CC      net/socket.o
+  CC      arch/arm/kernel/arch_timer.o
+  CC      block/blk-sysfs.o
+  CC      drivers/base/class.o
+  CC      arch/arm/kernel/ftrace.o
+  CC      net/802/p8022.o
+  CC      block/blk-flush.o
+  CC      arch/arm/lib/xor-neon.o
+  CC      arch/arm/oprofile/../../../drivers/oprofile/buffer_sync.o
+  CC      crypto/ablkcipher.o
+  LD      drivers/bluetooth/built-in.o
+  CC      kernel/sys.o
+  CC      drivers/char/mem.o
+  CC      fs/dcache.o
+  CC      arch/arm/kernel/insn.o
+  CC      drivers/base/cpu.o
+  CC      drivers/base/platform.o
+  CC      arch/arm/kernel/jump_label.o
+  AS      arch/arm/lib/ashldi3.o
+  CC      net/802/psnap.o
+  CC      arch/arm/kernel/patch.o
+  AS      arch/arm/lib/ashrdi3.o
+  CC      kernel/kmod.o
+  CC      block/blk-settings.o
