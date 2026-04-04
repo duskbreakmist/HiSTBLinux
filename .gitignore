@@ -7,7 +7,7 @@ cfg.mak.old
 # out
 
 out/
-
+mylogs
 # auto create links
 # source/kernel/linux-4.4.y/drivers/bluetooth_usb
 # source/kernel/linux-4.4.y/drivers/common
