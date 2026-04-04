@@ -1,7 +1,7 @@
 #
 # Automatically generated make config: don't edit
 # SDK version: KERNELVERSION
-# Sat Apr  4 17:43:36 2026
+# Sun Apr  5 01:05:09 2026
 #
 
 #
@@ -219,7 +219,7 @@ CFG_LINUX-4.4.y=y
 CFG_HI_KERNEL_VERSION=linux-4.4.y
 CFG_HI_KERNEL_CFG=hi3798mv100_defconfig
 # CFG_HI_FS_BUILDIN is not set
-# CFG_HI_MSP_BUILDIN is not set
+CFG_HI_MSP_BUILDIN=y
 
 #
 # Rootfs
@@ -504,6 +504,7 @@ CFG_HI_TEMP_CTRL_DOWN_THRESHOLD=0x73
 CFG_HI_TEMP_CTRL_UP_THRESHOLD=0x64
 CFG_HI_TEMP_CTRL_REBOOT_THRESHOLD=0x7d
 CFG_HI_PM_START_MCU_RUNNING=y
+# CFG_HI_MCE_SUPPORT is not set
 
 #
 # SCI Config
@@ -524,3 +525,7 @@ CFG_HI_SPI_BUS_SUPPORT=y
 # TEE
 #
 # CFG_HI_TEE_SUPPORT is not set
+# CFG_TVP_MEM_512M is not set
+# CFG_TVP_MEM_1G is not set
+# CFG_TVP_MEM_1_5G is not set
+# CFG_TVP_MEM_2G is not set
