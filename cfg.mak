@@ -1,7 +1,7 @@
 #
 # Automatically generated make config: don't edit
 # SDK version: KERNELVERSION
-# Fri Nov 14 12:30:43 2025
+# Sat Apr  4 17:43:36 2026
 #
 
 #
@@ -321,7 +321,6 @@ CFG_HI_CAPTION_TTX_SUPPORT=y
 CFG_HI_CAPTION_SO_SUPPORT=y
 CFG_HI_CAPTION_CC_SUPPORT=y
 # CFG_HI_PLAYER_SUPPORT is not set
-# CFG_HI_PLAYER_FULL_SUPPORT is not set
 # CFG_GSTREAMER_SUPPORT is not set
 CFG_HI_OPENSSL_SUPPORT=y
 CFG_HI_DRM_SUPPORT=y
