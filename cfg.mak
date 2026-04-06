@@ -1,7 +1,7 @@
 #
 # Automatically generated make config: don't edit
 # SDK version: KERNELVERSION
-# Sun Apr  5 01:05:09 2026
+# Tue Apr  7 00:13:11 2026
 #
 
 #
@@ -187,7 +187,7 @@ CFG_HI_VO_VDAC_VIDEO_BUFFER=y
 #
 # Boot Regfile Config
 #
-CFG_HI_BOOT_REG_NAME=hi3798mdmo1f_hi3798mv100_ddr3_1gbyte_16bitx2_2layers_emmc.reg
+CFG_HI_BOOT_REG_NAME=hi3798mdmo1g_hi3798mv100_ddr3_1gbyte_16bitx2_4layers_emmc.reg
 
 #
 # Boot
@@ -525,7 +525,3 @@ CFG_HI_SPI_BUS_SUPPORT=y
 # TEE
 #
 # CFG_HI_TEE_SUPPORT is not set
-# CFG_TVP_MEM_512M is not set
-# CFG_TVP_MEM_1G is not set
-# CFG_TVP_MEM_1_5G is not set
-# CFG_TVP_MEM_2G is not set
