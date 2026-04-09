@@ -29,24 +29,44 @@
 			device_type = "cpu";
 			compatible = "arm,cortex-a7";
 			reg = <0>;
+			operating-points = <
+            1500000 1380000
+            1200000 1380000
+            1000000 1380000
+        	>;
 		};
 
 		cpu@1 {
 			device_type = "cpu";
 			compatible = "arm,cortex-a7";
 			reg = <1>;
+			operating-points = <
+            1500000 1380000
+            1200000 1380000
+            1000000 1380000
+        	>;
 		};
 
 		cpu@2 {
 			device_type = "cpu";
 			compatible = "arm,cortex-a7";
 			reg = <2>;
+			operating-points = <
+            1500000 1380000
+            1200000 1380000
+            1000000 1380000
+        	>;
 		};
 
 		cpu@3 {
 			device_type = "cpu";
 			compatible = "arm,cortex-a7";
 			reg = <3>;
+			operating-points = <
+            1500000 1380000
+            1200000 1380000
+            1000000 1380000
+        	>;
 		};
 	};
 
@@ -356,6 +376,7 @@
 		};
 
 		hisilicon_clock: hisilicon_clock {
+
 			compatible = "hi3798mv100.clock";
 			reg = <0xF8A22000 0x200>, <0xF8A20000 0x0848>;
 			#clock-cells = <1>;

@@ -912,7 +912,7 @@ KSRC := $(LINUX_DIR)
 ARCH := $(CFG_HI_CPU_ARCH)
 CROSS_COMPILE := $(HI_KERNEL_TOOLCHAINS_NAME)-
 
-CONFIG_RTL8188EU := y
+CONFIG_RTL8188EU := m
 MODULE_NAME := rtl8188eu
 endif
 
@@ -1737,3 +1737,4 @@ clean:
 	rm -fr *.mod.c *.mod *.o .*.cmd *.ko *~
 	rm -fr .tmp_versions
 endif
+

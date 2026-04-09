@@ -143,17 +143,28 @@ ifeq ($(CFG_HI_SPI_SUPPORT),y)
 endif
 endif
 	$(AT)mkdir -p $(HI_MODULE_DIR)/usb
-	$(AT)-cp -f $(KERNEL_OUT_DIR)/drivers/usb/host/*.ko $(HI_MODULE_DIR)/usb/
-	$(AT)(for file in $(wildcard $(KERNEL_OUT_DIR)/drivers/ata/*.ko) ; do ( \
-			mkdir -p $(HI_MODULE_DIR)/sata && cp $$file $(HI_MODULE_DIR)/sata/ \
-		) done )
+	$(AT)files="$(wildcard $(KERNEL_OUT_DIR)/drivers/usb/host/*.ko)"; \
+	if [ -n "$$files" ]; then \
+		cp -f $$files $(HI_MODULE_DIR)/usb/; \
+	fi
+
+	$(AT)files="$(wildcard $(KERNEL_OUT_DIR)/drivers/ata/*.ko)"; \
+	if [ -n "$$files" ]; then \
+		mkdir -p $(HI_MODULE_DIR)/sata; \
+		cp -f $$files $(HI_MODULE_DIR)/sata/; \
+	fi
+
+
 ifeq ($(HI_DRV_BUILDTYPE),m)
 	$(AT)(find $(KERNEL_OUT_DIR)/drivers/common -name "*.ko" | xargs cp -f -t $(HI_MODULE_DIR)/)
 	$(AT)(find $(KERNEL_OUT_DIR)/drivers/msp -name "*.ko" | xargs cp -f -t $(HI_MODULE_DIR)/)
 endif
 ifeq ($(CFG_HI_WIFI_SUPPORT),y)
 	$(AT)-cp -f $(KERNEL_OUT_DIR)/net/wireless/cfg80211.ko $(HI_MODULE_DIR)/
-	$(AT)(find $(KERNEL_OUT_DIR)/drivers/wifi -name "*.ko" | xargs cp -f -t $(HI_MODULE_DIR)/)
+	$(AT)files="$(wildcard $(KERNEL_OUT_DIR)/drivers/wifi/*.ko)"; \
+	if [ -n "$$files" ]; then \
+		cp -f $$files $(HI_MODULE_DIR)/; \
+	fi
 endif
 ifeq ($(HI_CONFIG_BLUETOOTH_DEVICE),y)
 	$(AT)test -d $(HI_ROOTFS_DIR)/lib/firmware || mkdir -p $(HI_ROOTFS_DIR)/lib/firmware
