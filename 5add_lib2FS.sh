@@ -26,12 +26,20 @@ fi
 # ===== 2. 拷贝 sample =====
 if [ -d "$SDKOUTSAMPLE" ]; then
     echo "copy sample..."
-    sudo cp -an "$SDKOUTSAMPLE" "$ROOTFS/"
+    sudo rsync -av \
+        --exclude='*.o' \
+        "$SDKOUTSAMPLE/" \
+        "$ROOTFS/sample/"
 fi
 
 # ===== 3. 处理 extern / share / static =====
 sudo rsync -av --ignore-existing \
     "$SDKOUT/usr/lib/" \
     "$ROOTFS/usr/lib/"
+
+sudo rsync -av --ignore-existing \
+    "$SDKOUT/lib/" \
+    "$ROOTFS/lib/sdk"
+
 
 echo "done."

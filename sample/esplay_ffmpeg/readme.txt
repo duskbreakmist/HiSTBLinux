@@ -7,3 +7,6 @@ Parameters: vfile: video es file path.
 Example:		sample_esplay ./h264.es h264 ./mp3.es mp3
 Attention:	if only play audio��vfile and vtype should be null��if only play video, afile and atype should be null
 
+2026-05-13 21:51:23
+用ffmpeg做demux层，不用
+ffmpeg -i output.mp4 -c:v copy -bsf:v h264_mp4toannexb output.h264 -c:a copy output.aac

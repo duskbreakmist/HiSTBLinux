@@ -14,7 +14,7 @@ include $(SAMPLE_DIR)/base.mak
 CFLAGS += $(CFG_HI_SAMPLE_CFLAGS)
 CFLAGS += -I$(HI_INCLUDE_DIR) -I$(SAMPLE_DIR)/common
 
-objects :=  esplay ao audiocast tsplay es_ts_switch ipplay mosaic pip log memdev userproc cgms \
+objects :=  esplay esplay_ffmpeg ao audiocast tsplay es_ts_switch ipplay mosaic pip log memdev userproc cgms \
             mce capture fb higo tde jpeg png\
             gpio pmoc ir e2prom i2c \
             otp flash uart network fs cipher snapshot 3dtv pq test/hdmi_tsplay test/video_test omxvdec rawplay \

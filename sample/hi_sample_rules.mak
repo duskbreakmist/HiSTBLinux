@@ -25,6 +25,7 @@ CFLAGS  +=  $(CFG_HI_SAMPLE_CFLAGS)
 
 CFLAGS  +=  -I$(HI_INCLUDE_DIR) \
             -I$(SAMPLE_DIR)/common
+			
             
 ifdef CFG_HI_ADVCA_FUNCTION
 HI_LIB_PATHS :=  -L$(HI_STATIC_LIB_DIR)  -L$(HI_EXTERN_LIB_DIR) -L$(HI_SHARED_LIB_DIR) $(LIB_PATHS)
@@ -89,4 +90,3 @@ $(COMMON_OBJ64_DIR)/%.o : $(SAMPLE_DIR)/common/%.c
 $(OBJ64_DIR)/%.o : %.c
 	$(AT)test -d $(dir $@) || mkdir -p $(dir $@)
 	$(AT)$(CFG_HI_AARCH64_TOOLCHAINS_NAME)-gcc $(CFLAGS) -o $@ -c $^
-
