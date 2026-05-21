@@ -396,6 +396,7 @@
 				reg = <2>;
 				mac-address = [00 00 00 00 00 00];
 				phy-mode = "mii";
+				/*phy-mode = "rgmii";*/
 				internal-phy;
 				phy-gpio-base = <0>;
 				phy-gpio-bit = <0>;
