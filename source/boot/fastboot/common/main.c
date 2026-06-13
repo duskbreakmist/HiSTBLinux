@@ -60,6 +60,10 @@ extern int do_reset (cmd_tbl_t *cmdtp, int flag, int argc, char *argv[]);		/* fo
 
 extern int do_bootd (cmd_tbl_t *cmdtp, int flag, int argc, char *argv[]);
 
+#ifdef CONFIG_BOOTROOT_AUTOSELECT
+extern int bootroot_autoselect(int timeout);
+#endif
+
 #if defined(CONFIG_UPDATE_TFTP)
 void update_tftp (void);
 #endif /* CONFIG_UPDATE_TFTP */
@@ -289,6 +293,9 @@ void main_loop (void)
 #if defined(CONFIG_BOOTDELAY) && (CONFIG_BOOTDELAY >= 0)
 	char *s;
 	int bootdelay;
+#ifdef CONFIG_BOOTROOT_AUTOSELECT
+	int bootroot_abort = 0;
+#endif
 #endif
 #ifdef CONFIG_PREBOOT
 	char *p;
@@ -401,18 +408,35 @@ void main_loop (void)
 #endif /* CONFIG_BOOTCOUNT_LIMIT */
 	s = getenv ("bootcmd");
 
+#ifdef CONFIG_BOOTROOT_AUTOSELECT
+	if (bootdelay >= 0 && s)
+		bootroot_abort = bootroot_autoselect(CONFIG_BOOTROOT_AUTOSELECT_TIMEOUT);
+#endif
+
 #ifdef CONFIG_HIBERNATE
-	if (bootdelay >= 0 && !tstc())
+	if (bootdelay >= 0 &&
+#ifdef CONFIG_BOOTROOT_AUTOSELECT
+	    !bootroot_abort &&
+#endif
+	    !tstc())
 		hibernate_boot(-1);
 #endif
 
 #ifdef CONFIG_HISI_SNAPSHOT_BOOT
-	if (bootdelay >= 0 && !tstc())
+	if (bootdelay >= 0 &&
+#ifdef CONFIG_BOOTROOT_AUTOSELECT
+	    !bootroot_abort &&
+#endif
+	    !tstc())
 		checkout_qbboot();
 #endif
 	debug ("### main_loop: bootcmd=\"%s\"\n", s ? s : "<UNDEFINED>");
 
-	if (bootdelay >= 0 && s && !abortboot (bootdelay)) {
+	if (bootdelay >= 0 && s &&
+#ifdef CONFIG_BOOTROOT_AUTOSELECT
+	    !bootroot_abort &&
+#endif
+	    !abortboot (bootdelay)) {
 # ifdef CONFIG_AUTOBOOT_KEYED
 		int prev = disable_ctrlc(1);	/* disable Control C checking */
 # endif

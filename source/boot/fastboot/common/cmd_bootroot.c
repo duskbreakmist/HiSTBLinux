@@ -6,6 +6,9 @@
 #include <command.h>
 
 #define BOOTROOT_ENV_SELECT "rootfs_sel"
+#ifndef CONFIG_BOOTROOT_AUTOSELECT_TIMEOUT
+#define CONFIG_BOOTROOT_AUTOSELECT_TIMEOUT 5
+#endif
 
 struct bootroot_option {
 	const char *id;
@@ -24,7 +27,7 @@ static const struct bootroot_option bootroot_options[] = {
 	{
 		"2",
 		"eMMC: /dev/mmcblk0p4 ext4",
-		"console=ttyAMA0,115200 root=/dev/mmcblk0p4 rootfstype=btrfs rootwait "
+		"console=ttyAMA0,115200 root=/dev/mmcblk0p4 rootfstype=ext4 rootwait "
 		"blkdevparts=mmcblk0:1M(boot),1M(bootargs),18M(kernel),3800M(rootfs),-(others) "
 		"video=HDMI-A-1:1920x1080@60",
 	},
@@ -32,9 +35,8 @@ static const struct bootroot_option bootroot_options[] = {
 		"3",
 		"SD card: /dev/mmcblk1p1 ext4",
 		"console=ttyAMA0,115200 root=/dev/mmcblk1p1 rootfstype=ext4 rootwait "
-		"rw earlyprintk debug ignore_loglevel "
-		"blkdevparts=mmcblk0:1M(boot),1M(bootargs),18M(kernel),3800M(rootfs),-(others);"
-		"mmcblk1:3800M(rootfs),-(others)",
+		"blkdevparts=mmcblk0:1M(boot),1M(bootargs),18M(kernel),3800M(rootfs),-(others) "
+		"video=HDMI-A-1:1920x1080@60",
 	},
 };
 
@@ -156,6 +158,63 @@ static int bootroot_prompt(void)
 	}
 
 	return bootroot_apply(opt, 1);
+}
+
+int bootroot_autoselect(int timeout)
+{
+	const struct bootroot_option *cur;
+	const struct bootroot_option *opt;
+	int remain;
+
+	if (timeout <= 0)
+		timeout = CONFIG_BOOTROOT_AUTOSELECT_TIMEOUT;
+
+	cur = bootroot_current();
+	bootroot_print_list();
+
+	if (cur)
+		printf("\nDefault rootfs %s: %s\n", cur->id, cur->name);
+
+	puts("Press 1/2/3 to select rootfs, ENTER to keep current, any other key to stop autoboot.\n");
+
+	for (remain = timeout; remain > 0; remain--) {
+		int i;
+
+		printf("Autoboot in %d seconds: ", remain);
+
+		for (i = 0; i < 100; i++) {
+			if (tstc()) {
+				char c = getc();
+
+				putc('\n');
+				if (c == '\r' || c == '\n') {
+					if (cur)
+						printf("Keep rootfs %s: %s\n",
+						       cur->id, cur->name);
+					return 0;
+				}
+
+				if (c >= '1' && c <= '3') {
+					char id[2];
+
+					id[0] = c;
+					id[1] = '\0';
+					opt = bootroot_find(id);
+					if (opt)
+						return bootroot_apply(opt, 1);
+				}
+
+				puts("Stop autoboot.\n");
+				return 1;
+			}
+			udelay(10000);
+		}
+
+		puts("\r");
+	}
+
+	putc('\n');
+	return 0;
 }
 
 int do_bootroot(cmd_tbl_t *cmdtp, int flag, int argc, char *argv[])
